@@ -249,8 +249,8 @@
       footer_t3: 'Hubungi Sekretariat',
       footer_copy: '&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). Seluruh Hak Cipta Dilindungi.',
       view_mode_label: 'Tampilan:',
-      view_mode_desktop: '🖥️ Desktop',
-      view_mode_mobile: '📱 Mobile',
+      view_mode_desktop: 'Desktop (Default)',
+      view_mode_mobile: 'Mobile (Cadangan)',
 
       // Floating Dock & Out of Screen Drawer
       float_cta_btn: 'Kolaborasi Bersama',
@@ -515,8 +515,8 @@
       footer_t3: 'Contact Secretariat',
       footer_copy: '&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). All Rights Reserved.',
       view_mode_label: 'View:',
-      view_mode_desktop: '🖥️ Desktop',
-      view_mode_mobile: '📱 Mobile',
+      view_mode_desktop: 'Desktop (Default)',
+      view_mode_mobile: 'Mobile (Backup)',
 
       // Floating Dock & Out of Screen Drawer
       float_cta_btn: 'Partner With Us',
@@ -568,8 +568,6 @@
     const metaViewport = document.getElementById('viewportMeta') || document.querySelector('meta[name="viewport"]');
     const btnDesktop = document.getElementById('btnViewDesktop');
     const btnMobile = document.getElementById('btnViewMobile');
-    const topBtnDesktop = document.getElementById('topBtnViewDesktop');
-    const topBtnMobile = document.getElementById('topBtnViewMobile');
     const drawerBtnDesktop = document.getElementById('drawerBtnViewDesktop');
     const drawerBtnMobile = document.getElementById('drawerBtnViewMobile');
 
@@ -584,10 +582,10 @@
 
     function updateButtons(mode) {
       const isDesktop = (mode === 'desktop');
-      [btnDesktop, topBtnDesktop, drawerBtnDesktop].forEach(btn => {
+      [btnDesktop, drawerBtnDesktop].forEach(btn => {
         if (btn) btn.classList.toggle('active', isDesktop);
       });
-      [btnMobile, topBtnMobile, drawerBtnMobile].forEach(btn => {
+      [btnMobile, drawerBtnMobile].forEach(btn => {
         if (btn) btn.classList.toggle('active', !isDesktop);
       });
     }
@@ -612,8 +610,6 @@
 
     if (btnDesktop) btnDesktop.addEventListener('click', () => setViewMode('desktop'));
     if (btnMobile) btnMobile.addEventListener('click', () => setViewMode('mobile'));
-    if (topBtnDesktop) topBtnDesktop.addEventListener('click', () => setViewMode('desktop'));
-    if (topBtnMobile) topBtnMobile.addEventListener('click', () => setViewMode('mobile'));
     if (drawerBtnDesktop) drawerBtnDesktop.addEventListener('click', () => setViewMode('desktop'));
     if (drawerBtnMobile) drawerBtnMobile.addEventListener('click', () => setViewMode('mobile'));
 

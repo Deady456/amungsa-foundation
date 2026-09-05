@@ -38,13 +38,6 @@
         Budidaya Bioflok Lele & Nutrisi Keluarga bersama Pemuda di Prov. Papua Tengah
       </p>
       <a href="#program" class="announcement-link" data-i18n="announcement_link">Lihat Program →</a>
-      
-      <!-- Top View Mode Switcher (Immediate Access) -->
-      <div class="top-view-mode-switch" id="topViewModeSwitch">
-        <button type="button" id="topBtnViewDesktop" class="view-mode-btn active" data-i18n="view_mode_desktop" title="Tampilan Desktop (Default)">🖥️ Desktop</button>
-        <button type="button" id="topBtnViewMobile" class="view-mode-btn" data-i18n="view_mode_mobile" title="Tampilan Mobile (Cadangan)">📱 Mobile</button>
-      </div>
-
       <button class="announcement-close" id="closeAnnouncement" title="Tutup Pemberitahuan" aria-label="Tutup">✕</button>
     </div>
   </aside>
@@ -954,8 +947,21 @@
         <div class="footer-view-mode-row">
           <div class="view-mode-switch-wrapper" id="viewModeSelector">
             <span class="view-mode-label" data-i18n="view_mode_label">Tampilan Website:</span>
-            <button type="button" id="btnViewDesktop" class="view-mode-btn active" data-i18n="view_mode_desktop" title="Gunakan Tampilan Desktop (Default)">🖥️ Desktop (Default)</button>
-            <button type="button" id="btnViewMobile" class="view-mode-btn" data-i18n="view_mode_mobile" title="Gunakan Tampilan Mobile (Cadangan)">📱 Mobile (Cadangan)</button>
+            <button type="button" id="btnViewDesktop" class="view-mode-btn active" title="Gunakan Tampilan Desktop (Default)">
+              <svg class="view-mode-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              <span data-i18n="view_mode_desktop">Desktop (Default)</span>
+            </button>
+            <button type="button" id="btnViewMobile" class="view-mode-btn" title="Gunakan Tampilan Mobile (Cadangan)">
+              <svg class="view-mode-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+              <span data-i18n="view_mode_mobile">Mobile (Cadangan)</span>
+            </button>
           </div>
         </div>
 
@@ -1071,8 +1077,21 @@
           <div class="view-mode-switch-wrapper" style="margin-top: 12px; width: 100%; justify-content: space-between;">
             <span class="view-mode-label" data-i18n="view_mode_label">Tampilan:</span>
             <div style="display: inline-flex; gap: 4px;">
-              <button type="button" id="drawerBtnViewDesktop" class="view-mode-btn active" data-i18n="view_mode_desktop" title="Gunakan Tampilan Desktop (Default)">🖥️ Desktop</button>
-              <button type="button" id="drawerBtnViewMobile" class="view-mode-btn" data-i18n="view_mode_mobile" title="Gunakan Tampilan Mobile (Cadangan)">📱 Mobile</button>
+              <button type="button" id="drawerBtnViewDesktop" class="view-mode-btn active" title="Gunakan Tampilan Desktop (Default)">
+                <svg class="view-mode-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+                <span data-i18n="view_mode_desktop">Desktop</span>
+              </button>
+              <button type="button" id="drawerBtnViewMobile" class="view-mode-btn" title="Gunakan Tampilan Mobile (Cadangan)">
+                <svg class="view-mode-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                  <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+                <span data-i18n="view_mode_mobile">Mobile</span>
+              </button>
             </div>
           </div>
         </div>
