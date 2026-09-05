@@ -1568,16 +1568,23 @@ body {
 
 .footer-bottom-credits {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   width: 100%;
-  flex-wrap: wrap;
-  gap: 12px;
+  gap: 6px;
+}
+
+.footer-bottom-credits p {
+  text-align: center;
+  margin: 0;
 }
 
 .footer-domain {
   font-family: monospace;
   color: #93c5fd;
+  text-align: center;
 }
 
 /* --------------------------------------------------------------------------
