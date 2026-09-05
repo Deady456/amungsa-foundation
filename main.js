@@ -740,28 +740,37 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
 
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (navbar) {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+          }
+
+          let currentSectionId = '';
+          const scrollPos = window.scrollY + 140;
+          for (let i = 0; i < sections.length; i++) {
+            const section = sections[i];
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            if (scrollPos >= top && scrollPos < top + height) {
+              currentSectionId = section.getAttribute('id');
+              break;
+            }
+          }
+
+          if (currentSectionId) {
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${currentSectionId}`);
+            });
+          }
+
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      let currentSectionId = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentSectionId = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSectionId}`) {
-          link.classList.add('active');
-        }
-      });
     }, { passive: true });
   }
 
@@ -1065,11 +1074,18 @@
       mouseY = normY * 16;
     }, { passive: true });
 
-    // Animation Loop
+    // Animation Loop with Visibility Optimization
     let count = 0;
+    let isHeroVisible = true;
+    let animFrameId = null;
 
     const animate = () => {
-      requestAnimationFrame(animate);
+      if (!isHeroVisible) {
+        animFrameId = null;
+        return; // Suspend 3D loop when user scrolls down to avoid GPU starvation and blank tiling
+      }
+
+      animFrameId = requestAnimationFrame(animate);
 
       count += 0.035;
 
@@ -1107,7 +1123,19 @@
       renderer.render(scene, camera);
     };
 
-    animate();
+    if ('IntersectionObserver' in window) {
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          isHeroVisible = entry.isIntersecting;
+          if (isHeroVisible && !animFrameId) {
+            animFrameId = requestAnimationFrame(animate);
+          }
+        });
+      }, { threshold: 0.05 });
+      heroObserver.observe(heroSection);
+    } else {
+      animate();
+    }
   }
 
   // --------------------------------------------------------------------------
