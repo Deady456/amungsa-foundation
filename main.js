@@ -249,8 +249,8 @@
       footer_t3: 'Hubungi Sekretariat',
       footer_copy: '&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). Seluruh Hak Cipta Dilindungi.',
       view_mode_label: 'Tampilan:',
-      view_mode_desktop: 'Desktop (Default)',
-      view_mode_mobile: 'Mobile (Cadangan)',
+      view_mode_desktop: 'Desktop',
+      view_mode_mobile: 'Mobile',
 
       // Floating Dock & Out of Screen Drawer
       float_cta_btn: 'Kolaborasi Bersama',
@@ -515,8 +515,8 @@
       footer_t3: 'Contact Secretariat',
       footer_copy: '&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). All Rights Reserved.',
       view_mode_label: 'View:',
-      view_mode_desktop: 'Desktop (Default)',
-      view_mode_mobile: 'Mobile (Backup)',
+      view_mode_desktop: 'Desktop',
+      view_mode_mobile: 'Mobile',
 
       // Floating Dock & Out of Screen Drawer
       float_cta_btn: 'Partner With Us',
