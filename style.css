@@ -148,6 +148,37 @@ body {
   text-decoration: underline;
 }
 
+.top-view-mode-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-full);
+  padding: 2px 4px;
+  margin-left: 10px;
+}
+
+.top-view-mode-switch .view-mode-btn {
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  color: #e0f2fe;
+  border-radius: var(--radius-full);
+  line-height: 1.2;
+}
+
+.top-view-mode-switch .view-mode-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.top-view-mode-switch .view-mode-btn.active {
+  background: #ffffff;
+  color: #1e3a8a !important;
+  font-weight: 800;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
 .announcement-close {
   position: absolute;
   right: 1.5rem;
@@ -1514,17 +1545,34 @@ body {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 1.5rem 0;
+  padding: 2.2rem 0 7rem 0; /* Extra clearance ensures floating collab button never covers footer elements */
   font-size: 0.78rem;
   color: var(--color-text-subtle);
+  position: relative;
+  z-index: 10;
 }
 
 .footer-bottom-inner {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.footer-view-mode-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-bottom-credits {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-domain {

@@ -568,6 +568,8 @@
     const metaViewport = document.getElementById('viewportMeta') || document.querySelector('meta[name="viewport"]');
     const btnDesktop = document.getElementById('btnViewDesktop');
     const btnMobile = document.getElementById('btnViewMobile');
+    const topBtnDesktop = document.getElementById('topBtnViewDesktop');
+    const topBtnMobile = document.getElementById('topBtnViewMobile');
     const drawerBtnDesktop = document.getElementById('drawerBtnViewDesktop');
     const drawerBtnMobile = document.getElementById('drawerBtnViewMobile');
 
@@ -582,10 +584,10 @@
 
     function updateButtons(mode) {
       const isDesktop = (mode === 'desktop');
-      [btnDesktop, drawerBtnDesktop].forEach(btn => {
+      [btnDesktop, topBtnDesktop, drawerBtnDesktop].forEach(btn => {
         if (btn) btn.classList.toggle('active', isDesktop);
       });
-      [btnMobile, drawerBtnMobile].forEach(btn => {
+      [btnMobile, topBtnMobile, drawerBtnMobile].forEach(btn => {
         if (btn) btn.classList.toggle('active', !isDesktop);
       });
     }
@@ -610,6 +612,8 @@
 
     if (btnDesktop) btnDesktop.addEventListener('click', () => setViewMode('desktop'));
     if (btnMobile) btnMobile.addEventListener('click', () => setViewMode('mobile'));
+    if (topBtnDesktop) topBtnDesktop.addEventListener('click', () => setViewMode('desktop'));
+    if (topBtnMobile) topBtnMobile.addEventListener('click', () => setViewMode('mobile'));
     if (drawerBtnDesktop) drawerBtnDesktop.addEventListener('click', () => setViewMode('desktop'));
     if (drawerBtnMobile) drawerBtnMobile.addEventListener('click', () => setViewMode('mobile'));
 
