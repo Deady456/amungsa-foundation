@@ -248,6 +248,9 @@
       footer_t2: 'Studio Editor Foto',
       footer_t3: 'Hubungi Sekretariat',
       footer_copy: '&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). Seluruh Hak Cipta Dilindungi.',
+      view_mode_label: 'Tampilan:',
+      view_mode_desktop: '🖥️ Desktop',
+      view_mode_mobile: '📱 Mobile',
 
       // Floating Dock & Out of Screen Drawer
       float_cta_btn: 'Kolaborasi Bersama',
@@ -511,6 +514,9 @@
       footer_t2: 'Photo Studio Editor',
       footer_t3: 'Contact Secretariat',
       footer_copy: '&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). All Rights Reserved.',
+      view_mode_label: 'View:',
+      view_mode_desktop: '🖥️ Desktop',
+      view_mode_mobile: '📱 Mobile',
 
       // Floating Dock & Out of Screen Drawer
       float_cta_btn: 'Partner With Us',
@@ -541,6 +547,7 @@
   let currentTheme = localStorage.getItem('amungsa_theme') || 'dark';
 
   document.addEventListener('DOMContentLoaded', () => {
+    initViewMode();
     initThemeToggle();
     initLanguageSwitcher();
     initNavbar();
@@ -553,6 +560,62 @@
     init3DCardTilt();
     initCollabDrawer();
   });
+
+  // --------------------------------------------------------------------------
+  // View Mode Engine (Default: Desktop Site, Mobile on demand)
+  // --------------------------------------------------------------------------
+  function initViewMode() {
+    const metaViewport = document.getElementById('viewportMeta') || document.querySelector('meta[name="viewport"]');
+    const btnDesktop = document.getElementById('btnViewDesktop');
+    const btnMobile = document.getElementById('btnViewMobile');
+    const drawerBtnDesktop = document.getElementById('drawerBtnViewDesktop');
+    const drawerBtnMobile = document.getElementById('drawerBtnViewMobile');
+
+    // Default to 'desktop' unless visitor explicitly selected 'mobile'
+    let currentMode = 'desktop';
+    try {
+      const saved = localStorage.getItem('amungsa_view_mode');
+      if (saved === 'mobile') {
+        currentMode = 'mobile';
+      }
+    } catch (e) {}
+
+    function updateButtons(mode) {
+      const isDesktop = (mode === 'desktop');
+      [btnDesktop, drawerBtnDesktop].forEach(btn => {
+        if (btn) btn.classList.toggle('active', isDesktop);
+      });
+      [btnMobile, drawerBtnMobile].forEach(btn => {
+        if (btn) btn.classList.toggle('active', !isDesktop);
+      });
+    }
+
+    function setViewMode(mode, save = true) {
+      currentMode = mode;
+      if (mode === 'mobile') {
+        if (metaViewport) metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+        document.documentElement.setAttribute('data-view-mode', 'mobile');
+      } else {
+        // Desktop Default: Fixed 1240 viewport forces mobile browsers to render full desktop site
+        if (metaViewport) metaViewport.setAttribute('content', 'width=1240');
+        document.documentElement.setAttribute('data-view-mode', 'desktop');
+      }
+      updateButtons(mode);
+      if (save) {
+        try {
+          localStorage.setItem('amungsa_view_mode', mode);
+        } catch (e) {}
+      }
+    }
+
+    if (btnDesktop) btnDesktop.addEventListener('click', () => setViewMode('desktop'));
+    if (btnMobile) btnMobile.addEventListener('click', () => setViewMode('mobile'));
+    if (drawerBtnDesktop) drawerBtnDesktop.addEventListener('click', () => setViewMode('desktop'));
+    if (drawerBtnMobile) drawerBtnMobile.addEventListener('click', () => setViewMode('mobile'));
+
+    // Apply mode without re-saving
+    setViewMode(currentMode, false);
+  }
 
   // --------------------------------------------------------------------------
   // Theme Toggle Engine (Dark & Light Mode)
