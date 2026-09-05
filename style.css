@@ -70,6 +70,9 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -78,6 +81,9 @@ body {
   color: var(--color-text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 .container {
@@ -1531,10 +1537,10 @@ body {
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .program-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .grid-2-col, .impact-box, .contact-box-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -1542,6 +1548,30 @@ body {
 }
 
 @media (max-width: 768px) {
+  .navbar .container {
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+  .brand-logo {
+    gap: 8px;
+  }
+  .brand-sub {
+    display: none;
+  }
+  .brand-name {
+    font-size: 1.15rem;
+  }
+  .logo-symbol {
+    width: 34px;
+    height: 34px;
+  }
+  .nav-actions {
+    gap: 6px;
+  }
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1554,6 +1584,26 @@ body {
   .footer-content {
     grid-template-columns: 1fr;
   }
+  .impact-box {
+    padding: 2.2rem 1.25rem;
+    gap: 2rem;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .contact-info-panel,
+  .contact-form-panel {
+    padding: 2.2rem 1.25rem;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .floating-badge-card {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+  }
 
   /* Mobile Navigation Drawer */
   .mobile-toggle {
@@ -1561,19 +1611,99 @@ body {
   }
   .nav-menu {
     position: fixed;
-    top: 74px;
+    top: 70px;
     left: 0;
     width: 100%;
     background-color: var(--color-bg-surface);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: column;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     gap: 1.2rem;
     display: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   }
   .nav-menu.open {
     display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar .container {
+    padding: 0 0.75rem;
+  }
+  .brand-logo {
+    gap: 6px;
+  }
+  .brand-name {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+  .logo-symbol {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  .nav-actions {
+    gap: 4px;
+  }
+  .lang-btn {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+  .mobile-toggle {
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .hero-title {
+    font-size: 1.95rem;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .impact-numbers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .stat-big, .stat-number {
+    font-size: 2.2rem;
+  }
+  .announcement-content {
+    padding: 0 1rem;
+    font-size: 0.72rem;
+  }
+  .floating-collab-dock {
+    bottom: 14px;
+    right: 14px;
+    max-width: calc(100vw - 28px);
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-name span {
+    display: none;
+  }
+  .contact-info-panel,
+  .contact-form-panel {
+    padding: 1.5rem 0.85rem;
+  }
+  .hero-title {
+    font-size: 1.7rem;
+  }
+  .impact-box {
+    padding: 1.8rem 0.85rem;
   }
 }
 
@@ -2176,6 +2306,7 @@ body {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
   transition: opacity 0.35s ease, visibility 0.35s ease;
   display: flex;
   justify-content: flex-end;
@@ -2422,8 +2553,12 @@ body {
 
 @media (max-width: 640px) {
   .floating-collab-dock {
-    bottom: 20px;
-    right: 20px;
+    bottom: 16px;
+    right: 16px;
+    max-width: calc(100vw - 32px);
+  }
+  .pulse-ring {
+    display: none;
   }
   .collab-btn-badge {
     display: none;
