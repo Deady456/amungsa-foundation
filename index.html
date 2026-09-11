@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" id="viewportMeta" content="width=1240">
@@ -16,46 +16,43 @@
       } catch(e) {}
     })();
   </script>
-  <title>Amungsa Foundation — Dari Piring Sehat, Lahir Masa Depan Hebat</title>
-  <meta name="description" content="Yayasan Amungsa Foundation (Amungsa Cares Papua) bergerak dalam pemberdayaan ketahanan pangan, budidaya bioflok, pemenuhan gizi generasi emas, dan kemitraan masyarakat di Papua Tengah.">
+  <title>Amungsa Foundation — #UntukSetiapAnak Papua: Dari Piring Sehat, Lahir Masa Depan Hebat</title>
+  <meta name="description" content="Yayasan Amungsa Foundation (Amungsa Cares Papua) bergerak dalam aksi kemanusiaan pemenuhan gizi anak balita, pencegahan stunting, ketahanan pangan bioflok, dan kemitraan masyarakat di Papua Tengah.">
 
-  <!-- Favicon Suite (SVG, ICO, Apple Touch Icon, Web Manifest) -->
+  <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta name="theme-color" content="#091428">
+  <meta name="theme-color" content="#1CABE2">
 
-  <!-- Google Fonts: Plus Jakarta Sans, Montserrat, Dancing Script -->
+  <!-- Google Fonts: Montserrat & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Three.js 3D WebGL Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <link rel="stylesheet" href="style.css?v=2.2">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3.2">
 </head>
 <body>
 
-  <!-- Top Announcement Bar (Clean & Sleek) -->
+  <!-- Top Announcement Utility Bar -->
   <aside class="announcement-bar" id="topAnnouncement">
     <div class="container announcement-content">
-      <span class="announcement-tag" data-i18n="announcement_tag">Aksi Nyata</span>
+      <span class="announcement-tag" data-i18n="announcement_tag">AKSI KEMANUSIAAN #UNTUKSETIAPANAK</span>
       <p class="announcement-text" data-i18n="announcement_text">
-        Budidaya Bioflok Lele & Nutrisi Keluarga bersama Pemuda di Prov. Papua Tengah
+        Intervensi Gizi &amp; Budidaya Bioflok Lele bersama Pemuda &amp; Dinas Kesehatan di Prov. Papua Tengah
       </p>
-      <a href="#program" class="announcement-link" data-i18n="announcement_link">Lihat Program →</a>
+      <a href="#program" class="announcement-link" data-i18n="announcement_link">Lihat Upaya Kami →</a>
       <button class="announcement-close" id="closeAnnouncement" title="Tutup Pemberitahuan" aria-label="Tutup">✕</button>
     </div>
   </aside>
 
-  <!-- Navigation Bar (Ultra-Clean & Streamlined) -->
+  <!-- Navigation Bar (UNICEF Standard Clean Header) -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="brand-logo" aria-label="Beranda Amungsa Foundation">
-        <!-- SVG Emblem Amungsa Cares -->
+        <!-- SVG Emblem Amungsa Cares in UNICEF Cyan -->
         <div class="logo-symbol">
           <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round">
             <path d="M50 14 C 30 14 14 30 14 50 L 14 84" />
@@ -68,25 +65,29 @@
         </div>
         <div class="brand-text">
           <span class="brand-name">Amungsa <span>Foundation</span></span>
-          <span class="brand-sub">Amungsa Cares Papua</span>
+          <span class="brand-sub" data-i18n="nav_brand_sub">#UntukSetiapAnak Papua &middot; Amungsa Cares</span>
         </div>
       </a>
 
-      <!-- Streamlined Nav Menu -->
+      <!-- UNICEF Streamlined Nav Menu -->
       <nav class="nav-menu" id="navMenu">
         <a href="#beranda" class="nav-link active" data-i18n="nav_home">Beranda</a>
-        <a href="#tentang" class="nav-link" data-i18n="nav_about">Tentang</a>
-        <a href="#tokoh" class="nav-link" data-i18n="nav_team">Tokoh</a>
-        <a href="#program" class="nav-link" data-i18n="nav_program">Program</a>
-        <a href="#mitra" class="nav-link" data-i18n="nav_partners">Mitra</a>
+        <a href="#program" class="nav-link" data-i18n="nav_program">Upaya Kami</a>
+        <a href="#cerita" class="nav-link" data-i18n="nav_news">Cerita Lapangan</a>
         <a href="#dampak" class="nav-link" data-i18n="nav_impact">Dampak</a>
+        <a href="#dukungan" class="nav-link" data-i18n="nav_take_action">Ambil Bagian</a>
+        <a href="#tentang" class="nav-link" data-i18n="nav_about">Tentang &amp; Tokoh</a>
+        <a href="#mitra" class="nav-link" data-i18n="nav_partners">Mitra</a>
         <a href="#galeri" class="nav-link" data-i18n="nav_gallery">Galeri</a>
-        <a href="#berita" class="nav-link" data-i18n="nav_news">Berita</a>
         <a href="#kontak" class="nav-link" data-i18n="nav_contact">Kontak</a>
       </nav>
 
-      <!-- Right Action: Theme Switcher, Language Switcher & Mobile Trigger -->
+      <!-- Right Actions: UNICEF High-Conversion Yellow CTA, Theme Switcher & Language Switcher -->
       <div class="nav-actions">
+        <a href="#dukungan" class="btn btn-unicef-cta" id="navCtaBtn" data-i18n="nav_cta">
+          AMBIL AKSI
+        </a>
+
         <!-- Theme Switcher (Dark / Light) -->
         <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Mode Tema" title="Ganti Mode Gelap / Terang">
           <span class="theme-icon theme-icon-dark" aria-hidden="true">🌙</span>
@@ -106,613 +107,213 @@
     </div>
   </header>
 
-  <!-- HERO SECTION WITH INTERACTIVE 3D WEBGL STAGE -->
-  <section class="hero-section" id="beranda">
-    <!-- Interactive 3D Three.js Canvas -->
-    <canvas id="webglHeroCanvas" class="webgl-hero-canvas"></canvas>
-    <div class="hero-overlay"></div>
-    <div class="hero-pattern"></div>
+  <!-- HERO SECTION (AUTHENTIC UNICEF PHOTOJOURNALISM HERO BANNER) -->
+  <section class="unicef-hero-section" id="beranda">
+    <div class="container unicef-hero-container">
+      <div class="unicef-hero-stage">
+        <!-- Prominent Photojournalism Field Photo -->
+        <div class="unicef-hero-media">
+          <img src="images/panen-lele-stunting-dinkes.jpg" alt="Penyaluran 90 kg Ikan Lele Program Anti-Stunting Dinas Kesehatan Mimika" class="unicef-hero-img">
+          <div class="unicef-hero-overlay-shade"></div>
+          <div class="unicef-photo-credit-badge">
+            <span class="credit-camera-icon">📷</span>
+            <span>Foto: &copy; Amungsa Cares / Mimika &middot; Penyaluran Lele Anti-Stunting</span>
+          </div>
+        </div>
 
-    <div class="container hero-container">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        <span data-i18n="hero_badge">Gerakan Kemandirian Pangan & Generasi Emas Papua</span>
+        <!-- Signature UNICEF White Editorial Card -->
+        <div class="unicef-editorial-card">
+          <div class="unicef-card-kicker">
+            <span class="kicker-pulse"></span>
+            <span data-i18n="hero_badge">#UNTUKSETIAPANAK &middot; KESEHATAN &amp; GIZI PAPUA</span>
+          </div>
+
+          <h1 class="unicef-card-title">
+            <span data-i18n="hero_title_1">Dari Piring Sehat,</span><br>
+            <span class="unicef-cyan-text" data-i18n="hero_title_2">Lahir Masa Depan Hebat.</span>
+          </h1>
+
+          <p class="unicef-card-desc" data-i18n="hero_desc">
+            Yayasan <strong>Amungsa Foundation</strong> (Amungsa Cares Papua) bergerak bersama kelompok pemuda dan Dinas Kesehatan untuk membebaskan balita dari stunting melalui nutrisi protein hewani lele segar dan kemandirian pangan lokal berkelanjutan.
+          </p>
+
+          <div class="unicef-card-actions">
+            <a href="#dukungan" class="btn btn-unicef-yellow btn-lg" data-i18n="hero_btn_action">
+              AMBIL BAGIAN SEKARANG
+            </a>
+            <a href="#program" class="btn btn-unicef-outline btn-lg" data-i18n="hero_btn_program">
+              Pelajari Upaya Kami &rarr;
+            </a>
+          </div>
+
+          <div class="unicef-card-meta">
+            <span class="meta-pill-cyan">Aksi Lapangan Dinkes</span>
+            <span class="meta-pill-white"><strong>90+ Kg</strong> Lele Terdistribusi</span>
+            <span class="meta-pill-muted">&bull; Mimika, Papua Tengah</span>
+          </div>
+        </div>
       </div>
 
-      <h1 class="hero-title">
-        <span data-i18n="hero_title_1">Dari Piring Sehat,</span><br>
-        <span class="hero-highlight" data-i18n="hero_title_2">Lahir Masa Depan Hebat.</span>
-      </h1>
+      <!-- Quick Evidence-Based Impact Counters -->
+      <div class="unicef-impact-strip">
+        <div class="impact-strip-card">
+          <div class="strip-num-wrap">
+            <span class="stat-number" data-target="50">50</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="strip-label" data-i18n="stat_pools">Kolam Bioflok Aktif</span>
+        </div>
+        <div class="impact-strip-card">
+          <div class="strip-num-wrap">
+            <span class="stat-number" data-target="1500">1.500</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="strip-label" data-i18n="stat_beneficiaries">Balita &amp; Warga Penerima Gizi</span>
+        </div>
+        <div class="impact-strip-card">
+          <div class="strip-num-wrap">
+            <span class="stat-number" data-target="12">12</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="strip-label" data-i18n="stat_youth">Kelompok Pemuda Mitra</span>
+        </div>
+        <div class="impact-strip-card">
+          <div class="strip-num-wrap">
+            <span class="stat-number" data-target="100">100</span><span class="stat-suffix">%</span>
+          </div>
+          <span class="strip-label" data-i18n="stat_commitment">Komitmen untuk Papua</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p class="hero-description" data-i18n="hero_desc">
-        Yayasan <strong>Amungsa Foundation</strong> hadir mendampingi masyarakat di Provinsi Papua Tengah melalui inovasi budidaya perikanan bioflok, pemenuhan gizi keluarga, pemberdayaan ekonomi pemuda, serta aksi kepedulian sosial berkelanjutan.
+  <!-- UNICEF SIGNATURE MISSION RIBBON -->
+  <aside class="unicef-mission-ribbon">
+    <div class="container ribbon-inner">
+      <div class="ribbon-brand">
+        <span class="ribbon-tag" data-i18n="ribbon_tag">#UNTUKSETIAPANAK PAPUA &middot; FOR EVERY CHILD</span>
+      </div>
+      <p class="ribbon-text" data-i18n="ribbon_text">
+        "Setiap anak di Papua berhak atas nutrisi protein terbaik, tumbuh kembang yang sehat, dan masa depan yang tangguh."
       </p>
-
-      <div class="hero-actions">
-        <a href="#program" class="btn btn-primary btn-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="m9 18 6-6-6-6"/>
-          </svg>
-          <span data-i18n="hero_btn_program">Jelajahi Program Kami</span>
-        </a>
-        <a href="#kontak" class="btn btn-secondary btn-lg" data-i18n="hero_btn_contact">
-          Hubungi Tim Yayasan
-        </a>
-      </div>
-
-      <!-- Quick Stats Strip -->
-      <div class="hero-stats">
-        <div class="stat-card">
-          <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label" data-i18n="stat_pools">Kolam Bioflok Aktif</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="1500">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label" data-i18n="stat_beneficiaries">Penerima Manfaat Gizi</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="12">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label" data-i18n="stat_youth">Komunitas Pemuda Mitra</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
-          <span class="stat-label" data-i18n="stat_commitment">Komitmen untuk Papua</span>
-        </div>
-      </div>
+      <a href="#dukungan" class="ribbon-cta" data-i18n="ribbon_cta">
+        Ambil Bagian Sekarang &rarr;
+      </a>
     </div>
-  </section>
+  </aside>
 
-  <!-- TENTANG KAMI (ABOUT US) -->
-  <section class="section section-about" id="tentang">
-    <div class="container">
-      <div class="grid-2-col">
-        <div class="about-visual">
-          <div class="about-image-card">
-            <img loading="lazy" decoding="async" src="images/amungsa-cover-collage.jpg" alt="Dokumentasi Amungsa Cares Papua" class="about-real-img">
-            <div class="image-mockup-wrapper">
-              <div class="image-badge" data-i18n="badge_papua_tengah">Papua Tengah</div>
-              <div class="mockup-content">
-                <div class="mockup-quote font-script" data-i18n="about_quote">"Dari Piring Sehat, Lahir Masa Depan Hebat"</div>
-                <div class="mockup-sub" data-i18n="about_sub">Pembudidaya & Relawan Lapangan Amungsa Foundation</div>
-              </div>
-            </div>
-          </div>
-          <!-- Overlapping Card -->
-          <div class="floating-badge-card">
-            <div class="floating-icon">🌱</div>
-            <div>
-              <strong data-i18n="about_badge_title">Kearifan Lokal & Teknologi</strong>
-              <small data-i18n="about_badge_sub">Bioflok ramah lingkungan di dataran Papua</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-text">
-          <span class="section-tag" data-i18n="about_tag">Tentang Amungsa Foundation</span>
-          <h2 class="section-title" data-i18n="about_title">Merajut Harapan dari Bumi Cenderawasih</h2>
-          <p class="section-body" data-i18n="about_body_1">
-            Amungsa Foundation lahir dari kepedulian mendalam terhadap potensi sumber daya alam dan kualitas hidup anak-anak serta keluarga di Provinsi Papua Tengah. 
-          </p>
-          <p class="section-body" data-i18n="about_body_2">
-            Melalui payung gerakan <strong>Amungsa Cares</strong>, kami memadukan teknologi budidaya air tawar (bioflok lele) yang efisien dengan program edukasi gizi piring sehat, mendampingi para pemuda dan kelompok petani lokal untuk berdaya secara mandiri.
-          </p>
-
-          <!-- Core Values -->
-          <div class="core-values">
-            <div class="value-item">
-              <div class="value-icon">🐟</div>
-              <div>
-                <h4 data-i18n="val_1_title">Kemandirian Pangan</h4>
-                <p data-i18n="val_1_desc">Membudidayakan sumber protein hewani berkualitas tinggi langsung di lingkungan warga.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🥗</div>
-              <div>
-                <h4 data-i18n="val_2_title">Gizi Generasi Emas</h4>
-                <p data-i18n="val_2_desc">Mencegah stunting dengan memastikan piring anak-anak kaya nutrisi dan protein seimbang.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🤝</div>
-              <div>
-                <h4 data-i18n="val_3_title">Kemitraan Pemuda</h4>
-                <p data-i18n="val_3_desc">Menggandeng organisasi pemuda lokal seperti Pemuda Muslimin Indonesia (PMI) Papua Tengah.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROFIL TOKOH & PELAKU DI BALIK AMUNGSA FOUNDATION -->
-  <section class="section section-team" id="tokoh">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag" data-i18n="team_tag">Tokoh Penggerak</span>
-        <h2 class="section-title" data-i18n="team_title">Pelaku di Balik Amungsa Foundation</h2>
-        <p class="section-subtitle" data-i18n="team_subtitle">
-          Mengenal inisiator, dewan pembina, dan para pejuang lapangan yang mendedikasikan tenaga serta visi untuk kemandirian masyarakat Papua Tengah.
-        </p>
-      </div>
-
-      <div class="team-grid">
-        <!-- Tokoh 1: dr. Enny Kenangalem, M. Biomed. -->
-        <div class="team-card">
-          <div class="team-avatar-wrapper">
-            <div class="team-avatar avatar-real">
-              <img loading="lazy" decoding="async" src="images/foto-dr-enny-kenangalem.jpg" alt="dr. Enny Kenangalem, M. Biomed." class="team-real-photo">
-              <span class="avatar-tag" data-i18n="team_1_tag">Ketua Yayasan</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">dr. Enny Kenangalem, M. Biomed.</h3>
-            <span class="team-role" data-i18n="team_1_role">Ketua Yayasan &middot; Ketua IDI Mimika</span>
-            <p class="team-bio" data-i18n="team_1_bio">
-              Dokter dan akademisi biomedis putri asli suku Amungme. Ketua IDI Mimika (2025–2028) dan peneliti kesehatan masyarakat yang mendedikasikan ilmunya untuk intervensi gizi protein anak dan pencegahan stunting di Papua Tengah.
-            </p>
-            <div class="team-badge font-script" data-i18n="team_1_badge">"Katalisator Pembangunan & Gizi Papua"</div>
-          </div>
-        </div>
-
-        <!-- Tokoh 2: Febian Kakisina -->
-        <div class="team-card">
-          <div class="team-avatar-wrapper">
-            <div class="team-avatar avatar-real">
-              <img loading="lazy" decoding="async" src="images/foto-febian-kakisina.jpg" alt="Febian Kakisina" class="team-real-photo">
-              <span class="avatar-tag" data-i18n="team_2_tag">Sekretaris</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Febian Kakisina</h3>
-            <span class="team-role" data-i18n="team_2_role">Sekretaris Yayasan &middot; Sutradara Dokumenter</span>
-            <p class="team-bio" data-i18n="team_2_bio">
-              Sineas peraih Best Short Documentary Eagle Awards (*Mama Amamapare*). Mengawal manajemen kemitraan yayasan bersama PMI, pemerintah daerah, dan kelompok masyarakat untuk menyukseskan program pembangunan daerah.
-            </p>
-            <div class="team-badge font-script" data-i18n="team_2_badge">"Sinergi Nyata Mengawal Pembangunan"</div>
-          </div>
-        </div>
-
-        <!-- Tokoh 3: Marlan Frens Kasemi Bisay -->
-        <div class="team-card">
-          <div class="team-avatar-wrapper">
-            <div class="team-avatar avatar-real">
-              <img loading="lazy" decoding="async" src="images/foto-marlan-bisay.jpg" alt="Marlan Frens Kasemi Bisay" class="team-real-photo">
-              <span class="avatar-tag" data-i18n="team_3_tag">Dewan Pembina</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Marlan Frens Kasemi Bisay</h3>
-            <span class="team-role" data-i18n="team_3_role">Inisiator & Pembina Yayasan</span>
-            <p class="team-bio" data-i18n="team_3_bio">
-              Tokoh inisiator pemuda Papua (eks Koordinator Bidang Pendidikan & Kesehatan Papua Muda Inspiratif Mimika). Mengadvokasi pemberdayaan potensi pemuda dan kekuatan sumber daya lokal agar mandiri secara ekonomi.
-            </p>
-            <div class="team-badge font-script" data-i18n="team_3_badge">"Mengoptimalkan Kekuatan Sumber Daya Lokal"</div>
-          </div>
-        </div>
-
-        <!-- Tokoh 4: Djasiyo -->
-        <div class="team-card">
-          <div class="team-avatar-wrapper">
-            <div class="team-avatar avatar-real">
-              <img loading="lazy" decoding="async" src="images/foto-djasiyo.jpg" alt="Djasiyo" class="team-real-photo">
-              <span class="avatar-tag" data-i18n="team_4_tag">Mitra Pembudidaya</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Djasiyo</h3>
-            <span class="team-role" data-i18n="team_4_role">Ketua Kelompok Perikanan Bina Utama Maju</span>
-            <p class="team-bio" data-i18n="team_4_bio">
-              Praktisi pembudidaya ikan air tawar di SP3 Mimika sejak 2015. Memimpin 10 petani kolam lele, patin, nila, dan gurame, serta aktif memperjuangkan akses komoditas petani lokal ke rantai pasok perusahaan besar di Mimika.
-            </p>
-            <div class="team-badge font-script" data-i18n="team_4_badge">"Pemberdayaan Nyata Petani Kolam Lokal"</div>
-          </div>
-        </div>
-
-        <!-- Tokoh 5: Rahadian Rizky Putra -->
-        <div class="team-card">
-          <div class="team-avatar-wrapper">
-            <div class="team-avatar avatar-real">
-              <img loading="lazy" decoding="async" src="images/foto-rahadian-putra.jpg" alt="Rahadian Rizky Putra" class="team-real-photo">
-              <span class="avatar-tag" data-i18n="team_5_tag">Mitra Advokasi</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Rahadian Rizky Putra</h3>
-            <span class="team-role" data-i18n="team_5_role">Ketua PW PMI Provinsi Papua Tengah</span>
-            <p class="team-bio" data-i18n="team_5_bio">
-              Tokoh pemuda yang turun langsung mengawal aspirasi petani kolam lokal dan mengadvokasi regulasi penyerapan komoditas lokal oleh industri dan perusahaan besar ke meja legislatif DPRK Mimika.
-            </p>
-            <div class="team-badge font-script" data-i18n="team_5_badge">"Membawa Aspirasi Petani ke Meja Dewan"</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PILAR PROGRAM UNGGULAN -->
+  <!-- UPAYA KAMI (UNICEF 4-PILLAR FOCUS AREAS) -->
   <section class="section section-program" id="program">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag" data-i18n="program_tag">Program Unggulan</span>
-        <h2 class="section-title" data-i18n="program_title">Inisiatif Nyata Membangun Masa Depan</h2>
+        <span class="section-tag" data-i18n="program_tag">Upaya Kami</span>
+        <h2 class="section-title" data-i18n="program_title">Membangun Ketahanan Gizi &amp; Kemandirian Generasi Papua</h2>
         <p class="section-subtitle" data-i18n="program_subtitle">
-          Empat pilar program terpadu untuk mendorong kesejahteraan, kesehatan nutrisi, dan ketrampilan masyarakat Papua Tengah.
+          Empat pilar program terpadu untuk memastikan kesehatan nutrisi balita, kemandirian pangan lokal, dan kecakapan pemuda di Papua Tengah.
         </p>
       </div>
 
-      <div class="program-grid">
-        <!-- Program 1 -->
-        <div class="program-card">
-          <div class="program-banner program-banner-1">
-            <img loading="lazy" decoding="async" src="images/amungsa-kolam-bioflok.jpg" alt="Bioflok Lele Amungsa Foundation" class="program-img-bg">
-            <span class="program-pill" data-i18n="prog_1_pill">Pilar Pangan</span>
-            <div class="program-icon-wrap">🐟</div>
+      <div class="unicef-program-grid">
+        <!-- Pillar 1: Health & Nutrition -->
+        <article class="unicef-program-card">
+          <div class="unicef-card-media">
+            <img src="images/amungsa-panen-lele.jpg" alt="Gerakan Piring Sehat Papua" class="unicef-card-img">
+            <span class="unicef-media-tag" data-i18n="prog_2_pill">Gizi &amp; Kesehatan</span>
           </div>
-          <div class="program-body">
-            <h3 class="program-title" data-i18n="prog_1_title">Budidaya Perikanan Bioflok Lele</h3>
-            <p class="program-text" data-i18n="prog_1_desc">
-              Pemanfaatan teknologi kolam terpal bulat bioflok yang hemat air, efisien pakan, dan menghasilkan panen lele kaya protein untuk konsumsi keluarga serta bernilai ekonomi tinggi.
+          <div class="unicef-card-body">
+            <span class="unicef-card-kicker">#UntukSetiapAnak &middot; Nutrisi</span>
+            <h3 class="unicef-card-title" data-i18n="prog_2_title">Gerakan Piring Sehat Papua</h3>
+            <p class="unicef-card-snippet" data-i18n="prog_2_desc">
+              Kampanye gizi seimbang balita dengan slogan <em>"Dari Piring Sehat, Lahir Masa Depan Hebat"</em> guna mencegah dan menekan angka stunting anak melalui asupan protein ikan segar.
             </p>
-            <ul class="program-points">
-              <li data-i18n="prog_1_point_1">Instalasi kolam terpal bioflok terstandar</li>
-              <li data-i18n="prog_1_point_2">Pemberian bibit unggul & pendampingan pakan</li>
-              <li data-i18n="prog_1_point_3">Pelatihan teknis pemeliharaan & sirkulasi air</li>
-            </ul>
+            <a href="#dukungan" class="unicef-card-link" data-i18n="prog_learn_more">Pelajari Upaya Ini &rarr;</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Program 2 -->
-        <div class="program-card">
-          <div class="program-banner program-banner-2">
-            <img loading="lazy" decoding="async" src="images/amungsa-panen-lele.jpg" alt="Gerakan Piring Sehat Papua" class="program-img-bg">
-            <span class="program-pill" data-i18n="prog_2_pill">Pilar Kesehatan</span>
-            <div class="program-icon-wrap">🥗</div>
+        <!-- Pillar 2: Sustainable Food Security -->
+        <article class="unicef-program-card">
+          <div class="unicef-card-media">
+            <img src="images/amungsa-kolam-bioflok.jpg" alt="Bioflok Lele Amungsa Foundation" class="unicef-card-img">
+            <span class="unicef-media-tag" data-i18n="prog_1_pill">Ketahanan Pangan</span>
           </div>
-          <div class="program-body">
-            <h3 class="program-title" data-i18n="prog_2_title">Gerakan Piring Sehat Papua</h3>
-            <p class="program-text" data-i18n="prog_2_desc">
-              Kampanye pemenuhan gizi seimbang dengan slogan <em>"Dari Piring Sehat, Lahir Masa Depan Hebat"</em> untuk mencegah stunting dan meningkatkan tumbuh kembang anak-anak Papua.
+          <div class="unicef-card-body">
+            <span class="unicef-card-kicker">#UntukSetiapAnak &middot; Pangan</span>
+            <h3 class="unicef-card-title" data-i18n="prog_1_title">Budidaya Perikanan Bioflok Lele</h3>
+            <p class="unicef-card-snippet" data-i18n="prog_1_desc">
+              Pemanfaatan teknologi kolam bulat bioflok yang hemat air dan efisien pakan untuk memproduksi protein hewani bergizi tinggi dan bernilai ekonomi bagi keluarga.
             </p>
-            <ul class="program-points">
-              <li data-i18n="prog_2_point_1">Penyediaan olahan ikan segar untuk balita</li>
-              <li data-i18n="prog_2_point_2">Edukasi gizi bagi ibu dan keluarga</li>
-              <li data-i18n="prog_2_point_3">Pengukuran tumbuh kembang rutin di komunitas</li>
-            </ul>
+            <a href="#dukungan" class="unicef-card-link" data-i18n="prog_learn_more">Pelajari Upaya Ini &rarr;</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Program 3 -->
-        <div class="program-card">
-          <div class="program-banner program-banner-3">
-            <img loading="lazy" decoding="async" src="images/amungsa-tim-lapangan.jpg" alt="Kemitraan Pemuda Papua Tengah" class="program-img-bg">
-            <span class="program-pill" data-i18n="prog_3_pill">Pilar Vokasi</span>
-            <div class="program-icon-wrap">🤝</div>
+        <!-- Pillar 3: Youth Skills & Empowerment -->
+        <article class="unicef-program-card">
+          <div class="unicef-card-media">
+            <img src="images/amungsa-tim-lapangan.jpg" alt="Kemitraan Pemuda Papua Tengah" class="unicef-card-img">
+            <span class="unicef-media-tag" data-i18n="prog_3_pill">Vokasi &amp; Pemuda</span>
           </div>
-          <div class="program-body">
-            <h3 class="program-title" data-i18n="prog_3_title">Kemitraan Pemuda & Vokasi</h3>
-            <p class="program-text" data-i18n="prog_3_desc">
-              Kolaborasi aktif bersama organisasi pemuda (seperti Pemuda Muslimin Indonesia - PMI Papua Tengah) dalam mencetak wirausaha muda di sektor perikanan dan agrikultur.
+          <div class="unicef-card-body">
+            <span class="unicef-card-kicker">#UntukSetiapAnak &middot; Masa Depan</span>
+            <h3 class="unicef-card-title" data-i18n="prog_3_title">Kemitraan Pemuda &amp; Vokasi</h3>
+            <p class="unicef-card-snippet" data-i18n="prog_3_desc">
+              Kolaborasi aktif bersama Pemuda Muslimin Indonesia (PMI) Papua Tengah dalam mencetak wirausaha muda mandiri di sektor perikanan air tawar dan agrikultur.
             </p>
-            <ul class="program-points">
-              <li data-i18n="prog_3_point_1">Pelatihan kewirausahaan budidaya air tawar</li>
-              <li data-i18n="prog_3_point_2">Penyaluran sarana produksi perikanan</li>
-              <li data-i18n="prog_3_point_3">Jejaring pemasaran hasil panen kelompok</li>
-            </ul>
+            <a href="#dukungan" class="unicef-card-link" data-i18n="prog_learn_more">Pelajari Upaya Ini &rarr;</a>
           </div>
-        </div>
+        </article>
 
-        <!-- Program 4 -->
-        <div class="program-card">
-          <div class="program-banner program-banner-4">
-            <img loading="lazy" decoding="async" src="images/amungsa-sortir-lele.jpg" alt="Amungsa Cares Peduli" class="program-img-bg">
-            <span class="program-pill" data-i18n="prog_4_pill">Pilar Sosial</span>
-            <div class="program-icon-wrap">💙</div>
+        <!-- Pillar 4: Social Protection & Care -->
+        <article class="unicef-program-card">
+          <div class="unicef-card-media">
+            <img src="images/amungsa-sortir-lele.jpg" alt="Amungsa Cares Peduli" class="unicef-card-img">
+            <span class="unicef-media-tag" data-i18n="prog_4_pill">Perlindungan Sosial</span>
           </div>
-          <div class="program-body">
-            <h3 class="program-title" data-i18n="prog_4_title">Amungsa Cares Peduli</h3>
-            <p class="program-text" data-i18n="prog_4_desc">
-              Aksi tanggap sosial kemanusiaan, bantuan logistik masyarakat pelosok, dan pendampingan kesejahteraan sosial bagi keluarga rentan di pedalaman Papua Tengah.
+          <div class="unicef-card-body">
+            <span class="unicef-card-kicker">#UntukSetiapAnak &middot; Kepedulian</span>
+            <h3 class="unicef-card-title" data-i18n="prog_4_title">Amungsa Cares Peduli Sesama</h3>
+            <p class="unicef-card-snippet" data-i18n="prog_4_desc">
+              Aksi tanggap sosial kemanusiaan, bantuan paket sembako nutrisi keluarga, serta pendampingan kesejahteraan sosial bagi warga rentan di pedalaman Papua Tengah.
             </p>
-            <ul class="program-points">
-              <li data-i18n="prog_4_point_1">Bantuan paket sembako & nutrisi keluarga</li>
-              <li data-i18n="prog_4_point_2">Dukungan perlengkapan sekolah anak-anak</li>
-              <li data-i18n="prog_4_point_3">Tanggap darurat bencana dan krisis sosial</li>
-            </ul>
+            <a href="#dukungan" class="unicef-card-link" data-i18n="prog_learn_more">Pelajari Upaya Ini &rarr;</a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- IMPACT COUNTER & TESTIMONI SINGKAT -->
-  <section class="section section-impact" id="dampak">
-    <div class="container">
-      <div class="impact-box">
-        <div class="impact-content">
-          <span class="section-tag-light" data-i18n="impact_tag">Dampak Nyata</span>
-          <h2 class="impact-title" data-i18n="impact_title">Bersama Menghadirkan Perubahan Berkelanjutan</h2>
-          <p class="impact-desc" data-i18n="impact_desc">
-            Setiap kolam yang terbangun dan setiap porsi makanan bergizi yang disajikan adalah langkah nyata menuju generasi Papua yang sehat, tangguh, dan berdaya saing.
-          </p>
-        </div>
-
-        <div class="impact-numbers-grid">
-          <div class="impact-stat-item">
-            <div class="stat-big">50+</div>
-            <div class="stat-name" data-i18n="stat_name_1">Titik Kolam Bioflok</div>
-            <p class="stat-sub" data-i18n="stat_sub_1">Tersebar di kelompok binaan pemuda & warga</p>
-          </div>
-          <div class="impact-stat-item">
-            <div class="stat-big">15.000+</div>
-            <div class="stat-name" data-i18n="stat_name_2">Bibit Lele Unggul</div>
-            <p class="stat-sub" data-i18n="stat_sub_2">Telah ditebar dan dipanen bersama</p>
-          </div>
-          <div class="impact-stat-item">
-            <div class="stat-big">1.500+</div>
-            <div class="stat-name" data-i18n="stat_name_3">Penerima Asupan Nutrisi</div>
-            <p class="stat-sub" data-i18n="stat_sub_3">Anak dan keluarga mendapatkan manfaat gizi</p>
-          </div>
-          <div class="impact-stat-item">
-            <div class="stat-big">8+</div>
-            <div class="stat-name" data-i18n="stat_name_4">Mitra Strategis</div>
-            <p class="stat-sub" data-i18n="stat_sub_4">Organisasi kemasyarakatan & komunitas lokal</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MITRA KERJA SAMA: PEMERINTAH, MEDIA GALERI PAPUA & KOMUNITAS -->
-  <section class="section section-partners" id="mitra">
+  <!-- CERITA DARI LAPANGAN (UNICEF EDITORIAL STORIES MOSAIC) -->
+  <section class="section section-news" id="cerita">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag" data-i18n="partners_tag">Kolaborasi Strategis</span>
-        <h2 class="section-title" data-i18n="partners_title">Mitra Kerja Sama Kami</h2>
-        <p class="section-subtitle" data-i18n="partners_subtitle">
-          Sinergi berkelanjutan bersama lembaga pemerintah, media partner Galeri Papua, dan organisasi masyarakat dalam mendorong kemajuan Papua Tengah.
-        </p>
-      </div>
-
-      <div class="partners-grid">
-        <!-- Mitra 1: Pemerintah Provinsi Papua Tengah -->
-        <div class="partner-card partner-government">
-          <div class="partner-header">
-            <img loading="lazy" decoding="async" src="images/logo-papua-tengah.png" alt="Lambang Provinsi Papua Tengah" class="partner-logo-img">
-            <div>
-              <span class="partner-category" data-i18n="partner_1_cat">Pemerintah Daerah</span>
-              <h3 class="partner-title" data-i18n="partner_1_title">Pemerintah Provinsi Papua Tengah</h3>
-            </div>
-          </div>
-          <p class="partner-desc" data-i18n="partner_1_desc">
-            Sinergi bersama instansi pemerintahan tingkat provinsi dan kabupaten (Dinas Kelautan & Perikanan, Dinas Koperasi & UMKM, Dinas Sosial) dalam sinkronisasi program ketahanan pangan daerah, bimbingan teknis budidaya perikanan darat, serta akselerasi pencegahan stunting anak.
-          </p>
-          <ul class="partner-collab-list">
-            <li data-i18n="partner_1_bullet_1">Dukungan regulasi & fasilitasi bimbingan teknis kelompok tani perikanan</li>
-            <li data-i18n="partner_1_bullet_2">Sinergi program penanganan gizi spesifik keluarga rentan</li>
-            <li data-i18n="partner_1_bullet_3">Pemberdayaan ekonomi mikro keluarga pembudidaya lokal</li>
-          </ul>
-        </div>
-
-        <!-- Mitra 2: Media Partner Galeri Papua -->
-        <div class="partner-card partner-media">
-          <div class="partner-header">
-            <img loading="lazy" decoding="async" src="images/logo-galeri-papua.jpg" alt="Logo Galeri Papua" class="partner-logo-img">
-            <div>
-              <span class="partner-category" data-i18n="partner_2_cat">Media Partner Resmi</span>
-              <h3 class="partner-title" data-i18n="partner_2_title">Galeri Papua (Media Galeri Papua)</h3>
-            </div>
-          </div>
-          <p class="partner-desc" data-i18n="partner_2_desc">
-            Media publikasi dan dokumentasi visual terpercaya yang setia mengangkat keindahan alam, budaya, karya anak bangsa, dan geliat pembangunan di Tanah Papua. Galeri Papua berperan sebagai mitra publikasi warta kegiatan lapangan, rilis berita resmi, serta kampanye edukasi gizi ke khalayak luas.
-          </p>
-          <ul class="partner-collab-list">
-            <li data-i18n="partner_2_bullet_1">Peliputan dokumentasi visual profesional kegiatan bioflok & panen</li>
-            <li data-i18n="partner_2_bullet_2">Publikasi warta inspiratif & testimoni pembudidaya lele</li>
-            <li data-i18n="partner_2_bullet_3">Kampanye digital gerakan "Dari Piring Sehat, Lahir Masa Depan Hebat"</li>
-          </ul>
-          <div class="partner-media-badge">
-            <span data-i18n="partner_2_badge">📰 Media Partner Resmi Publikasi Papua</span>
-          </div>
-        </div>
-
-        <!-- Mitra 3: Pemuda & Komunitas -->
-        <div class="partner-card partner-youth">
-          <div class="partner-header">
-            <div class="partner-icon">🤝</div>
-            <div>
-              <span class="partner-category" data-i18n="partner_3_cat">Organisasi Kepemudaan</span>
-              <h3 class="partner-title" data-i18n="partner_3_title">Pemuda Muslimin Indonesia (PMI) Papua Tengah</h3>
-            </div>
-          </div>
-          <p class="partner-desc" data-i18n="partner_3_desc">
-            Mitra aksi lapangan yang menggerakkan pemuda milenial di Papua Tengah untuk aktif berwirausaha mandiri di sektor perikanan air tawar, gotong royong instalasi kolam bioflok, serta advokasi kebijakan pasar komoditas petani ke DPRK Mimika.
-          </p>
-          <ul class="partner-collab-list">
-            <li data-i18n="partner_3_bullet_1">Pemberdayaan pemuda pembudidaya lele mandiri</li>
-            <li data-i18n="partner_3_bullet_2">Advokasi kebijakan pasar komoditas petani ke DPRK Mimika</li>
-            <li data-i18n="partner_3_bullet_3">Gotong royong bakti kemanusiaan Amungsa Cares</li>
-          </ul>
-        </div>
-
-        <!-- Mitra 4: Dinas Kesehatan Kab. Mimika -->
-        <div class="partner-card partner-health">
-          <div class="partner-header">
-            <img loading="lazy" decoding="async" src="images/logo-kabupaten-mimika.jpg" alt="Lambang Kabupaten Mimika" class="partner-logo-img">
-            <div>
-              <span class="partner-category" data-i18n="partner_4_cat">Intervensi Gizi & Kesehatan</span>
-              <h3 class="partner-title" data-i18n="partner_4_title">Dinas Kesehatan Kabupaten Mimika</h3>
-            </div>
-          </div>
-          <p class="partner-desc" data-i18n="partner_4_desc">
-            Mitra penyerapan komoditas ikan air tawar lokal untuk pemenuhan gizi protein hewani dalam program intervensi spesifik penanganan dan pencegahan stunting pada balita dan anak-anak di Kabupaten Mimika.
-          </p>
-          <ul class="partner-collab-list">
-            <li data-i18n="partner_4_bullet_1">Penyerapan hasil panen lele segar lokal untuk program stunting</li>
-            <li data-i18n="partner_4_bullet_2">Edukasi gizi piring sehat kaya nutrisi bagi keluarga</li>
-            <li data-i18n="partner_4_bullet_3">Kolaborasi pemantauan tumbuh kembang anak generasi emas</li>
-          </ul>
-        </div>
-
-        <!-- Mitra 5: Kelompok Perikanan Bina Utama Maju SP3 -->
-        <div class="partner-card partner-farmer">
-          <div class="partner-header">
-            <div class="partner-icon">🐟</div>
-            <div>
-              <span class="partner-category" data-i18n="partner_5_cat">Sentra Budidaya Lapangan</span>
-              <h3 class="partner-title" data-i18n="partner_5_title">Kelompok Perikanan Bina Utama Maju (SP3)</h3>
-            </div>
-          </div>
-          <p class="partner-desc" data-i18n="partner_5_desc">
-            Kelompok pembudidaya perikanan air tawar di SP3 Mimika yang dipimpin oleh Bapak Djasiyo. Telah merintis budidaya lele, patin, gurame, dan bawal sejak 2015 serta menjadi sentra percontohan kemandirian pangan lokal.
-          </p>
-          <ul class="partner-collab-list">
-            <li data-i18n="partner_5_bullet_1">Pengembangan klaster kolam budidaya lele berstandar</li>
-            <li data-i18n="partner_5_bullet_2">Penyediaan bibit dan pasokan ikan konsumsi berkualitas</li>
-            <li data-i18n="partner_5_bullet_3">Kemitraan rantai pasok ke perusahaan dan pasar daerah</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOKUMENTASI & GALERI KEGIATAN -->
-  <section class="section section-gallery" id="galeri">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag" data-i18n="gallery_tag">Dokumentasi Lapangan</span>
-        <h2 class="section-title" data-i18n="gallery_title">Jejak Langkah di Tanah Papua Tengah</h2>
-        <p class="section-subtitle" data-i18n="gallery_subtitle">
-          Potret nyata kebersamaan relawan, pengurus yayasan, dan para pembudidaya lele saat beraktivitas di lapangan.
-        </p>
-
-        <!-- Gallery Filters -->
-        <div class="gallery-filter-tabs">
-          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Semua Foto</button>
-          <button class="filter-btn" data-filter="bioflok" data-i18n="filter_bioflok">Kolam Bioflok</button>
-          <button class="filter-btn" data-filter="panen" data-i18n="filter_panen">Panen Lele</button>
-          <button class="filter-btn" data-filter="kemitraan" data-i18n="filter_kemitraan">Kemitraan Pemuda</button>
-        </div>
-      </div>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- Gallery Item 1 -->
-        <div class="gallery-item" data-category="panen">
-          <div class="gallery-img-box">
-            <img loading="lazy" decoding="async" src="images/amungsa-panen-lele.jpg" alt="Panen Lele Bersama Pembudidaya" class="gallery-real-img">
-            <span class="gallery-icon-tag" data-i18n="gal_1_tag">🐟 Panen</span>
-            <div class="gallery-overlay">
-              <h4 data-i18n="gal_1_title">Panen Lele Bersama Pembudidaya</h4>
-              <p data-i18n="gal_1_desc">Proses sortir lele hasil kolam bioflok berkualitas tinggi di Papua Tengah.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 2 -->
-        <div class="gallery-item" data-category="bioflok">
-          <div class="gallery-img-box">
-            <img loading="lazy" decoding="async" src="images/amungsa-kolam-bioflok.jpg" alt="Inspeksi Kolam Bioflok" class="gallery-real-img">
-            <span class="gallery-icon-tag" data-i18n="gal_2_tag">💧 Bioflok</span>
-            <div class="gallery-overlay">
-              <h4 data-i18n="gal_2_title">Inspeksi Kolam Air Tawar</h4>
-              <p data-i18n="gal_2_desc">Pengecekan aerasi oksigen dan kesehatan ekosistem air bioflok.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 3 -->
-        <div class="gallery-item" data-category="kemitraan">
-          <div class="gallery-img-box">
-            <img loading="lazy" decoding="async" src="images/amungsa-tim-lapangan.jpg" alt="Kolaborasi bersama PMI Papua Tengah" class="gallery-real-img">
-            <span class="gallery-icon-tag" data-i18n="gal_3_tag">🤝 Kemitraan</span>
-            <div class="gallery-overlay">
-              <h4 data-i18n="gal_3_title">Kolaborasi bersama PMI Papua Tengah</h4>
-              <p data-i18n="gal_3_desc">Pemberian bibit & pelatihan budidaya pemuda muslimin lokal.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 4 -->
-        <div class="gallery-item" data-category="panen">
-          <div class="gallery-img-box">
-            <img loading="lazy" decoding="async" src="images/panen-lele-stunting-dinkes.jpg" alt="Panen Lele Program Stunting Dinkes Mimika" class="gallery-real-img">
-            <span class="gallery-icon-tag" data-i18n="gal_4_tag">🐟 Panen Dinkes</span>
-            <div class="gallery-overlay">
-              <h4 data-i18n="gal_4_title">Panen 90 Kg Lele Program Stunting</h4>
-              <p data-i18n="gal_4_desc">Amungsa Foundation & PMI membantu panen lele untuk pemenuhan gizi Dinas Kesehatan Mimika.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 5 -->
-        <div class="gallery-item" data-category="panen">
-          <div class="gallery-img-box">
-            <img loading="lazy" decoding="async" src="images/febian-djasiyo-panen.jpg" alt="Febian Kakisina & Djasiyo Panen Bersama" class="gallery-real-img">
-            <span class="gallery-icon-tag" data-i18n="gal_5_tag">🤝 Sinergi Lapangan</span>
-            <div class="gallery-overlay">
-              <h4 data-i18n="gal_5_title">Sinergi Bersama Pembudidaya</h4>
-              <p data-i18n="gal_5_desc">Sekretaris Yayasan Febian Kakisina mendampingi langsung Bapak Djasiyo di kolam SP3.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 6 -->
-        <div class="gallery-item" data-category="kemitraan">
-          <div class="gallery-img-box">
-            <img loading="lazy" decoding="async" src="images/diskusi-pmi-amungsa-petani.jpg" alt="Dialog Aspirasi Pasar Petani" class="gallery-real-img">
-            <span class="gallery-icon-tag" data-i18n="gal_6_tag">📋 Serap Aspirasi</span>
-            <div class="gallery-overlay">
-              <h4 data-i18n="gal_6_title">Dialog Aspirasi Pasar Bersama Petani</h4>
-              <p data-i18n="gal_6_desc">Mendengar langsung kebutuhan pembudidaya lokal guna didorong ke DPRK Mimika.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BERITA & KABAR TERKINI -->
-  <section class="section section-news" id="berita">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag" data-i18n="news_tag">Warta Yayasan</span>
-        <h2 class="section-title" data-i18n="news_title">Kabar & Publikasi Terkini</h2>
+        <span class="section-tag" data-i18n="news_tag">Cerita dari Lapangan</span>
+        <h2 class="section-title" data-i18n="news_title">Kisah Nyata Perubahan dari Tanah Papua</h2>
         <p class="section-subtitle" data-i18n="news_subtitle">
-          Liputan perkembangan program, rilis kemitraan, dan cerita inspiratif dari lapangan.
+          Liputan faktual perkembangan program, suara pembudidaya, dan cerita inspiratif aksi nutrisi balita di Papua Tengah.
         </p>
       </div>
 
-      <div class="news-grid">
-        <!-- News 1: Liputan Faktual YouTube Galeri Papua -->
-        <article class="news-card news-card-featured">
-          <div class="news-thumb thumb-1">
-            <img loading="lazy" decoding="async" src="images/amungsa-tim-lapangan.jpg" alt="Ikan Lokal Mimika Sulit Tembus Pasar Besar" class="news-img-bg">
-            <div class="news-date-badge">
-              <span class="date-day">04</span>
-              <span class="date-month">SEPT</span>
-              <span class="date-year">2026</span>
+      <div class="unicef-mosaic-grid">
+        <!-- Story 1: Kunker SP3 & Panen 90kg Lele -->
+        <article class="unicef-story-card">
+          <div class="unicef-story-thumb">
+            <img src="images/kunker/01_COVER_KUNKER_SP3.jpg" alt="Ikan Lokal Mimika Butuh Akses Pasar Besar" class="unicef-story-img">
+            <div class="unicef-story-date">
+              <span class="date-num">04</span>
+              <span class="date-str">SEPT 2026</span>
             </div>
-            <span class="news-category" data-i18n="news_1_cat">LIPUTAN KHUSUS &middot; ADVOKASI</span>
-            <div class="news-video-badge">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-              <span data-i18n="news_1_video_badge">Liputan Video YouTube</span>
-            </div>
+            <span class="unicef-story-kicker-tag" data-i18n="news_1_cat">LIPUTAN KHUSUS &middot; ADVOKASI PASAR</span>
           </div>
-          <div class="news-body">
-            <h3 class="news-title" data-i18n="news_1_title">
-              Ikan Lokal Mimika Butuh Akses Pasar Besar: PMI & Amungsa Foundation Siap Kawal Aspirasi Petani ke DPRK
+          <div class="unicef-story-body">
+            <h3 class="unicef-story-title" data-i18n="news_1_title">
+              Ikan Lokal Mimika Butuh Akses Pasar Besar: PMI &amp; Amungsa Siap Kawal Aspirasi Petani ke DPRK
             </h3>
-            <p class="news-snippet" data-i18n="news_1_desc">
-              Amungsa Foundation bersama Pemuda Muslimin Indonesia (PMI) Papua Tengah meninjau Kelompok Perikanan Bina Utama Maju di SP3 Mimika dan membantu memanen 90 kg ikan lele untuk program gizi stunting Dinas Kesehatan. Yayasan mendorong pembukaan rantai pasok ke perusahaan besar di Mimika.
+            <p class="unicef-story-snippet" data-i18n="news_1_desc">
+              Amungsa Foundation bersama PMI Papua Tengah meninjau Kelompok Perikanan SP3 Mimika dan memanen 90 kg lele untuk program gizi stunting Dinas Kesehatan, sekaligus memperjuangkan serapan pasar industri.
             </p>
-            <div class="news-footer news-footer-actions">
-              <span class="news-author" data-i18n="news_1_author">Warta Galeri Papua (Endy L.)</span>
-              <div class="news-links-group">
-                <a href="https://youtu.be/8Ye5Cv0Dhig" target="_blank" rel="noopener" class="news-link-yt" title="Tonton Liputan di YouTube" data-i18n="news_1_btn_yt">
-                  ▶ Tonton Video
+            <div class="unicef-story-footer">
+              <span class="story-byline" data-i18n="news_1_author">Warta Galeri Papua (Endy L.)</span>
+              <div class="story-actions">
+                <a href="https://youtu.be/8Ye5Cv0Dhig" target="_blank" rel="noopener" class="story-badge-yt" data-i18n="news_1_btn_yt">
+                  ▶ Video
                 </a>
-                <a href="https://galeripapua.com/petani-ikan-mimika-butuh-pasar-pmi-dan-amungsa-foundation-siap-dorong-ke-dprk/" target="_blank" rel="noopener" class="news-readmore" title="Baca Artikel Galeri Papua" data-i18n="news_1_btn_read">
+                <a href="https://galeripapua.com/petani-ikan-mimika-butuh-pasar-pmi-dan-amungsa-foundation-siap-dorong-ke-dprk/" target="_blank" rel="noopener" class="story-badge-read" data-i18n="news_1_btn_read">
                   Baca Berita ↗
                 </a>
               </div>
@@ -720,52 +321,50 @@
           </div>
         </article>
 
-        <!-- News 2 -->
-        <article class="news-card">
-          <div class="news-thumb thumb-2">
-            <img loading="lazy" decoding="async" src="images/amungsa-panen-lele.jpg" alt="Sosialisasi Piring Sehat Papua" class="news-img-bg">
-            <div class="news-date-badge">
-              <span class="date-day">28</span>
-              <span class="date-month" data-i18n="date_month_aug">AGU</span>
-              <span class="date-year">2026</span>
+        <!-- Story 2: Nutrition Campaign -->
+        <article class="unicef-story-card">
+          <div class="unicef-story-thumb">
+            <img src="images/amungsa-panen-lele.jpg" alt="Sosialisasi Piring Sehat Papua" class="unicef-story-img">
+            <div class="unicef-story-date">
+              <span class="date-num">28</span>
+              <span class="date-str" data-i18n="date_month_aug">AGU 2026</span>
             </div>
-            <span class="news-category" data-i18n="news_2_cat">GIZI SEHAT</span>
+            <span class="unicef-story-kicker-tag" data-i18n="news_2_cat">GIZI SEHAT #UNTUKSETIAPANAK</span>
           </div>
-          <div class="news-body">
-            <h3 class="news-title" data-i18n="news_2_title">
+          <div class="unicef-story-body">
+            <h3 class="unicef-story-title" data-i18n="news_2_title">
               Sosialisasi "Dari Piring Sehat, Lahir Masa Depan Hebat" untuk Pencegahan Stunting Anak
             </h3>
-            <p class="news-snippet" data-i18n="news_2_desc">
+            <p class="unicef-story-snippet" data-i18n="news_2_desc">
               Kampanye nutrisi berbasis konsumsi protein ikan air tawar guna memastikan asupan nutrisi optimal bagi balita dan anak-anak usia sekolah.
             </p>
-            <div class="news-footer">
-              <span class="news-author" data-i18n="news_2_author">Oleh Divisi Kesehatan</span>
-              <a href="#kontak" class="news-readmore" data-i18n="news_read_more">Selengkapnya →</a>
+            <div class="unicef-story-footer">
+              <span class="story-byline" data-i18n="news_2_author">Oleh Divisi Kesehatan</span>
+              <a href="#dukungan" class="story-link-more" data-i18n="news_read_more">Selengkapnya &rarr;</a>
             </div>
           </div>
         </article>
 
-        <!-- News 3 -->
-        <article class="news-card">
-          <div class="news-thumb thumb-3">
-            <img loading="lazy" decoding="async" src="images/amungsa-kolam-bioflok.jpg" alt="Panen Raya Bioflok Lele" class="news-img-bg">
-            <div class="news-date-badge">
-              <span class="date-day">15</span>
-              <span class="date-month" data-i18n="date_month_aug">AGU</span>
-              <span class="date-year">2026</span>
+        <!-- Story 3: Biofloc Harvest -->
+        <article class="unicef-story-card">
+          <div class="unicef-story-thumb">
+            <img src="images/amungsa-kolam-bioflok.jpg" alt="Panen Raya Bioflok Lele" class="unicef-story-img">
+            <div class="unicef-story-date">
+              <span class="date-num">15</span>
+              <span class="date-str" data-i18n="date_month_aug">AGU 2026</span>
             </div>
-            <span class="news-category" data-i18n="news_3_cat">PEMBERDAYAAN</span>
+            <span class="unicef-story-kicker-tag" data-i18n="news_3_cat">KEMANDIRIAN PANGAN</span>
           </div>
-          <div class="news-body">
-            <h3 class="news-title" data-i18n="news_3_title">
+          <div class="unicef-story-body">
+            <h3 class="unicef-story-title" data-i18n="news_3_title">
               Panen Raya Bioflok Tahap II: Bukti Keberhasilan Kemandirian Ekonomi Warga Binaan
             </h3>
-            <p class="news-snippet" data-i18n="news_3_desc">
+            <p class="unicef-story-snippet" data-i18n="news_3_desc">
               Hasil panen lele melimpah siap diserap pasar lokal sekaligus memenuhi ketersediaan lauk sehat bergizi bagi keluarga pembudidaya.
             </p>
-            <div class="news-footer">
-              <span class="news-author" data-i18n="news_3_author">Oleh Tim Lapangan</span>
-              <a href="#kontak" class="news-readmore" data-i18n="news_read_more">Selengkapnya →</a>
+            <div class="unicef-story-footer">
+              <span class="story-byline" data-i18n="news_3_author">Oleh Tim Lapangan</span>
+              <a href="#dukungan" class="story-link-more" data-i18n="news_read_more">Selengkapnya &rarr;</a>
             </div>
           </div>
         </article>
@@ -773,120 +372,453 @@
     </div>
   </section>
 
-  <!-- KONTAK & FORMULIR KEMITRAAN -->
-  <section class="section section-contact" id="kontak">
+  <!-- DAMPAK NYATA (FACTS & FIGURES - UNICEF SIGNATURE NAVY SECTION) -->
+  <section class="section section-impact" id="dampak">
     <div class="container">
-      <div class="contact-box-grid">
-        <!-- Left: Info -->
-        <div class="contact-info-panel">
-          <span class="section-tag-light" data-i18n="contact_tag">Mari Bersinergi</span>
-          <h2 class="contact-title" data-i18n="contact_title">Mari Bergandengan Tangan untuk Papua Tengah</h2>
-          <p class="contact-desc" data-i18n="contact_desc">
-            Amungsa Foundation terbuka untuk kemitraan bersama instansi pemerintah, lembaga kemanusiaan, perusahaan, maupun relawan perorangan.
+      <div class="impact-box-unicef">
+        <div class="impact-header-row">
+          <div>
+            <span class="section-tag-light" data-i18n="impact_tag">Fakta &amp; Angka Capaian</span>
+            <h2 class="impact-title" data-i18n="impact_title">Dampak Nyata untuk Generasi Emas Papua</h2>
+          </div>
+          <p class="impact-desc" data-i18n="impact_desc">
+            Setiap kolam yang terbangun dan setiap asupan makanan bergizi adalah langkah nyata menuju generasi Papua yang sehat, tangguh, dan berdaya saing.
           </p>
-
-          <div class="contact-methods">
-            <div class="method-card">
-              <div class="method-icon">📍</div>
-              <div>
-                <strong data-i18n="contact_lbl_loc">Wilayah Kerja & Kantor</strong>
-                <p data-i18n="contact_val_loc">Provinsi Papua Tengah, Indonesia</p>
-              </div>
-            </div>
-            <div class="method-card">
-              <div class="method-icon">💬</div>
-              <div>
-                <strong data-i18n="contact_lbl_wa">WhatsApp Resmi</strong>
-                <p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" data-i18n="contact_val_wa">+62 812-xxxx-xxxx (Resmi)</a></p>
-              </div>
-            </div>
-            <div class="method-card">
-              <div class="method-icon">✉️</div>
-              <div>
-                <strong data-i18n="contact_lbl_email">Surat Elektronik (Email)</strong>
-                <p><a href="mailto:info@amungsafoundation.com">info@amungsafoundation.com</a></p>
-              </div>
-            </div>
-            <div class="method-card">
-              <div class="method-icon">🌐</div>
-              <div>
-                <strong data-i18n="contact_lbl_web">Portal Website</strong>
-                <p>www.amungsafoundation.com</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social Links -->
-          <div class="social-block">
-            <span data-i18n="contact_follow">Ikuti Akun Resmi:</span>
-            <div class="social-icons-row">
-              <a href="https://tiktok.com/@amungsafoundation" target="_blank" rel="noopener" class="social-btn" title="TikTok @amungsafoundation">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-              </a>
-              <a href="https://instagram.com/amungsafoundation" target="_blank" rel="noopener" class="social-btn" title="Instagram @amungsafoundation">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="https://facebook.com/amungsafoundation" target="_blank" rel="noopener" class="social-btn" title="Facebook @amungsafoundation">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.688 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"/></svg>
-              </a>
-            </div>
-          </div>
         </div>
 
-        <!-- Right: Form -->
-        <div class="contact-form-panel">
-          <form id="contactForm" class="contact-form">
-            <h3 class="form-title" data-i18n="form_title">Kirim Pesan atau Permohonan Kerjasama</h3>
-            
-            <div class="form-group">
-              <label for="formName" data-i18n="form_lbl_name">Nama Lengkap / Instansi</label>
-              <input type="text" id="formName" required placeholder="Contoh: Budi Santoso / Komunitas Pemuda" data-i18n-placeholder="form_ph_name">
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="formPhone" data-i18n="form_lbl_phone">Nomor WhatsApp / HP</label>
-                <input type="tel" id="formPhone" required placeholder="08xxxxxxxxxx">
-              </div>
-              <div class="form-group">
-                <label for="formEmail" data-i18n="form_lbl_email">Alamat Email</label>
-                <input type="email" id="formEmail" required placeholder="email@domain.com">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="formTopic" data-i18n="form_lbl_topic">Topik Kolaborasi</label>
-              <select id="formTopic" required>
-                <option value="kemitraan" data-i18n="form_opt_1">Kemitraan Budidaya Bioflok Lele</option>
-                <option value="gizi" data-i18n="form_opt_2">Program Piring Sehat & Nutrisi</option>
-                <option value="donasi" data-i18n="form_opt_3">Dukungan Donasi / Amungsa Cares</option>
-                <option value="relawan" data-i18n="form_opt_4">Menjadi Relawan Lapangan</option>
-                <option value="umum" data-i18n="form_opt_5">Pertanyaan Umum Lainnya</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="formMessage" data-i18n="form_lbl_msg">Pesan atau Rencana Kerjasama</label>
-              <textarea id="formMessage" rows="4" required placeholder="Tuliskan pesan atau detail rencana kemitraan Anda..." data-i18n-placeholder="form_ph_msg"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block" id="btnSubmitForm">
-              <span data-i18n="btn_submit">Kirim Pesan Sekarang</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-            </button>
-
-            <div class="form-feedback" id="formFeedback"></div>
-          </form>
+        <div class="impact-numbers-grid">
+          <div class="impact-stat-item">
+            <div class="stat-big">50+</div>
+            <div class="stat-name" data-i18n="stat_name_1">Titik Kolam Bioflok</div>
+            <p class="stat-sub" data-i18n="stat_sub_1">Tersebar di kelompok pemuda &amp; warga binaan</p>
+          </div>
+          <div class="impact-stat-item">
+            <div class="stat-big">15.000+</div>
+            <div class="stat-name" data-i18n="stat_name_2">Bibit Lele Unggul</div>
+            <p class="stat-sub" data-i18n="stat_sub_2">Telah ditebar dan dipanen bersama petani lokal</p>
+          </div>
+          <div class="impact-stat-item">
+            <div class="stat-big">1.500+</div>
+            <div class="stat-name" data-i18n="stat_name_3">Penerima Manfaat Gizi</div>
+            <p class="stat-sub" data-i18n="stat_sub_3">Balita dan keluarga rentan terlayani nutrisinya</p>
+          </div>
+          <div class="impact-stat-item">
+            <div class="stat-big">100%</div>
+            <div class="stat-name" data-i18n="stat_name_4">Komitmen Kemanusiaan</div>
+            <p class="stat-sub" data-i18n="stat_sub_4">Mendampingi masyarakat Papua Tengah secara berkelanjutan</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- AMBIL BAGIAN (TAKE ACTION - UNICEF INTERACTIVE DONATION & PACKAGES) -->
+  <section class="section section-take-action" id="dukungan">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="action_tag">Ambil Bagian</span>
+        <h2 class="section-title" data-i18n="action_title">Bersama Menghadirkan Senyum dan Gizi bagi Anak Papua</h2>
+        <p class="section-subtitle" data-i18n="action_subtitle">
+          Pilih bagaimana Anda ingin berkontribusi: mendukung nutrisi balita stunting, mendanai kolam bioflok pemuda, atau menjalin kemitraan strategis CSR.
+        </p>
+      </div>
+
+      <!-- UNICEF Interactive Donation Module -->
+      <div class="unicef-donation-module">
+        <div class="donation-header-row">
+          <div class="donation-type-tabs">
+            <button type="button" class="donation-tab active" data-freq="once" id="tabDonateOnce" data-i18n="donate_freq_once">Sekali Donasi</button>
+            <button type="button" class="donation-tab" data-freq="monthly" id="tabDonateMonthly" data-i18n="donate_freq_monthly">Donasi Rutin Bulanan</button>
+          </div>
+          <span class="donation-guarantee">🔒 Transparan &amp; Berbasis Komunitas Papua</span>
+        </div>
+
+        <div class="donation-amount-grid">
+          <button type="button" class="amount-chip active" data-val="50000" data-impact="Menyediakan 3 kg paket ikan lele segar kaya protein untuk anak balita stunting binaan posyandu.">
+            <span class="amount-val">Rp 50.000</span>
+            <span class="amount-lbl" data-i18n="pkg_1_title">Paket Gizi Balita</span>
+          </button>
+          <button type="button" class="amount-chip" data-val="150000" data-impact="Menyediakan paket edukasi piring sehat, suplemen nutrisi, dan pemantauan berat badan balita 1 bulan.">
+            <span class="amount-val">Rp 150.000</span>
+            <span class="amount-lbl">Nutrisi Terpadu</span>
+          </button>
+          <button type="button" class="amount-chip" data-val="350000" data-impact="Mendukung bibit ikan lele unggul dan pakan permulaan untuk 1 kolam bioflok kelompok pemuda kampung.">
+            <span class="amount-val">Rp 350.000</span>
+            <span class="amount-lbl" data-i18n="pkg_2_title">Dukungan Kolam</span>
+          </button>
+          <button type="button" class="amount-chip" data-val="custom" data-impact="Salurkan donasi nominal pilihan Anda untuk mendukung seluruh aksi kemanusiaan Amungsa Cares.">
+            <span class="amount-val">Nominal Lain</span>
+            <span class="amount-lbl">Dukungan Bebas</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Impact Display Box -->
+        <div class="donation-impact-callout">
+          <div class="impact-callout-icon">💙</div>
+          <div class="impact-callout-text" id="donationImpactText">
+            Dengan <strong>Rp 50.000</strong>, Anda langsung menyediakan 3 kg paket ikan lele segar kaya protein untuk anak balita stunting binaan posyandu di Papua Tengah.
+          </div>
+        </div>
+
+        <div class="donation-cta-wrapper">
+          <a href="https://wa.me/6281234567890?text=Halo%20Sekretariat%20Amungsa%20Foundation,%20saya%20ingin%20berdonasi%20Rp%2050.000%20untuk%20Paket%20Gizi%20Protein%20Balita." target="_blank" rel="noopener" class="btn btn-unicef-yellow btn-lg btn-donate-cta" id="btnDonationSubmit" data-i18n="donate_cta">
+            SALURKAN BANTUAN SEKARANG &rarr;
+          </a>
+          <span class="donation-subtext">Konfirmasi donasi langsung terhubung dengan narahubung resmi Sekretariat Amungsa Foundation</span>
+        </div>
+      </div>
+
+      <!-- 3 UNICEF Modular Support Packages -->
+      <div class="take-action-grid">
+        <!-- Option 1: Child Nutrition Package -->
+        <div class="action-package-card">
+          <div class="package-header">
+            <span class="package-badge" data-i18n="pkg_1_badge">Intervensi Langsung</span>
+            <h3 class="package-title" data-i18n="pkg_1_title">Paket Gizi Protein Balita</h3>
+            <p class="package-desc" data-i18n="pkg_1_desc">
+              Penyediaan olahan ikan lele segar kaya protein hewani bagi balita di posyandu binaan guna menekan angka stunting secara cepat dan tepat sasaran.
+            </p>
+          </div>
+          <div class="package-highlights">
+            <div class="highlight-point">✓ 100% ikan segar lokal bersumber dari kolam warga</div>
+            <div class="highlight-point">✓ Didampingi tenaga medis dan edukasi gizi piring sehat</div>
+          </div>
+          <div class="package-footer">
+            <a href="https://wa.me/6281234567890?text=Halo%20Sekretariat%20Amungsa%20Foundation,%20saya%20ingin%20mendukung%20Paket%20Gizi%20Protein%20Balita." target="_blank" rel="noopener" class="btn btn-unicef-yellow btn-block" data-i18n="pkg_1_btn">
+              Dukung Paket Gizi &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 2: Biofloc Pond Sponsorship -->
+        <div class="action-package-card action-package-featured">
+          <div class="package-featured-tag" data-i18n="pkg_2_tag">Paling Berdampak</div>
+          <div class="package-header">
+            <span class="package-badge" data-i18n="pkg_2_badge">Kemandirian Berkelanjutan</span>
+            <h3 class="package-title" data-i18n="pkg_2_title">Sponsor 1 Kolam Bioflok Pemuda</h3>
+            <p class="package-desc" data-i18n="pkg_2_desc">
+              Bantuan instalasi 1 unit kolam bulat bioflok lengkap dengan aerator, 1.000 bibit unggul, dan pakan masa awal untuk kelompok pemuda kampung di Mimika.
+            </p>
+          </div>
+          <div class="package-highlights">
+            <div class="highlight-point">✓ Menghasilkan panen berkala untuk ketahanan pangan</div>
+            <div class="highlight-point">✓ Memberdayakan 3–5 wirausaha muda kampung binaan</div>
+          </div>
+          <div class="package-footer">
+            <a href="https://wa.me/6281234567890?text=Halo%20Sekretariat%20Amungsa%20Foundation,%20kami%20tertarik%20mensponsori%201%20unit%20kolam%20bioflok%20pemuda." target="_blank" rel="noopener" class="btn btn-unicef-yellow btn-block" data-i18n="pkg_2_btn">
+              Sponsori Kolam Bioflok &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 3: Corporate CSR & Strategic Partnership -->
+        <div class="action-package-card">
+          <div class="package-header">
+            <span class="package-badge" data-i18n="pkg_3_badge">Kemitraan Institusi</span>
+            <h3 class="package-title" data-i18n="pkg_3_title">Kemitraan CSR &amp; Lembaga</h3>
+            <p class="package-desc" data-i18n="pkg_3_desc">
+              Sinergi program Tanggung Jawab Sosial Lingkungan (TJSL/CSR) bersama instansi pemerintah, BUMN, perbankan, korporasi swasta, dan yayasan filantropi.
+            </p>
+          </div>
+          <div class="package-highlights">
+            <div class="highlight-point">✓ Laporan pertanggungjawaban transparan dan terukur</div>
+            <div class="highlight-point">✓ Publikasi bersama di media partner resmi Galeri Papua</div>
+          </div>
+          <div class="package-footer">
+            <a href="mailto:info@amungsafoundation.com?subject=Permohonan%20Kerjasama%20CSR%20Amungsa%20Foundation" class="btn btn-unicef-outline btn-block" data-i18n="pkg_3_btn">
+              Kirim Proposal Kemitraan &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI & TOKOH PENGGERAK (WHO WE ARE & LEADERSHIP) -->
+  <section class="section section-about" id="tentang">
+    <div class="container">
+      <div class="about-unicef-layout">
+        <!-- Left: Image & Badge -->
+        <div class="about-visual">
+          <div class="about-image-card">
+            <img src="images/amungsa-cover-collage.jpg" alt="Dokumentasi Amungsa Cares Papua" class="about-real-img">
+            <div class="image-mockup-wrapper">
+              <div class="image-badge" data-i18n="badge_papua_tengah">Papua Tengah</div>
+              <div class="mockup-content">
+                <div class="mockup-quote font-script" data-i18n="about_quote">"Dari Piring Sehat, Lahir Masa Depan Hebat"</div>
+                <div class="mockup-sub" data-i18n="about_sub">Pembudidaya &amp; Relawan Lapangan Amungsa Foundation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text & Core Values -->
+        <div class="about-text">
+          <span class="section-tag" data-i18n="about_tag">Tentang Amungsa Foundation</span>
+          <h2 class="section-title" data-i18n="about_title">Merajut Harapan dari Bumi Cenderawasih</h2>
+          <p class="section-body" data-i18n="about_body_1">
+            Amungsa Foundation lahir dari kepedulian mendalam terhadap masa depan anak-anak serta keluarga di Provinsi Papua Tengah. Melalui gerakan <strong>Amungsa Cares</strong>, kami memadukan teknologi budidaya air tawar bioflok ramah lingkungan dengan kampanye edukasi gizi piring sehat untuk memutus rantai stunting dan mendorong kemandirian pangan lokal berkelanjutan.
+          </p>
+          <div class="core-values-compact">
+            <div class="val-pill">
+              <span class="val-icon">🐟</span>
+              <strong data-i18n="val_1_title">Kemandirian Pangan</strong>
+            </div>
+            <div class="val-pill">
+              <span class="val-icon">🥗</span>
+              <strong data-i18n="val_2_title">Gizi Generasi Emas</strong>
+            </div>
+            <div class="val-pill">
+              <span class="val-icon">🤝</span>
+              <strong data-i18n="val_3_title">Kemitraan Pemuda</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Team Strip (Tokoh Penggerak) -->
+      <div class="team-compact-strip" id="tokoh">
+        <div class="team-strip-header text-center">
+          <span class="section-tag" data-i18n="team_tag">Tokoh Penggerak</span>
+          <h3 class="team-strip-title" data-i18n="team_title">Pelaku di Balik Amungsa Foundation</h3>
+        </div>
+
+        <div class="team-strip-grid">
+          <div class="team-strip-card">
+            <img src="images/foto-dr-enny-kenangalem.jpg" alt="dr. Enny Kenangalem, M. Biomed." class="team-strip-avatar">
+            <h4 class="team-strip-name">dr. Enny Kenangalem</h4>
+            <span class="team-strip-role" data-i18n="team_1_role">Ketua Yayasan &middot; Ketua IDI Mimika</span>
+            <small class="team-strip-tag">Dokter Asli Amungme</small>
+          </div>
+
+          <div class="team-strip-card">
+            <img src="images/foto-febian-kakisina.jpg" alt="Febian Kakisina" class="team-strip-avatar">
+            <h4 class="team-strip-name">Febian Kakisina</h4>
+            <span class="team-strip-role" data-i18n="team_2_role">Sekretaris &middot; Sutradara</span>
+            <small class="team-strip-tag">Eagle Awards</small>
+          </div>
+
+          <div class="team-strip-card">
+            <img src="images/foto-marlan-bisay.jpg" alt="Marlan Frens Kasemi Bisay" class="team-strip-avatar">
+            <h4 class="team-strip-name">Marlan Bisay</h4>
+            <span class="team-strip-role" data-i18n="team_3_role">Inisiator &amp; Dewan Pembina</span>
+            <small class="team-strip-tag">Pemuda Inspiratif</small>
+          </div>
+
+          <div class="team-strip-card">
+            <img src="images/foto-djasiyo.jpg" alt="Djasiyo" class="team-strip-avatar">
+            <h4 class="team-strip-name">Djasiyo</h4>
+            <span class="team-strip-role" data-i18n="team_4_role">Ketua Perikanan SP3</span>
+            <small class="team-strip-tag">Pembudidaya Mimika</small>
+          </div>
+
+          <div class="team-strip-card">
+            <img src="images/foto-rahadian-putra.jpg" alt="Rahadian Rizky Putra" class="team-strip-avatar">
+            <h4 class="team-strip-name">Rahadian Rizky</h4>
+            <span class="team-strip-role" data-i18n="team_5_role">Ketua PW PMI Papua Tengah</span>
+            <small class="team-strip-tag">Advokasi Aspirasi Petani</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MITRA KERJA SAMA (UNICEF TRUST LOGO STRIP) -->
+  <section class="section section-partners-strip" id="mitra">
+    <div class="container">
+      <div class="partners-strip-header text-center">
+        <span class="section-tag" data-i18n="partners_tag">Kemitraan Strategis</span>
+        <h2 class="section-title" data-i18n="partners_title">Mitra Kerja Sama Kami</h2>
+        <p class="section-subtitle" data-i18n="partners_subtitle">
+          Sinergi bersama lembaga pemerintah daerah, media partner Galeri Papua, dan organisasi kemasyarakatan.
+        </p>
+      </div>
+
+      <div class="unicef-partner-row">
+        <div class="unicef-partner-item">
+          <img src="images/logo-papua-tengah.png" alt="Pemerintah Provinsi Papua Tengah" class="unicef-partner-logo">
+          <span class="unicef-partner-name">Pemprov Papua Tengah</span>
+          <span class="unicef-partner-badge" data-i18n="partner_1_cat">Pemerintah Daerah</span>
+        </div>
+
+        <div class="unicef-partner-item">
+          <img src="images/logo-galeri-papua.jpg" alt="Galeri Papua" class="unicef-partner-logo">
+          <span class="unicef-partner-name">Media Galeri Papua</span>
+          <span class="unicef-partner-badge" data-i18n="partner_2_cat">Media Partner</span>
+        </div>
+
+        <div class="unicef-partner-item">
+          <div class="unicef-partner-icon-circle">🤝</div>
+          <span class="unicef-partner-name">PMI Papua Tengah</span>
+          <span class="unicef-partner-badge" data-i18n="partner_3_cat">Organisasi Pemuda</span>
+        </div>
+
+        <div class="unicef-partner-item">
+          <img src="images/logo-kabupaten-mimika.jpg" alt="Dinas Kesehatan Mimika" class="unicef-partner-logo">
+          <span class="unicef-partner-name">Dinas Kesehatan Mimika</span>
+          <span class="unicef-partner-badge" data-i18n="partner_4_cat">Intervensi Gizi</span>
+        </div>
+
+        <div class="unicef-partner-item">
+          <div class="unicef-partner-icon-circle">🐟</div>
+          <span class="unicef-partner-name">Kelompok Tani SP3</span>
+          <span class="unicef-partner-badge" data-i18n="partner_5_cat">Sentra Budidaya</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOKUMENTASI KEGIATAN & ACARA LAPANGAN (CURATED UNICEF PHOTOJOURNALISM) -->
+  <section class="section section-gallery" id="galeri">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="gallery_tag">Dokumentasi Lapangan &amp; Acara</span>
+        <h2 class="section-title" data-i18n="gallery_title">Jejak Langkah di Tanah Papua Tengah</h2>
+        <p class="section-subtitle" data-i18n="gallery_subtitle">
+          Dokumentasi faktual kunjungan kerja, dialog kemitraan, budidaya bioflok, dan aksi gizi Amungsa Cares di Provinsi Papua Tengah.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-filter-bar">
+        <button type="button" class="filter-btn active" data-filter="all">Semua Kegiatan</button>
+        <button type="button" class="filter-btn" data-filter="kunker">🏛️ Kunker &amp; Dialog SP3</button>
+        <button type="button" class="filter-btn" data-filter="bioflok">💧 Budidaya Bioflok</button>
+        <button type="button" class="filter-btn" data-filter="sosial">❤️ Aksi Gizi &amp; Sosial</button>
+      </div>
+
+      <!-- 8-Photo Curated Event Grid -->
+      <div class="gallery-compact-grid">
+        <!-- Photo 1 -->
+        <div class="gallery-item" data-category="kunker" data-title="Peninjauan Kolam Bioflok SP3 Mimika" data-date="07 September 2026" data-loc="SP3 Mimika, Papua Tengah" data-tag="🏛️ Kunker Lapangan" data-desc="Tinjauan langsung Anggota DPRD Mimika Arminus Omaleng didampingi Dinas Perikanan dan Yayasan Amungsa ke kelompok budidaya ikan lele SP3.">
+          <div class="gallery-img-box">
+            <img src="images/kunker/03_PENINJAUAN_KOLAM_PANORAMA.jpg" alt="Peninjauan Kolam Bioflok SP3 Mimika" class="gallery-real-img">
+            <span class="gallery-icon-tag">🏛️ Kunker Lapangan</span>
+            <div class="gallery-overlay">
+              <h4>Peninjauan Kolam Bioflok SP3</h4>
+              <p>Tinjauan langsung Anggota DPRD Mimika &amp; Dinas Perikanan ke sentra kolam bioflok.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item" data-category="kunker" data-title="Sinergi Legislatif, Dinas &amp; Yayasan Amungsa" data-date="07 September 2026" data-loc="SP3 Mimika, Papua Tengah" data-tag="🤝 Sinergi Kemitraan" data-desc="Foto bersama rombongan kunjungan kerja DPRD Kabupaten Mimika, Dinas Perikanan, pengurus Amungsa Foundation, dan kelompok peternak lele SP3.">
+          <div class="gallery-img-box">
+            <img src="images/kunker/08_FOTO_BERSAMA_YAYASAN_DEWAN_DINAS.jpg" alt="Foto Bersama Yayasan, Dewan &amp; Dinas" class="gallery-real-img">
+            <span class="gallery-icon-tag">🤝 Sinergi Kemitraan</span>
+            <div class="gallery-overlay">
+              <h4>Sinergi Dewan, Dinas &amp; Yayasan</h4>
+              <p>Komitmen bersama pengawalan aspirasi dan bantuan sarana kelompok peternak lokal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item" data-category="kunker" data-title="Verifikasi Teknis Kolam oleh Dinas Perikanan" data-date="07 September 2026" data-loc="SP3 Mimika, Papua Tengah" data-tag="📋 Bimbingan Teknis" data-desc="Inspeksi kualitas air, kepadatan tebar bibit lele, dan kelayakan sistem aerasi bioflok oleh perwakilan teknis Dinas Perikanan Mimika.">
+          <div class="gallery-img-box">
+            <img src="images/kunker/05_VERIFIKASI_DINAS_PERIKANAN.jpg" alt="Verifikasi Teknis Dinas Perikanan" class="gallery-real-img">
+            <span class="gallery-icon-tag">📋 Bimbingan Teknis</span>
+            <div class="gallery-overlay">
+              <h4>Verifikasi Dinas Perikanan</h4>
+              <p>Pemeriksaan kualitas air dan kesiapan teknis kolam bioflok peternak SP3.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item" data-category="kunker" data-title="Dialog Aspirasi Kelompok Peternak Ikan" data-date="07 September 2026" data-loc="SP3 Mimika, Papua Tengah" data-tag="💬 Dialog Aspirasi" data-desc="Pertemuan tatap muka menyerap kebutuhan riil peternak terkait stabilitas harga pakan mandiri dan pembukaan akses pasar komoditas ikan di Mimika.">
+          <div class="gallery-img-box">
+            <img src="images/kunker/11_DIALOG_ASPIRASI_YAYASAN.jpg" alt="Dialog Aspirasi Peternak Ikan SP3" class="gallery-real-img">
+            <span class="gallery-icon-tag">💬 Dialog Aspirasi</span>
+            <div class="gallery-overlay">
+              <h4>Dialog Aspirasi Peternak Ikan</h4>
+              <p>Serap aspirasi solusi pakan terjangkau dan akses pasar lokal bersama pengambil kebijakan.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-item" data-category="kunker" data-title="Komitmen Bersama Sinergi Hulu-Hilir" data-date="07 September 2026" data-loc="SP3 Mimika, Papua Tengah" data-tag="🤝 Komitmen Bersama" data-desc="Simbol komitmen bersama antara pemangku kebijakan dan peternak untuk mendorong rantai pasok ikan lele lokal ke industri besar di Mimika.">
+          <div class="gallery-img-box">
+            <img src="images/kunker/10_KOMITMEN_BERSAMA_HANDSHAKE.jpg" alt="Komitmen Bersama Handshake" class="gallery-real-img">
+            <span class="gallery-icon-tag">🤝 Komitmen Bersama</span>
+            <div class="gallery-overlay">
+              <h4>Komitmen Sinergi Hulu-Hilir</h4>
+              <p>Jabat tangan simbolis dorong kemandirian pangan dan serapan pasar komoditas lokal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-item" data-category="sosial" data-title="Penyaluran 90 Kg Lele Program Anti-Stunting" data-date="Agustus 2026" data-loc="Mimika, Papua Tengah" data-tag="🐟 Intervensi Gizi" data-desc="Distribusi hasil panen 90 kg lele binaan Amungsa Foundation disalurkan bersama Dinas Kesehatan Mimika untuk pemenuhan gizi protein hewani anak balita.">
+          <div class="gallery-img-box">
+            <img src="images/panen-lele-stunting-dinkes.jpg" alt="Panen Lele Program Stunting Dinkes Mimika" class="gallery-real-img">
+            <span class="gallery-icon-tag">🐟 Dinkes Mimika</span>
+            <div class="gallery-overlay">
+              <h4>Panen 90 Kg Lele Bersama Dinkes</h4>
+              <p>Distribusi nutrisi protein hewani segar untuk pencegahan stunting anak balita.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="gallery-item" data-category="bioflok" data-title="Pemberdayaan Budidaya Bioflok Lele Berkelanjutan" data-date="Agustus 2026" data-loc="Prov. Papua Tengah" data-tag="💧 Bioflok Lele" data-desc="Pemberdayaan kelompok pemuda dengan instalasi kolam terpal bundar bioflok yang hemat air, efisien lahan, dan berproduksi tinggi.">
+          <div class="gallery-img-box">
+            <img src="images/kunker/02_KOLASE_3FOTO_BUDIDAYA.jpg" alt="Budidaya Bioflok Lele Berkelanjutan" class="gallery-real-img">
+            <span class="gallery-icon-tag">💧 Bioflok Lele</span>
+            <div class="gallery-overlay">
+              <h4>Budidaya Bioflok Berkelanjutan</h4>
+              <p>Teknologi kolam bulat hemat air dan padat tebar tinggi binaan Amungsa Foundation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="gallery-item" data-category="sosial" data-title="Bakti Kemanusiaan Amungsa Cares &amp; Relawan Pemuda" data-date="September 2026" data-loc="Nabire &amp; Mimika, Papua Tengah" data-tag="❤️ Amungsa Cares" data-desc="Aksi gotong royong pemuda milenial dan relawan kemanusiaan Amungsa Cares dalam pendampingan kesejahteraan sosial masyarakat pelosok.">
+          <div class="gallery-img-box">
+            <img src="images/kegiatan/kegiatan-sosial-1.jpg" alt="Bakti Kemanusiaan Amungsa Cares" class="gallery-real-img">
+            <span class="gallery-icon-tag">❤️ Amungsa Cares</span>
+            <div class="gallery-overlay">
+              <h4>Bakti Kemanusiaan Pemuda</h4>
+              <p>Aksi gotong royong relawan dalam pendampingan kesejahteraan sosial masyarakat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK & SEKRETARIAT (COMPACT HUMANITARIAN ACTION) -->
+  <section class="section section-contact-unicef" id="kontak">
+    <div class="container">
+      <div class="contact-unicef-card">
+        <div class="contact-unicef-content">
+          <span class="unicef-tag-cyan" data-i18n="contact_tag">Sekretariat &amp; Kemitraan</span>
+          <h2 class="contact-unicef-title" data-i18n="contact_title">Mari Bergandengan Tangan untuk Anak Papua</h2>
+          <p class="contact-unicef-desc" data-i18n="contact_desc">
+            Amungsa Foundation menyambut sinergi bersama instansi pemerintah daerah, korporasi (CSR), lembaga kemanusiaan, media publikasi, dan masyarakat luas.
+          </p>
+          <div class="contact-quick-pills">
+            <span class="quick-pill">📍 Prov. Papua Tengah</span>
+            <span class="quick-pill">✉️ info@amungsafoundation.com</span>
+            <span class="quick-pill">🌐 www.amungsafoundation.com</span>
+          </div>
+        </div>
+
+        <div class="contact-unicef-action">
+          <a href="https://wa.me/6281234567890?text=Halo%20Sekretariat%20Amungsa%20Foundation,%20kami%20ingin%20berkolaborasi%20program%20di%20Papua%20Tengah." target="_blank" rel="noopener" class="btn btn-unicef-yellow btn-lg btn-block" data-i18n="contact_btn_wa">
+            💬 Hubungi via WhatsApp
+          </a>
+          <a href="mailto:info@amungsafoundation.com?subject=Permohonan%20Kerjasama%20Amungsa%20Foundation" class="btn btn-unicef-outline-white btn-lg btn-block" data-i18n="contact_btn_email">
+            ✉️ Kirim Surat / Proposal Email &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (UNICEF STANDARD CLEAN NAVY FOOTER) -->
   <footer class="footer">
-    <!-- Papuan Ethnic Wave Border -->
     <div class="footer-ethnic-pattern"></div>
 
     <div class="container footer-content">
@@ -904,11 +836,11 @@
           </div>
           <div class="brand-text">
             <span class="brand-name">Amungsa <span>Foundation</span></span>
-            <span class="brand-sub">Amungsa Cares Papua</span>
+            <span class="brand-sub">#UntukSetiapAnak Papua</span>
           </div>
         </div>
         <p class="footer-bio" data-i18n="footer_bio">
-          Yayasan non-profit berdedikasi membangun ketahanan pangan, perbaikan nutrisi, dan pemberdayaan generasi emas di Provinsi Papua Tengah.
+          Yayasan non-profit berdedikasi membangun ketahanan pangan, perbaikan nutrisi balita, dan pemberdayaan generasi emas di Provinsi Papua Tengah.
         </p>
         <p class="footer-slogan font-script" data-i18n="footer_slogan">
           "Dari Piring Sehat, Lahir Masa Depan Hebat"
@@ -919,29 +851,29 @@
         <h4 class="footer-title" data-i18n="footer_title_nav">Navigasi Utama</h4>
         <ul class="footer-links">
           <li><a href="#beranda" data-i18n="nav_home">Beranda</a></li>
-          <li><a href="#tentang" data-i18n="nav_about">Tentang Kami</a></li>
-          <li><a href="#tokoh" data-i18n="nav_team">Tokoh Penggerak</a></li>
-          <li><a href="#program" data-i18n="nav_program">Pilar Program</a></li>
+          <li><a href="#program" data-i18n="nav_program">Upaya Kami</a></li>
+          <li><a href="#cerita" data-i18n="nav_news">Cerita Lapangan</a></li>
+          <li><a href="#dampak" data-i18n="nav_impact">Dampak</a></li>
+          <li><a href="#dukungan" data-i18n="nav_take_action">Ambil Bagian</a></li>
+          <li><a href="#tentang" data-i18n="nav_about">Tentang &amp; Tokoh</a></li>
           <li><a href="#mitra" data-i18n="nav_partners">Mitra Kerja Sama</a></li>
-          <li><a href="#dampak" data-i18n="nav_impact">Capaian Dampak</a></li>
           <li><a href="#galeri" data-i18n="nav_gallery">Galeri Dokumentasi</a></li>
-          <li><a href="#berita" data-i18n="nav_news">Kabar Berita</a></li>
-          <li><a href="#kontak" data-i18n="nav_contact">Kontak & Sekretariat</a></li>
+          <li><a href="#kontak" data-i18n="nav_contact">Kontak &amp; Sekretariat</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-title" data-i18n="footer_title_prog">Program Fokus</h4>
+        <h4 class="footer-title" data-i18n="footer_title_prog">Fokus Program</h4>
         <ul class="footer-links">
+          <li><a href="#program" data-i18n="footer_p2">Gerakan Piring Sehat Balita</a></li>
           <li><a href="#program" data-i18n="footer_p1">Bioflok Lele Berkelanjutan</a></li>
-          <li><a href="#program" data-i18n="footer_p2">Gerakan Piring Sehat</a></li>
-          <li><a href="#program" data-i18n="footer_p3">Kemitraan Pemuda & Vokasi</a></li>
+          <li><a href="#program" data-i18n="footer_p3">Kemitraan Pemuda &amp; Vokasi</a></li>
           <li><a href="#program" data-i18n="footer_p4">Aksi Sosial Amungsa Cares</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-title" data-i18n="footer_title_tools">Alat & Media</h4>
+        <h4 class="footer-title" data-i18n="footer_title_tools">Alat &amp; Media</h4>
         <ul class="footer-links">
           <li><a href="../photo-editor-studio/template.html" data-i18n="footer_t1">Generator Template Foto Instagram</a></li>
           <li><a href="../photo-editor-studio/index.html" data-i18n="footer_t2">Studio Editor Foto</a></li>
@@ -952,7 +884,6 @@
 
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <!-- Centered View Mode Row (Completely clear of floating collab dock) -->
         <div class="footer-view-mode-row">
           <div class="view-mode-switch-wrapper" id="viewModeSelector">
             <span class="view-mode-label" data-i18n="view_mode_label">Tampilan Website:</span>
@@ -982,132 +913,24 @@
     </div>
   </footer>
 
-  <!-- =========================================================================
-       OUT OF SCREEN FLOATING COLLABORATION DOCK & SLIDE-OVER DRAWER
-       ========================================================================= -->
-  <!-- Floating Action Trigger (Docked at Bottom-Right Viewport) -->
-  <aside class="floating-collab-dock" id="floatingCollabDock">
-    <button class="floating-collab-btn" id="btnOpenCollabDrawer" aria-label="Buka Kolaborasi" title="Kolaborasi Bersama Amungsa Foundation">
-      <div class="pulse-ring"></div>
-      <div class="collab-btn-icon">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
+  <!-- Gallery Photojournalism Lightbox Modal -->
+  <div class="gallery-lightbox-overlay" id="galleryLightboxOverlay" aria-hidden="true">
+    <div class="gallery-lightbox-modal" id="galleryLightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+      <button type="button" class="lightbox-close-btn" id="btnCloseLightbox" aria-label="Tutup Pratinjau Foto">&times;</button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImg" src="" alt="Pratinjau Foto Kegiatan">
       </div>
-      <span class="collab-btn-text" data-i18n="float_cta_btn">Kolaborasi Bersama</span>
-      <span class="collab-btn-badge" data-i18n="float_cta_badge">Mitra Baru</span>
-    </button>
-  </aside>
-
-  <!-- Out of Screen Slide-Over Drawer Modal -->
-  <div class="collab-drawer-overlay" id="collabDrawerOverlay" aria-hidden="true">
-    <div class="collab-drawer" id="collabDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
-      <div class="drawer-header">
-        <div class="drawer-header-brand">
-          <div class="drawer-logo-badge">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <div>
-            <h3 id="drawerTitle" data-i18n="drawer_title">Pintu Kolaborasi Strategis</h3>
-            <p class="drawer-subtitle" data-i18n="drawer_subtitle">Amungsa Foundation &middot; Papua Tengah</p>
-          </div>
+      <div class="lightbox-details">
+        <div class="lightbox-meta-row">
+          <span class="lightbox-badge" id="lightboxBadge">Dokumentasi</span>
+          <span class="lightbox-date-loc" id="lightboxDateLoc">07 September 2026 &middot; Papua Tengah</span>
         </div>
-        <button class="drawer-close-btn" id="btnCloseCollabDrawer" aria-label="Tutup Panel">&times;</button>
-      </div>
-
-      <div class="drawer-body">
-        <p class="drawer-desc" data-i18n="drawer_desc">
-          Kami menyambut kemitraan dengan instansi pemerintah, perusahaan BUMN/Swasta (CSR), lembaga filantropi, media publikasi, dan komunitas lokal untuk bersama mempercepat kemandirian pangan dan generasi emas Papua Tengah.
-        </p>
-
-        <!-- Quick Action Channels -->
-        <div class="drawer-channels">
-          <a href="https://wa.me/6281234567890?text=Halo%20Sekretariat%20Amungsa%20Foundation,%20kami%20tertarik%20untuk%20berkolaborasi%20program%20di%20Papua%20Tengah." target="_blank" rel="noopener" class="channel-card channel-wa">
-            <div class="channel-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.817 2.796.817 3.182 0 5.768-2.587 5.768-5.768.001-3.182-2.584-5.802-5.768-5.802zm0 10.366c-.958 0-1.745-.274-2.502-.751l-.178-.112-1.859.488.496-1.813-.118-.188c-.534-.849-.817-1.428-.817-2.424 0-2.529 2.059-4.588 4.59-4.588 2.531 0 4.59 2.059 4.59 4.59s-2.059 4.798-4.59 4.798z"/>
-              </svg>
-            </div>
-            <div class="channel-info">
-              <h4 data-i18n="channel_wa_title">Chat Tim Sekretariat (WhatsApp)</h4>
-              <p data-i18n="channel_wa_desc">Respon cepat direct WhatsApp untuk inisiasi kemitraan & kunjungan</p>
-            </div>
-            <span class="channel-arrow">&rarr;</span>
-          </a>
-
-          <a href="#kontak" class="channel-card channel-form" id="btnDrawerToContact">
-            <div class="channel-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </div>
-            <div class="channel-info">
-              <h4 data-i18n="channel_form_title">Formulir Kemitraan Resmi</h4>
-              <p data-i18n="channel_form_desc">Kirim proposal atau permohonan kerjasama terstruktur via formulir web</p>
-            </div>
-            <span class="channel-arrow">&rarr;</span>
-          </a>
-        </div>
-
-        <!-- Collaboration Pillar Checklist -->
-        <div class="drawer-areas">
-          <h4 class="drawer-section-title" data-i18n="drawer_areas_title">Bentuk Kolaborasi Terbuka:</h4>
-          <ul class="drawer-areas-list">
-            <li>
-              <span class="area-badge" data-i18n="area_badge_bioflok">Bioflok</span>
-              <span data-i18n="drawer_area_1">Replikasi klaster budidaya bioflok lele di kampung-kampung</span>
-            </li>
-            <li>
-              <span class="area-badge" data-i18n="area_badge_nutrisi">Nutrisi</span>
-              <span data-i18n="drawer_area_2">Penyediaan makanan piring sehat protein hewani cegah stunting</span>
-            </li>
-            <li>
-              <span class="area-badge">CSR</span>
-              <span data-i18n="drawer_area_3">Penyaluran dana CSR perusahaan untuk vokasi pemuda Papua</span>
-            </li>
-            <li>
-              <span class="area-badge" data-i18n="area_badge_media">Media</span>
-              <span data-i18n="drawer_area_4">Publikasi jurnalistik dan edukasi masyarakat bersama Galeri Papua</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="drawer-footer">
-          <div class="drawer-contact-quick">
-            <span data-i18n="drawer_loc">📍 Nabire, Provinsi Papua Tengah</span>
-            <span>✉️ info@amungsafoundation.com</span>
-          </div>
-          <div class="view-mode-switch-wrapper" style="margin-top: 12px; width: 100%; justify-content: space-between;">
-            <span class="view-mode-label" data-i18n="view_mode_label">Tampilan:</span>
-            <div style="display: inline-flex; gap: 4px;">
-              <button type="button" id="drawerBtnViewDesktop" class="view-mode-btn active" title="Gunakan Tampilan Desktop (Default)">
-                <svg class="view-mode-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                </svg>
-                <span data-i18n="view_mode_desktop">Desktop</span>
-              </button>
-              <button type="button" id="drawerBtnViewMobile" class="view-mode-btn" title="Gunakan Tampilan Mobile (Cadangan)">
-                <svg class="view-mode-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                  <line x1="12" y1="18" x2="12.01" y2="18"/>
-                </svg>
-                <span data-i18n="view_mode_mobile">Mobile</span>
-              </button>
-            </div>
-          </div>
-        </div>
+        <h3 class="lightbox-title" id="lightboxTitle">Judul Foto Kegiatan</h3>
+        <p class="lightbox-desc" id="lightboxDesc">Keterangan dokumentasi kegiatan lapangan Amungsa Foundation.</p>
       </div>
     </div>
   </div>
 
-  <script src="main.js?v=2.2"></script>
+  <script src="main.js?v=3.2"></script>
 </body>
 </html>

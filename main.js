@@ -12,29 +12,41 @@
   const translations = {
     id: {
       // Top Announcement Bar
-      announcement_tag: 'Aksi Nyata',
-      announcement_text: 'Budidaya Bioflok Lele & Nutrisi Keluarga bersama Pemuda di Prov. Papua Tengah',
+      announcement_tag: 'Aksi Kemanusiaan & Gizi',
+      announcement_text: 'Intervensi Gizi & Budidaya Bioflok Lele bersama Pemuda & Dinas Kesehatan di Prov. Papua Tengah',
       announcement_link: 'Lihat Program →',
 
       // Navbar
       nav_home: 'Beranda',
-      nav_about: 'Tentang',
+      nav_about: 'Tentang & Tokoh',
       nav_team: 'Tokoh',
-      nav_program: 'Program',
+      nav_program: 'Apa yang Kami Lakukan',
       nav_partners: 'Mitra',
       nav_impact: 'Dampak',
       nav_gallery: 'Galeri',
-      nav_news: 'Berita',
+      nav_news: 'Cerita Lapangan',
       nav_contact: 'Kontak',
-      nav_cta: 'Kolaborasi Bersama',
+      nav_brand_sub: 'Untuk Setiap Generasi Papua &middot; Amungsa Cares',
+      nav_cta: 'Ambil Aksi',
+      prog_learn_more: 'Pelajari Program →',
+      contact_btn_wa: '💬 Hubungi via WhatsApp',
+      contact_btn_email: '✉️ Kirim Surat / Proposal Email →',
 
       // Hero
-      hero_badge: 'Gerakan Kemandirian Pangan & Generasi Emas Papua',
+      hero_badge: 'UNTUK SETIAP ANAK PAPUA &middot; FOR EVERY CHILD',
       hero_title_1: 'Dari Piring Sehat,',
       hero_title_2: 'Lahir Masa Depan Hebat.',
-      hero_desc: 'Yayasan <strong>Amungsa Foundation</strong> hadir mendampingi masyarakat di Provinsi Papua Tengah melalui inovasi budidaya perikanan bioflok, pemenuhan gizi keluarga, pemberdayaan ekonomi pemuda, serta aksi kepedulian sosial berkelanjutan.',
-      hero_btn_program: 'Jelajahi Program Kami',
-      hero_btn_contact: 'Hubungi Tim Yayasan',
+      hero_desc: 'Yayasan <strong>Amungsa Foundation</strong> (Amungsa Cares Papua) bergerak bersama masyarakat, kelompok pemuda, dan dinas kesehatan di Provinsi Papua Tengah untuk mengatasi stunting, meningkatkan gizi keluarga, serta mewujudkan kemandirian pangan lokal berkelanjutan.',
+      hero_btn_action: 'AMBIL BAGIAN SEKARANG',
+      hero_btn_program: 'Pelajari Upaya Kami →',
+      hero_photo_tag: 'Intervensi Gizi & Anti-Stunting',
+      hero_photo_caption: 'Panen 90 kg lele segar binaan Amungsa Foundation disalurkan bersama Dinkes Mimika untuk pemenuhan gizi protein anak balita.',
+      hero_photo_stat: '90+ Kg Terdistribusi',
+
+      // Mission Ribbon
+      ribbon_tag: 'UNTUK SETIAPANAK PAPUA &middot; FOR EVERY CHILD',
+      ribbon_text: '"Setiap anak di Papua berhak atas nutrisi protein terbaik, tumbuh kembang yang sehat, dan masa depan yang tangguh."',
+      ribbon_cta: 'Ambil Bagian Sekarang &rarr;',
 
       // Stats Strip
       stat_pools: 'Kolam Bioflok Aktif',
@@ -273,34 +285,82 @@
       drawer_loc: '📍 Nabire, Provinsi Papua Tengah',
       area_badge_bioflok: 'Bioflok',
       area_badge_nutrisi: 'Nutrisi',
-      area_badge_media: 'Media'
+      area_badge_media: 'Media',
+
+      // Take Action & Donation Section
+      nav_take_action: 'Ambil Bagian',
+      action_tag: 'Ambil Bagian',
+      action_title: 'Bersama Menghadirkan Senyum dan Gizi bagi Anak Papua',
+      action_subtitle: 'Pilih bagaimana Anda ingin berkontribusi: mendukung nutrisi balita stunting, mendanai kolam bioflok pemuda, atau menjalin kemitraan strategis CSR.',
+      donate_freq_once: 'Sekali Donasi',
+      donate_freq_monthly: 'Donasi Rutin Bulanan',
+      donate_cta: 'SALURKAN BANTUAN SEKARANG →',
+      pkg_1_badge: 'Intervensi Langsung',
+      pkg_1_title: 'Paket Gizi Protein Balita',
+      pkg_1_desc: 'Penyediaan olahan ikan lele segar kaya protein hewani bagi balita di posyandu binaan guna menekan angka stunting secara cepat dan tepat sasaran.',
+      pkg_1_btn: 'Dukung Paket Gizi →',
+      pkg_2_tag: 'Paling Berdampak',
+      pkg_2_badge: 'Kemandirian Berkelanjutan',
+      pkg_2_title: 'Sponsor 1 Kolam Bioflok Pemuda',
+      pkg_2_desc: 'Bantuan instalasi 1 unit kolam bulat bioflok lengkap dengan aerator, 1.000 bibit unggul, dan pakan masa awal untuk kelompok pemuda kampung di Mimika.',
+      pkg_2_btn: 'Sponsori Kolam Bioflok →',
+      pkg_3_badge: 'Kemitraan Institusi',
+      pkg_3_title: 'Kemitraan CSR & Lembaga',
+      pkg_3_desc: 'Sinergi program Tanggung Jawab Sosial Lingkungan (TJSL/CSR) bersama instansi pemerintah, BUMN, perbankan, korporasi swasta, dan yayasan filantropi.',
+      pkg_3_btn: 'Kirim Proposal Kemitraan →',
+
+      // Appeal Section
+      appeal_tag: 'AKSI KEMANUSIAAN &amp; KEMITRAAN',
+      appeal_title: 'Bersama Menghadirkan Masa Depan Bergizi Bagi Generasi Emas Papua',
+      appeal_desc: 'Dukungan dan kolaborasi Anda membantu kami membangun kolam bioflok baru, mendistribusikan ikan segar kaya protein untuk pencegahan stunting anak balita, serta membina wirausaha muda lokal di pedalaman Papua Tengah.',
+      appeal_btn_wa: '💬 Hubungi Sekretariat (WhatsApp)',
+      appeal_btn_form: 'Kirim Surat / Proposal Kemitraan &rarr;'
     },
 
     en: {
       // Top Announcement Bar
-      announcement_tag: 'Action in Motion',
-      announcement_text: 'Biofloc Catfish Farming & Family Nutrition alongside Youth in Central Papua',
+      announcement_tag: 'Humanitarian &amp; Nutrition Action',
+      announcement_text: 'Nutrition Intervention &amp; Biofloc Catfish Cultivation alongside Youth &amp; Health Office in Central Papua',
       announcement_link: 'Explore Programs →',
 
       // Navbar
       nav_home: 'Home',
-      nav_about: 'About',
+      nav_about: 'About & Leadership',
       nav_team: 'Leadership',
-      nav_program: 'Programs',
+      nav_program: 'What We Do',
       nav_partners: 'Partners',
       nav_impact: 'Impact',
       nav_gallery: 'Gallery',
-      nav_news: 'News',
+      nav_news: 'Field Stories',
       nav_contact: 'Contact',
-      nav_cta: 'Partner With Us',
+      nav_brand_sub: 'For Every Child in Papua &middot; Amungsa Cares',
+      nav_cta: 'Take Action',
+      prog_learn_more: 'Explore Program →',
+      contact_btn_wa: '💬 Contact via WhatsApp',
+      contact_btn_email: '✉️ Send Proposal via Email →',
 
       // Hero
-      hero_badge: 'Food Self-Reliance & Golden Generation Movement of Papua',
+      hero_badge: 'FOR EVERY CHILD IN PAPUA &middot; FOR EVERY CHILD',
       hero_title_1: 'From Healthy Plates,',
       hero_title_2: 'Rises a Brighter Future.',
-      hero_desc: '<strong>Amungsa Foundation</strong> is dedicated to empowering communities across Central Papua through biofloc aquaculture innovation, family nutrition, youth economic development, and sustainable humanitarian action.',
-      hero_btn_program: 'Explore Our Programs',
-      hero_btn_contact: 'Contact Our Team',
+      hero_desc: '<strong>Amungsa Foundation</strong> (Amungsa Cares Papua) collaborates with communities, youth networks, and healthcare personnel across Central Papua to tackle stunting, uplift family nutrition, and achieve sustainable local food sovereignty.',
+      hero_btn_action: 'TAKE ACTION NOW',
+      hero_btn_program: 'Explore Our Work →',
+      hero_photo_tag: 'Nutrition &amp; Anti-Stunting',
+      hero_photo_caption: 'Fresh 90 kg catfish harvest cultivated by Amungsa Foundation distributed alongside Mimika Health Office for toddler protein intake.',
+      hero_photo_stat: '90+ Kg Distributed',
+
+      // Mission Ribbon
+      ribbon_tag: 'FOR EVERY CHILD IN PAPUA &middot; FOR EVERY CHILD',
+      ribbon_text: '"Every child in Papua has the right to quality protein nutrition, healthy development free from stunting, and a resilient future."',
+      ribbon_cta: 'Take Action Now &rarr;',
+
+      // Appeal Section
+      appeal_tag: 'HUMANITARIAN ACTION &amp; PARTNERSHIP',
+      appeal_title: 'Together Building a Well-Nourished Future for Papua’s Golden Generation',
+      appeal_desc: 'Your support enables us to construct new biofloc pools, provide protein-dense fresh fish to prevent toddler stunting, and mentor aspiring young entrepreneurs in Central Papua.',
+      appeal_btn_wa: '💬 Chat Secretariat (WhatsApp)',
+      appeal_btn_form: 'Submit Partnership Proposal &rarr;',
 
       // Stats Strip
       stat_pools: 'Active Biofloc Pools',
@@ -539,12 +599,34 @@
       drawer_loc: '📍 Nabire, Central Papua Province',
       area_badge_bioflok: 'Biofloc',
       area_badge_nutrisi: 'Nutrition',
-      area_badge_media: 'Media'
+      area_badge_media: 'Media',
+
+      // Take Action & Donation Section
+      nav_take_action: 'Take Action',
+      action_tag: 'Take Action',
+      action_title: 'Together Bringing Smiles and Nutrition to Children in Papua',
+      action_subtitle: 'Choose how you wish to contribute: supporting toddler anti-stunting nutrition, funding youth biofloc ponds, or establishing strategic CSR partnerships.',
+      donate_freq_once: 'One-Time Donation',
+      donate_freq_monthly: 'Monthly Donation',
+      donate_cta: 'DELIVER SUPPORT NOW →',
+      pkg_1_badge: 'Direct Intervention',
+      pkg_1_title: 'Child Protein Nutrition Package',
+      pkg_1_desc: 'Provision of fresh, protein-rich catfish meals for toddlers in community health posts to rapidly and accurately curb child stunting.',
+      pkg_1_btn: 'Support Nutrition Package →',
+      pkg_2_tag: 'Highest Impact',
+      pkg_2_badge: 'Sustainable Self-Reliance',
+      pkg_2_title: 'Sponsor 1 Youth Biofloc Pool',
+      pkg_2_desc: 'Assistance for the complete installation of 1 round biofloc unit with aeration, 1,000 quality fingerlings, and initial feed for village youth in Mimika.',
+      pkg_2_btn: 'Sponsor Biofloc Pool →',
+      pkg_3_badge: 'Institutional Partnership',
+      pkg_3_title: 'CSR & Institutional Partnership',
+      pkg_3_desc: 'Synergy through Corporate Social Responsibility (CSR/TJSL) alongside government bodies, state-owned enterprises, banks, corporations, and philanthropic funds.',
+      pkg_3_btn: 'Send Partnership Proposal →'
     }
   };
 
   let currentLang = localStorage.getItem('amungsa_lang') || 'id';
-  let currentTheme = localStorage.getItem('amungsa_theme') || 'dark';
+  let currentTheme = localStorage.getItem('amungsa_theme') || 'light';
 
   document.addEventListener('DOMContentLoaded', () => {
     initViewMode();
@@ -554,11 +636,8 @@
     initMobileMenu();
     initStatsCounter();
     initGalleryFilter();
-    initContactForm();
     initAnnouncement();
-    init3DHeroCanvas();
-    init3DCardTilt();
-    initCollabDrawer();
+    initDonationModule();
   });
 
   // --------------------------------------------------------------------------
@@ -568,8 +647,6 @@
     const metaViewport = document.getElementById('viewportMeta') || document.querySelector('meta[name="viewport"]');
     const btnDesktop = document.getElementById('btnViewDesktop');
     const btnMobile = document.getElementById('btnViewMobile');
-    const drawerBtnDesktop = document.getElementById('drawerBtnViewDesktop');
-    const drawerBtnMobile = document.getElementById('drawerBtnViewMobile');
 
     // Default to 'desktop' unless visitor explicitly selected 'mobile'
     let currentMode = 'desktop';
@@ -582,12 +659,8 @@
 
     function updateButtons(mode) {
       const isDesktop = (mode === 'desktop');
-      [btnDesktop, drawerBtnDesktop].forEach(btn => {
-        if (btn) btn.classList.toggle('active', isDesktop);
-      });
-      [btnMobile, drawerBtnMobile].forEach(btn => {
-        if (btn) btn.classList.toggle('active', !isDesktop);
-      });
+      if (btnDesktop) btnDesktop.classList.toggle('active', isDesktop);
+      if (btnMobile) btnMobile.classList.toggle('active', !isDesktop);
     }
 
     function setViewMode(mode, save = true) {
@@ -610,8 +683,6 @@
 
     if (btnDesktop) btnDesktop.addEventListener('click', () => setViewMode('desktop'));
     if (btnMobile) btnMobile.addEventListener('click', () => setViewMode('mobile'));
-    if (drawerBtnDesktop) drawerBtnDesktop.addEventListener('click', () => setViewMode('desktop'));
-    if (drawerBtnMobile) drawerBtnMobile.addEventListener('click', () => setViewMode('mobile'));
 
     // Apply mode without re-saving
     setViewMode(currentMode, false);
@@ -832,7 +903,7 @@
           statNumbers.forEach(numEl => animateCount(numEl));
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.1 });
 
     const statsContainer = document.querySelector('.hero-stats');
     if (statsContainer) {
@@ -841,380 +912,164 @@
   }
 
   // --------------------------------------------------------------------------
-  // Gallery Tab Filtering
+  // Gallery Tab Filtering & Photojournalism Lightbox Modal
   // --------------------------------------------------------------------------
   function initGalleryFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
-    if (!filterBtns.length || !galleryItems.length) return;
+    if (!galleryItems.length) return;
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    if (filterBtns.length) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
 
-        const filter = btn.dataset.filter;
+          const filter = btn.dataset.filter;
 
-        galleryItems.forEach(item => {
-          const category = item.dataset.category;
-          if (filter === 'all' || category === filter) {
-            item.style.display = 'block';
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'scale(1)';
-            }, 50);
+          galleryItems.forEach(item => {
+            const category = item.dataset.category;
+            if (filter === 'all' || category === filter) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.95)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 250);
+            }
+          });
+        });
+      });
+    }
+
+    // Lightbox Modal
+    const lightboxOverlay = document.getElementById('galleryLightboxOverlay');
+    const lightboxModal = document.getElementById('galleryLightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxBadge = document.getElementById('lightboxBadge');
+    const lightboxDateLoc = document.getElementById('lightboxDateLoc');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const btnClose = document.getElementById('btnCloseLightbox');
+
+    if (lightboxOverlay && lightboxImg) {
+      const openLightbox = (item) => {
+        const imgEl = item.querySelector('img');
+        const imgSrc = imgEl ? imgEl.src : '';
+        const title = item.dataset.title || item.querySelector('h4')?.textContent || 'Dokumentasi Kegiatan';
+        const date = item.dataset.date || 'Papua Tengah';
+        const loc = item.dataset.loc || 'Prov. Papua Tengah';
+        const tag = item.dataset.tag || 'Kegiatan';
+        const desc = item.dataset.desc || item.querySelector('p')?.textContent || '';
+
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = title;
+        if (lightboxTitle) lightboxTitle.textContent = title;
+        if (lightboxBadge) lightboxBadge.textContent = tag;
+        if (lightboxDateLoc) lightboxDateLoc.textContent = `${date} · ${loc}`;
+        if (lightboxDesc) lightboxDesc.textContent = desc;
+
+        lightboxOverlay.classList.add('active');
+        lightboxOverlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeLightbox = () => {
+        lightboxOverlay.classList.remove('active');
+        lightboxOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => openLightbox(item));
+      });
+
+      if (btnClose) {
+        btnClose.addEventListener('click', closeLightbox);
+      }
+
+      lightboxOverlay.addEventListener('click', (e) => {
+        if (lightboxModal && !lightboxModal.contains(e.target)) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // UNICEF Interactive Donation Module
+  // --------------------------------------------------------------------------
+  function initDonationModule() {
+    const tabs = document.querySelectorAll('.donation-tab');
+    const chips = document.querySelectorAll('.amount-chip');
+    const impactText = document.getElementById('donationImpactText');
+    const submitBtn = document.getElementById('btnDonationSubmit');
+    if (!submitBtn) return;
+
+    let currentFreq = 'once';
+    let currentAmount = 'Rp 50.000';
+    let currentDesc = 'Paket Gizi Protein Balita';
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFreq = tab.getAttribute('data-freq') || 'once';
+        updateDonationLink();
+      });
+    });
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const impact = chip.getAttribute('data-impact');
+        const val = chip.getAttribute('data-val');
+        if (impactText && impact) {
+          impactText.innerHTML = impact;
+        }
+        if (val === 'custom') {
+          const userVal = prompt('Masukkan nominal donasi pilihan Anda (contoh: 500000):');
+          if (userVal && userVal.trim()) {
+            const num = parseInt(userVal.replace(/\D/g, ''), 10);
+            if (!isNaN(num) && num > 0) {
+              currentAmount = 'Rp ' + num.toLocaleString('id-ID');
+            } else {
+              currentAmount = userVal;
+            }
           } else {
-            item.style.opacity = '0';
-            item.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-              item.style.display = 'none';
-            }, 250);
+            currentAmount = 'Nominal Pilihan Bebas';
           }
-        });
-      });
-    });
-  }
-
-  // --------------------------------------------------------------------------
-  // Contact Form Handling
-  // --------------------------------------------------------------------------
-  function initContactForm() {
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('formFeedback');
-    const btnSubmit = document.getElementById('btnSubmitForm');
-
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('formName').value.trim();
-      const phone = document.getElementById('formPhone').value.trim();
-      const email = document.getElementById('formEmail').value.trim();
-      const topic = document.getElementById('formTopic').options[document.getElementById('formTopic').selectedIndex].text;
-      const message = document.getElementById('formMessage').value.trim();
-
-      if (!name || !phone || !message) {
-        alert(currentLang === 'en' ? 'Please complete all required fields before submitting.' : 'Mohon lengkapi formulir sebelum mengirim.');
-        return;
-      }
-
-      btnSubmit.disabled = true;
-      btnSubmit.innerHTML = `
-        <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
-          <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/>
-        </svg>
-        <span>${currentLang === 'en' ? 'Sending Message...' : 'Mengirim Pesan...'}</span>
-      `;
-
-      setTimeout(() => {
-        btnSubmit.disabled = false;
-        btnSubmit.innerHTML = `
-          <span>${currentLang === 'en' ? 'Send Message Now' : 'Kirim Pesan Sekarang'}</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-          </svg>
-        `;
-
-        feedback.className = 'form-feedback success';
-        if (currentLang === 'en') {
-          feedback.innerHTML = `Thank you <strong>${name}</strong>! Your message has been received by the Amungsa Foundation Secretariat. Our team will contact you via WhatsApp at <strong>${phone}</strong> shortly.`;
+          currentDesc = 'Dukungan Bebas Program Kemanusiaan';
         } else {
-          feedback.innerHTML = `Terima kasih Bapak/Ibu <strong>${name}</strong>! Pesan Anda telah diterima oleh Sekretariat Amungsa Foundation. Tim kami akan segera menghubungi Anda melalui nomor WhatsApp <strong>${phone}</strong>.`;
+          currentAmount = 'Rp ' + parseInt(val, 10).toLocaleString('id-ID');
+          const lbl = chip.querySelector('.amount-lbl');
+          currentDesc = lbl ? lbl.textContent.trim() : 'Donasi Gizi';
         }
-
-        form.reset();
-      }, 900);
-    });
-  }
-
-  // --------------------------------------------------------------------------
-  // Interactive 3D WebGL Hero Canvas (Three.js Aquatic/Bioflok Simulation)
-  // --------------------------------------------------------------------------
-  function init3DHeroCanvas() {
-    const canvas = document.getElementById('webglHeroCanvas');
-    if (!canvas || typeof THREE === 'undefined') return;
-
-    const heroSection = document.getElementById('beranda');
-    if (!heroSection) return;
-
-    // Scene & Perspective Camera
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(55, heroSection.clientWidth / heroSection.clientHeight, 0.1, 1000);
-    camera.position.set(0, 48, 105);
-    camera.lookAt(0, 0, 0);
-
-    const renderer = new THREE.WebGLRenderer({
-      canvas: canvas,
-      alpha: true,
-      antialias: true,
-      powerPreference: 'high-performance'
-    });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-    const handleResize = () => {
-      if (!heroSection) return;
-      const width = heroSection.clientWidth;
-      const height = heroSection.clientHeight;
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize, { passive: true });
-
-    // Interactive 3D Particle Wave Mesh (Bioflok & Water currents)
-    const SEPARATION = 4.2;
-    const AMOUNTX = 64;
-    const AMOUNTY = 44;
-    const numParticles = AMOUNTX * AMOUNTY;
-
-    const positions = new Float32Array(numParticles * 3);
-    const scales = new Float32Array(numParticles);
-    const colors = new Float32Array(numParticles * 3);
-
-    const colorCyan = new THREE.Color(0x38bdf8);  // Bright cyan
-    const colorBlue = new THREE.Color(0x0284c7);  // Deep oceanic blue
-    const colorGold = new THREE.Color(0xf59e0b);  // Warm gold accent
-
-    let i = 0, j = 0;
-    for (let ix = 0; ix < AMOUNTX; ix++) {
-      for (let iy = 0; iy < AMOUNTY; iy++) {
-        positions[i] = ix * SEPARATION - ((AMOUNTX * SEPARATION) / 2); // x
-        positions[i + 1] = 0; // y
-        positions[i + 2] = iy * SEPARATION - ((AMOUNTY * SEPARATION) / 2); // z
-
-        scales[j] = 2.4;
-
-        // Gradient color along depth with golden glints
-        const ratio = (ix / AMOUNTX + iy / AMOUNTY) * 0.5;
-        const c = (ix % 11 === 0 && iy % 9 === 0) ? colorGold : (ratio > 0.45 ? colorCyan : colorBlue);
-        colors[i] = c.r;
-        colors[i + 1] = c.g;
-        colors[i + 2] = c.b;
-
-        i += 3;
-        j++;
-      }
-    }
-
-    const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute('scale', new THREE.BufferAttribute(scales, 1));
-    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-    // Custom circular soft glow particle texture
-    const createGlowTexture = () => {
-      const c = document.createElement('canvas');
-      c.width = 64;
-      c.height = 64;
-      const ctx = c.getContext('2d');
-      const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-      gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-      gradient.addColorStop(0.35, 'rgba(56, 189, 248, 0.85)');
-      gradient.addColorStop(0.8, 'rgba(2, 132, 199, 0.25)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, 64, 64);
-      const texture = new THREE.Texture(c);
-      texture.needsUpdate = true;
-      return texture;
-    };
-
-    const material = new THREE.PointsMaterial({
-      size: 4.8,
-      map: createGlowTexture(),
-      vertexColors: true,
-      transparent: true,
-      opacity: 0.85,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false
-    });
-
-    const particles = new THREE.Points(geometry, material);
-    particles.rotation.x = 0.22;
-    scene.add(particles);
-
-    // Floating ambient micro-particles (Bioflok bubbles)
-    const floatCount = 60;
-    const floatGeo = new THREE.BufferGeometry();
-    const floatPos = new Float32Array(floatCount * 3);
-    for (let f = 0; f < floatCount * 3; f += 3) {
-      floatPos[f] = (Math.random() - 0.5) * 220;
-      floatPos[f + 1] = Math.random() * 80;
-      floatPos[f + 2] = (Math.random() - 0.5) * 160;
-    }
-    floatGeo.setAttribute('position', new THREE.BufferAttribute(floatPos, 3));
-    const floatMat = new THREE.PointsMaterial({
-      size: 3.2,
-      color: 0x38bdf8,
-      transparent: true,
-      opacity: 0.55,
-      blending: THREE.AdditiveBlending
-    });
-    const floatMesh = new THREE.Points(floatGeo, floatMat);
-    scene.add(floatMesh);
-
-    // Mouse Interaction Tracking
-    let mouseX = 0;
-    let mouseY = 0;
-    let targetCameraX = 0;
-    let targetCameraY = 48;
-
-    window.addEventListener('mousemove', (e) => {
-      const normX = (e.clientX / window.innerWidth) * 2 - 1;
-      const normY = -(e.clientY / window.innerHeight) * 2 + 1;
-      mouseX = normX * 26;
-      mouseY = normY * 16;
-    }, { passive: true });
-
-    // Animation Loop with Visibility Optimization
-    let count = 0;
-    let isHeroVisible = true;
-    let animFrameId = null;
-
-    const animate = () => {
-      if (!isHeroVisible) {
-        animFrameId = null;
-        return; // Suspend 3D loop when user scrolls down to avoid GPU starvation and blank tiling
-      }
-
-      animFrameId = requestAnimationFrame(animate);
-
-      count += 0.035;
-
-      // Smooth camera interpolation with mouse parallax
-      targetCameraX += (mouseX - targetCameraX) * 0.04;
-      targetCameraY += (48 + mouseY - targetCameraY) * 0.04;
-      camera.position.x = targetCameraX;
-      camera.position.y = targetCameraY;
-      camera.lookAt(0, 5, 0);
-
-      // Organic fluid wave math
-      const posArray = geometry.attributes.position.array;
-      let idx = 0;
-      for (let ix = 0; ix < AMOUNTX; ix++) {
-        for (let iy = 0; iy < AMOUNTY; iy++) {
-          posArray[idx + 1] = (Math.sin((ix + count) * 0.3) * 7.5) +
-                              (Math.sin((iy + count) * 0.5) * 7.5);
-          idx += 3;
-        }
-      }
-      geometry.attributes.position.needsUpdate = true;
-
-      // Rotate particles slightly with mouse
-      particles.rotation.y = targetCameraX * 0.003;
-      particles.rotation.z = Math.sin(count * 0.2) * 0.02;
-
-      // Slowly elevate float bubbles
-      const fPos = floatGeo.attributes.position.array;
-      for (let f = 1; f < floatCount * 3; f += 3) {
-        fPos[f] += 0.12;
-        if (fPos[f] > 90) fPos[f] = -10;
-      }
-      floatGeo.attributes.position.needsUpdate = true;
-
-      renderer.render(scene, camera);
-    };
-
-    if ('IntersectionObserver' in window) {
-      const heroObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          isHeroVisible = entry.isIntersecting;
-          if (isHeroVisible && !animFrameId) {
-            animFrameId = requestAnimationFrame(animate);
-          }
-        });
-      }, { threshold: 0.05 });
-      heroObserver.observe(heroSection);
-    } else {
-      animate();
-    }
-  }
-
-  // --------------------------------------------------------------------------
-  // Interactive 3D Card Tilt Engine (Perspective, Rotation, Depth)
-  // --------------------------------------------------------------------------
-  function init3DCardTilt() {
-    const cards = document.querySelectorAll('.program-card, .team-card, .stat-card, .gallery-item');
-    if (!cards.length) return;
-
-    if (window.matchMedia('(hover: none)').matches) return;
-
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transition = 'transform 0.12s ease-out, box-shadow 0.25s ease';
-      });
-
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * -11; // Max 11 deg tilt
-        const rotateY = ((x - centerX) / centerX) * 11;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(12px) scale3d(1.02, 1.02, 1.02)`;
-      });
-
-      card.addEventListener('mouseleave', () => {
-        card.style.transition = 'transform 0.4s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease';
-        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale3d(1, 1, 1)';
+        updateDonationLink();
       });
     });
-  }
 
-  // --------------------------------------------------------------------------
-  // Out-of-Screen Collaboration Drawer & Floating Action Dock
-  // --------------------------------------------------------------------------
-  function initCollabDrawer() {
-    const btnOpen = document.getElementById('btnOpenCollabDrawer');
-    const btnClose = document.getElementById('btnCloseCollabDrawer');
-    const overlay = document.getElementById('collabDrawerOverlay');
-    const drawer = document.getElementById('collabDrawer');
-    const btnToContact = document.getElementById('btnDrawerToContact');
-
-    if (!btnOpen || !overlay) return;
-
-    const openDrawer = () => {
-      overlay.classList.add('active');
-      overlay.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    };
-
-    const closeDrawer = () => {
-      overlay.classList.remove('active');
-      overlay.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    };
-
-    btnOpen.addEventListener('click', openDrawer);
-
-    if (btnClose) {
-      btnClose.addEventListener('click', closeDrawer);
+    function updateDonationLink() {
+      const freqStr = currentFreq === 'monthly' ? 'Donasi Rutin Bulanan' : 'Sekali Donasi';
+      const msg = encodeURIComponent(`Halo Sekretariat Amungsa Foundation, saya ingin berpartisipasi dalam program (${freqStr}) sebesar ${currentAmount} untuk ${currentDesc}. Mohon info rekening resmi atau petunjuk penyaluran.`);
+      submitBtn.href = `https://wa.me/6281234567890?text=${msg}`;
     }
 
-    overlay.addEventListener('click', (e) => {
-      if (drawer && !drawer.contains(e.target)) {
-        closeDrawer();
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.classList.contains('active')) {
-        closeDrawer();
-      }
-    });
-
-    if (btnToContact) {
-      btnToContact.addEventListener('click', () => {
-        closeDrawer();
-      });
-    }
+    updateDonationLink();
   }
 
 })();
+
