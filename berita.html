@@ -707,6 +707,22 @@
     </a>
   </nav>
 
+  <!-- Modal Popup Khusus: Waspada Asap (Hanya Foto) -->
+  <div class="waspada-asap-popup-overlay" id="waspadaAsapPopup" aria-hidden="true" role="dialog" aria-label="Poster Waspada Asap: Jaga Napas Anak Papua, Lindungi Masa Depan Kita">
+    <div class="waspada-asap-backdrop" id="waspadaAsapBackdrop"></div>
+    <div class="waspada-asap-dialog">
+      <button type="button" class="waspada-asap-close" id="btnCloseWaspadaAsap" aria-label="Tutup Poster">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="waspada-asap-img-wrap">
+        <img src="images/instagram/ig_waspada_asap_11sept.jpg" alt="Waspada Asap: Jaga Napas Anak Papua, Lindungi Masa Depan Kita" class="waspada-asap-img">
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="articles-data.js?v=4.2"></script>
   <script>
@@ -949,6 +965,43 @@
           };
         });
       }
+
+      // --------------------------------------------------------------------------
+      // POPUP BANNER: WASPADA ASAP (HANYA FOTO)
+      // --------------------------------------------------------------------------
+      function initWaspadaAsapPopup() {
+        const popup = document.getElementById('waspadaAsapPopup');
+        if (!popup) return;
+
+        const closeBtn = document.getElementById('btnCloseWaspadaAsap');
+        const backdrop = document.getElementById('waspadaAsapBackdrop');
+
+        const closePopup = () => {
+          popup.classList.remove('active');
+          popup.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        };
+
+        const openPopup = () => {
+          popup.classList.add('active');
+          popup.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        };
+
+        if (closeBtn) closeBtn.addEventListener('click', closePopup);
+        if (backdrop) backdrop.addEventListener('click', closePopup);
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && popup.classList.contains('active')) {
+            closePopup();
+          }
+        });
+
+        // Auto-open on page load
+        setTimeout(openPopup, 650);
+      }
+
+      initWaspadaAsapPopup();
     })();
   </script>
 </body>

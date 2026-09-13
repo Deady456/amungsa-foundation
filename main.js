@@ -1231,6 +1231,43 @@
         modal.classList.add('active');
       });
     });
+
+    // --------------------------------------------------------------------------
+    // POPUP BANNER: WASPADA ASAP (HANYA FOTO)
+    // --------------------------------------------------------------------------
+    function initWaspadaAsapPopup() {
+      const popup = document.getElementById('waspadaAsapPopup');
+      if (!popup) return;
+
+      const closeBtn = document.getElementById('btnCloseWaspadaAsap');
+      const backdrop = document.getElementById('waspadaAsapBackdrop');
+
+      const closePopup = () => {
+        popup.classList.remove('active');
+        popup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      const openPopup = () => {
+        popup.classList.add('active');
+        popup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closePopup);
+      if (backdrop) backdrop.addEventListener('click', closePopup);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popup.classList.contains('active')) {
+          closePopup();
+        }
+      });
+
+      // Automatically trigger popup on page load
+      setTimeout(openPopup, 650);
+    }
+
+    initWaspadaAsapPopup();
   });
 
 })();

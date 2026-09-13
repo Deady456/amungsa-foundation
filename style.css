@@ -4295,5 +4295,127 @@ button {
   }
 }
 
+/* ==========================================================================
+   POPUP FOTO KHUSUS: WASPADA ASAP (HANYA FOTO)
+   ========================================================================== */
+.waspada-asap-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
+.waspada-asap-popup-overlay.active {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
 
+.waspada-asap-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 15, 28, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.waspada-asap-dialog {
+  position: relative;
+  z-index: 2;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.waspada-asap-popup-overlay.active .waspada-asap-dialog {
+  transform: scale(1);
+}
+
+.waspada-asap-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #0F172A;
+  border: 2px solid rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.22s ease;
+  z-index: 10;
+  padding: 0;
+}
+
+.waspada-asap-close:hover {
+  background: #EF4444;
+  color: #FFFFFF;
+  transform: rotate(90deg) scale(1.1);
+  border-color: #EF4444;
+}
+
+.waspada-asap-close svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+.waspada-asap-img-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.18);
+  line-height: 0;
+  background-color: #0F172A;
+}
+
+.waspada-asap-img {
+  display: block;
+  max-width: min(88vw, 480px);
+  max-height: min(82vh, 680px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 600px) {
+  .waspada-asap-popup-overlay {
+    padding: 0.75rem;
+  }
+  .waspada-asap-close {
+    top: -12px;
+    right: -10px;
+    width: 36px;
+    height: 36px;
+  }
+  .waspada-asap-close svg {
+    width: 18px;
+    height: 18px;
+  }
+  .waspada-asap-img-wrap {
+    border-radius: 12px;
+  }
+  .waspada-asap-img {
+    max-width: 90vw;
+    max-height: 78vh;
+  }
+}
