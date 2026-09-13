@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Warta & Cerita Lapangan — Amungsa Foundation</title>
+  <meta name="description" id="pageDescription" content="Dokumentasi resmi, laporan kegiatan kemanusiaan, aksi gizi balita, dan advokasi kebijakan Yayasan Amungsa Foundation (Amungsa Cares Papua).">
+
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1CABE2">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4.2">
+  <style>
+    /* ==========================================================================
+       STANDALONE ARTICLE & NEWS PORTAL STYLES (UNICEF EDITORIAL DESIGN)
+       ========================================================================== */
+    .article-page-wrap {
+      padding-top: 100px;
+      padding-bottom: 70px;
+      min-height: 85vh;
+      background: var(--color-bg-primary);
+    }
+    .article-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .article-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      margin-bottom: 1.25rem;
+    }
+    .article-breadcrumb a {
+      color: var(--color-unicef-blue);
+      text-decoration: none;
+    }
+    .article-breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .article-header {
+      margin-bottom: 2rem;
+    }
+    .article-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .article-category-badge {
+      display: inline-block;
+      background: rgba(28, 171, 226, 0.12);
+      color: var(--color-unicef-blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+    .article-read-time {
+      font-size: 0.82rem;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+    }
+    .article-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--color-unicef-navy);
+      margin-bottom: 1rem;
+    }
+    [data-theme="dark"] .article-title {
+      color: #ffffff;
+    }
+    .article-subtitle {
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--color-text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    .article-meta-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      flex-wrap: wrap;
+    }
+    .meta-author-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .meta-author-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--color-unicef-navy);
+    }
+    [data-theme="dark"] .meta-author-name {
+      color: #ffffff;
+    }
+    .meta-date-loc {
+      font-size: 0.82rem;
+      color: var(--color-text-secondary);
+    }
+    .meta-share-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-share-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-primary);
+      color: var(--color-unicef-navy);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    [data-theme="dark"] .btn-share-item {
+      color: #ffffff;
+    }
+    .btn-share-item:hover {
+      background: var(--color-unicef-blue);
+      color: #ffffff;
+      border-color: var(--color-unicef-blue);
+    }
+    .article-featured-media {
+      margin: 2rem 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+    }
+    .article-featured-img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .article-media-caption {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.84rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      background: rgba(0, 0, 0, 0.03);
+      border-top: 1px solid var(--color-border);
+    }
+    .article-body-content {
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: var(--color-text-primary);
+    }
+    .article-body-content p {
+      margin-bottom: 1.4rem;
+    }
+    .article-body-content p.lead-paragraph {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      font-weight: 500;
+      color: var(--color-unicef-navy);
+      border-left: 4px solid var(--color-unicef-blue);
+      padding-left: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+    [data-theme="dark"] .article-body-content p.lead-paragraph {
+      color: #e0f2fe;
+    }
+    .article-body-content h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--color-unicef-navy);
+      margin-top: 2rem;
+      margin-bottom: 0.85rem;
+    }
+    [data-theme="dark"] .article-body-content h3 {
+      color: #ffffff;
+    }
+    .editorial-quote {
+      margin: 1.75rem 0;
+      padding: 1.25rem 1.5rem;
+      background: rgba(28, 171, 226, 0.07);
+      border-left: 4px solid var(--color-unicef-yellow);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .editorial-quote p {
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-unicef-navy);
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    [data-theme="dark"] .editorial-quote p {
+      color: #f1f5f9;
+    }
+    .editorial-quote cite {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-unicef-blue);
+      display: block;
+    }
+    .article-callout-box {
+      margin: 1.75rem 0;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+    .article-callout-box h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-unicef-navy);
+      margin-bottom: 0.75rem;
+    }
+    [data-theme="dark"] .article-callout-box h4 {
+      color: #ffffff;
+    }
+    .article-callout-box ul {
+      padding-left: 1.25rem;
+      margin-bottom: 0;
+    }
+    .article-callout-box li {
+      margin-bottom: 0.5rem;
+    }
+    .article-gallery-section {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .article-gallery-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--color-unicef-navy);
+      margin-bottom: 1rem;
+    }
+    [data-theme="dark"] .article-gallery-title {
+      color: #ffffff;
+    }
+    .article-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.25s ease;
+    }
+    .gallery-card img:hover {
+      transform: scale(1.03);
+    }
+    .gallery-caption {
+      padding: 0.65rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--color-text-secondary);
+      line-height: 1.4;
+    }
+    .article-footer-nav {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .related-stories-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .related-stories-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-unicef-navy);
+      margin-bottom: 1.25rem;
+    }
+    [data-theme="dark"] .related-stories-title {
+      color: #ffffff;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* PORTAL VIEW STYLES */
+    .portal-hero {
+      text-align: center;
+      padding: 2rem 0 3rem;
+    }
+    .portal-hero-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-unicef-blue);
+      margin-bottom: 0.75rem;
+    }
+    .portal-hero-title {
+      font-size: 2.35rem;
+      font-weight: 900;
+      color: var(--color-unicef-navy);
+      margin-bottom: 0.85rem;
+    }
+    [data-theme="dark"] .portal-hero-title {
+      color: #ffffff;
+    }
+    .portal-hero-desc {
+      font-size: 1.08rem;
+      color: var(--color-text-secondary);
+      max-width: 650px;
+      margin: 0 auto 1.75rem;
+    }
+    .portal-filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-card);
+      color: var(--color-text-primary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--color-unicef-blue);
+      color: #ffffff;
+      border-color: var(--color-unicef-blue);
+    }
+    .portal-stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" id="topAnnouncement">
+    <div class="container announcement-content">
+      <span class="announcement-tag">WARTA RESMI AMUNGSA CARES</span>
+      <p class="announcement-text">
+        Liputan langsung dan dokumentasi kegiatan intervensi gizi, kemitraan pemuda, dan advokasi anak Papua.
+      </p>
+      <a href="index.html#upaya" class="announcement-link">Lihat Upaya Kami →</a>
+      <button class="announcement-close" id="closeAnnouncement" title="Tutup" aria-label="Tutup">✕</button>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Beranda Amungsa Foundation">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round">
+            <path d="M50 14 C 30 14 14 30 14 50 L 14 84" />
+            <path d="M86 84 L 86 50 C 86 30 70 14 50 14" />
+            <path d="M50 28 C 38 28 28 38 28 50 L 28 84" />
+            <path d="M72 84 L 72 50 C 72 38 62 28 50 28" />
+            <path d="M50 42 C 46 42 42 46 42 50 L 42 84" />
+            <path d="M58 84 L 58 50 C 58 46 54 42 50 42" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Amungsa <span>Foundation</span></span>
+          <span class="brand-sub">#UntukSetiapAnak Papua &middot; Amungsa Cares</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html#beranda" class="nav-link">Beranda</a>
+        <a href="index.html#upaya" class="nav-link">Upaya Kami</a>
+        <a href="berita.html" class="nav-link active">Cerita Lapangan</a>
+        <a href="index.html#tentang" class="nav-link">Tentang &amp; Mitra</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Mode Tema" title="Ganti Mode Gelap / Terang">
+          <span class="theme-icon theme-icon-dark" aria-hidden="true">🌙</span>
+          <span class="theme-icon theme-icon-light" aria-hidden="true">☀️</span>
+        </button>
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">ID</button>
+          <button class="lang-btn" data-lang="en" title="English">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-page-wrap">
+    <div class="container article-container" id="mainArticleContent">
+      <!-- Dynamic Article Content Injected via JS -->
+      <div id="articleDetailView" style="display: none;">
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span>/</span>
+          <a href="berita.html">Cerita Lapangan</a>
+          <span>/</span>
+          <span id="bcArticleTitle">Detail Berita</span>
+        </nav>
+
+        <header class="article-header">
+          <div class="article-badge-row">
+            <span class="article-category-badge" id="artCatBadge">Advokasi Kebijakan</span>
+            <span class="article-read-time" id="artReadTime">4 menit baca</span>
+          </div>
+          <h1 class="article-title" id="artTitle">Judul Artikel</h1>
+          <p class="article-subtitle" id="artSubtitle">Subjudul ringkasan artikel.</p>
+
+          <div class="article-meta-card">
+            <div class="meta-author-group">
+              <span class="meta-author-name" id="artAuthor">Tim Redaksi Amungsa Cares</span>
+              <span class="meta-date-loc" id="artDateLoc">20 Agustus 2026 &middot; Mimika, Papua Tengah</span>
+            </div>
+            <div class="meta-share-group">
+              <button type="button" class="btn-share-item" id="btnShareWa">
+                <span>💬 WhatsApp</span>
+              </button>
+              <button type="button" class="btn-share-item" id="btnCopyLink">
+                <span>🔗 Salin Tautan</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <figure class="article-featured-media">
+          <img src="" alt="" class="article-featured-img" id="artCoverImg">
+          <figcaption class="article-media-caption" id="artCoverCaption"></figcaption>
+        </figure>
+
+        <article class="article-body-content" id="artBodyContent">
+          <!-- Article text paragraphs -->
+        </article>
+
+        <!-- Gallery Section -->
+        <section class="article-gallery-section" id="artGallerySection">
+          <h3 class="article-gallery-title">📸 Dokumentasi Kegiatan Terkait</h3>
+          <div class="article-gallery-grid" id="artGalleryGrid"></div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="article-footer-nav">
+          <a href="berita.html" class="btn btn-unicef-outline">
+            &larr; Lihat Semua Cerita &amp; Liputan
+          </a>
+          <a href="index.html#tentang" class="btn btn-unicef-yellow">
+            Hubungi Narahubung &amp; Kemitraan &rarr;
+          </a>
+        </div>
+
+        <!-- Related Stories -->
+        <section class="related-stories-section">
+          <h3 class="related-stories-title">Cerita Terkait Lainnya</h3>
+          <div class="related-grid" id="relatedStoriesGrid"></div>
+        </section>
+      </div>
+
+      <!-- Portal View (When no ?id is specified) -->
+      <div id="articlePortalView">
+        <div class="portal-hero">
+          <span class="portal-hero-tag">ARSIP WARTA &amp; KEGIATAN RESMI</span>
+          <h1 class="portal-hero-title">Cerita dari Tanah Papua</h1>
+          <p class="portal-hero-desc">
+            Kumpulan kisah perubahan nyata, advokasi kemanusiaan anak, budidaya bioflok lele, dan kegiatan lapangan Yayasan Amungsa Foundation (Amungsa Cares Papua).
+          </p>
+
+          <div class="portal-filter-tabs" id="filterTabs">
+            <button type="button" class="filter-btn active" data-filter="all">Semua Warta</button>
+            <button type="button" class="filter-btn" data-filter="unicef">UNICEF &amp; Kebijakan</button>
+            <button type="button" class="filter-btn" data-filter="pangan">Pangan &amp; Gizi</button>
+            <button type="button" class="filter-btn" data-filter="darurat">Tanggap Darurat</button>
+            <button type="button" class="filter-btn" data-filter="kegiatan">Kegiatan &amp; Mitra</button>
+          </div>
+        </div>
+
+        <div class="portal-stories-grid" id="portalStoriesGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer footer-compact">
+    <div class="container footer-content-compact">
+      <div class="footer-brand-wrap">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="brand-text">
+            <span class="brand-name">Amungsa <span>Foundation</span></span>
+            <span class="brand-sub">#UntukSetiapAnak Papua</span>
+          </div>
+        </a>
+        <p class="footer-tagline font-script">"Dari Piring Sehat, Lahir Masa Depan Hebat"</p>
+      </div>
+
+      <nav class="footer-nav-links">
+        <a href="index.html#beranda">Beranda</a>
+        <a href="index.html#upaya">Upaya Kami</a>
+        <a href="berita.html">Cerita Lapangan</a>
+        <a href="index.html#tentang">Tentang &amp; Mitra</a>
+      </nav>
+
+      <div class="footer-bottom-row">
+        <p class="footer-copy">&copy; 2026 Amungsa Foundation (Amungsa Cares Papua). Seluruh Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="articles-data.js?v=4.2"></script>
+  <script>
+    (function() {
+      // Theme toggling support
+      const themeBtn = document.getElementById('themeToggleBtn');
+      const rootHtml = document.documentElement;
+      const savedTheme = localStorage.getItem('amungsa-theme') || 'light';
+      rootHtml.setAttribute('data-theme', savedTheme);
+
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const currentTheme = rootHtml.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          rootHtml.setAttribute('data-theme', newTheme);
+          localStorage.setItem('amungsa-theme', newTheme);
+        });
+      }
+
+      // Read article ID from URL query: ?id=...
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleId = urlParams.get('id');
+
+      const detailView = document.getElementById('articleDetailView');
+      const portalView = document.getElementById('articlePortalView');
+
+      if (articleId && typeof AMUNGSA_ARTICLES !== 'undefined') {
+        const article = AMUNGSA_ARTICLES.find(a => a.id === articleId) || AMUNGSA_ARTICLES[0];
+        renderArticleDetail(article);
+      } else {
+        renderPortalView();
+      }
+
+      function renderArticleDetail(art) {
+        portalView.style.display = 'none';
+        detailView.style.display = 'block';
+
+        document.title = `${art.title} — Amungsa Foundation`;
+        document.getElementById('bcArticleTitle').textContent = art.title;
+        document.getElementById('artCatBadge').textContent = art.categoryBadge || art.category;
+        document.getElementById('artReadTime').textContent = art.readTime;
+        document.getElementById('artTitle').textContent = art.title;
+        document.getElementById('artSubtitle').textContent = art.subtitle;
+        document.getElementById('artAuthor').textContent = art.author;
+        document.getElementById('artDateLoc').textContent = `${art.date} · ${art.location}`;
+
+        const coverImg = document.getElementById('artCoverImg');
+        coverImg.src = art.coverImage;
+        coverImg.alt = art.title;
+        document.getElementById('artCoverCaption').textContent = art.coverCaption;
+
+        document.getElementById('artBodyContent').innerHTML = art.contentHtml;
+
+        // Render Gallery
+        const galleryGrid = document.getElementById('artGalleryGrid');
+        galleryGrid.innerHTML = '';
+        if (art.gallery && art.gallery.length > 0) {
+          art.gallery.forEach(g => {
+            const card = document.createElement('div');
+            card.className = 'gallery-card';
+            card.innerHTML = `
+              <img src="${g.src}" alt="${g.caption}">
+              <div class="gallery-caption">${g.caption}</div>
+            `;
+            galleryGrid.appendChild(card);
+          });
+        } else {
+          document.getElementById('artGallerySection').style.display = 'none';
+        }
+
+        // Share buttons
+        const shareWa = document.getElementById('btnShareWa');
+        if (shareWa) {
+          shareWa.addEventListener('click', () => {
+            const shareUrl = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`*${art.title}*\nBaca warta resmi Amungsa Foundation: `);
+            window.open(`https://wa.me/?text=${shareText}${shareUrl}`, '_blank');
+          });
+        }
+        const copyBtn = document.getElementById('btnCopyLink');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              copyBtn.textContent = '✅ Tautan Tersalin!';
+              setTimeout(() => { copyBtn.textContent = '🔗 Salin Tautan'; }, 2500);
+            });
+          });
+        }
+
+        // Related stories (exclude current)
+        const relatedGrid = document.getElementById('relatedStoriesGrid');
+        relatedGrid.innerHTML = '';
+        const related = AMUNGSA_ARTICLES.filter(a => a.id !== art.id).slice(0, 3);
+        related.forEach(item => {
+          const card = document.createElement('article');
+          card.className = 'news-card-compact';
+          card.innerHTML = `
+            <div class="news-card-thumb">
+              <img src="${item.coverImage}" alt="${item.title}">
+              <span class="news-thumb-tag">${item.date}</span>
+            </div>
+            <div class="news-card-info">
+              <h4 class="news-card-heading">${item.title}</h4>
+              <p class="news-card-desc">${item.summary}</p>
+              <a href="berita.html?id=${item.id}" class="news-card-action">Baca Liputan &rarr;</a>
+            </div>
+          `;
+          relatedGrid.appendChild(card);
+        });
+      }
+
+      function renderPortalView() {
+        portalView.style.display = 'block';
+        detailView.style.display = 'none';
+
+        const grid = document.getElementById('portalStoriesGrid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        function displayItems(filter) {
+          grid.innerHTML = '';
+          if (typeof AMUNGSA_ARTICLES === 'undefined') return;
+
+          const filtered = AMUNGSA_ARTICLES.filter(item => {
+            if (filter === 'all') return true;
+            if (filter === 'unicef') return item.id.includes('malaria') || item.category.toLowerCase().includes('unicef');
+            if (filter === 'pangan') return item.id.includes('petani') || item.category.toLowerCase().includes('pangan') || item.category.toLowerCase().includes('gizi');
+            if (filter === 'darurat') return item.id.includes('masker') || item.category.toLowerCase().includes('darurat');
+            if (filter === 'kegiatan') return item.id.includes('brida') || item.id.includes('kunker') || item.id.includes('lks') || item.category.toLowerCase().includes('sosial') || item.category.toLowerCase().includes('kegiatan');
+            return true;
+          });
+
+          filtered.forEach(item => {
+            const card = document.createElement('article');
+            card.className = 'news-card-compact';
+            card.innerHTML = `
+              <div class="news-card-thumb">
+                <img src="${item.coverImage}" alt="${item.title}">
+                <span class="news-thumb-tag">${item.date}</span>
+              </div>
+              <div class="news-card-info">
+                <span class="unicef-card-kicker">${item.categoryBadge || item.category}</span>
+                <h3 class="news-card-heading" style="margin-top: 4px;">${item.title}</h3>
+                <p class="news-card-desc">${item.summary}</p>
+                <a href="berita.html?id=${item.id}" class="news-card-action">Baca Warta Lengkap &rarr;</a>
+              </div>
+            `;
+            grid.appendChild(card);
+          });
+        }
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const cat = btn.getAttribute('data-filter') || 'all';
+            displayItems(cat);
+          });
+        });
+
+        displayItems('all');
+      }
+    })();
+  </script>
+</body>
+</html>
