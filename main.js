@@ -1065,7 +1065,7 @@
     function updateDonationLink() {
       const freqStr = currentFreq === 'monthly' ? 'Donasi Rutin Bulanan' : 'Sekali Donasi';
       const msg = encodeURIComponent(`Halo Sekretariat Amungsa Foundation, saya ingin berpartisipasi dalam program (${freqStr}) sebesar ${currentAmount} untuk ${currentDesc}. Mohon info rekening resmi atau petunjuk penyaluran.`);
-      submitBtn.href = `https://wa.me/6281234567890?text=${msg}`;
+      submitBtn.href = `https://wa.me/6281247244664?text=${msg}`;
     }
 
     updateDonationLink();
