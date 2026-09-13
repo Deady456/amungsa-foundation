@@ -511,11 +511,12 @@
           </p>
 
           <div class="portal-filter-tabs" id="filterTabs">
-            <button type="button" class="filter-btn active" data-filter="all">Semua Warta</button>
+            <button type="button" class="filter-btn active" data-filter="all">Semua Warta &amp; Postingan</button>
+            <button type="button" class="filter-btn" data-filter="instagram" style="color: #e1306c; border-color: rgba(225, 48, 108, 0.4);">📸 Postingan Instagram</button>
             <button type="button" class="filter-btn" data-filter="unicef">UNICEF &amp; Kebijakan</button>
             <button type="button" class="filter-btn" data-filter="pangan">Pangan &amp; Gizi</button>
             <button type="button" class="filter-btn" data-filter="darurat">Tanggap Darurat</button>
-            <button type="button" class="filter-btn" data-filter="kegiatan">Kegiatan &amp; Mitra</button>
+            <button type="button" class="filter-btn" data-filter="kegiatan">Kegiatan &amp; Kemitraan</button>
           </div>
         </div>
 
@@ -676,10 +677,11 @@
 
           const filtered = AMUNGSA_ARTICLES.filter(item => {
             if (filter === 'all') return true;
+            if (filter === 'instagram') return item.coverImage.includes('instagram') || (item.author && item.author.toLowerCase().includes('instagram'));
             if (filter === 'unicef') return item.id.includes('malaria') || item.category.toLowerCase().includes('unicef');
             if (filter === 'pangan') return item.id.includes('petani') || item.category.toLowerCase().includes('pangan') || item.category.toLowerCase().includes('gizi');
             if (filter === 'darurat') return item.id.includes('masker') || item.category.toLowerCase().includes('darurat');
-            if (filter === 'kegiatan') return item.id.includes('brida') || item.id.includes('kunker') || item.id.includes('lks') || item.category.toLowerCase().includes('sosial') || item.category.toLowerCase().includes('kegiatan');
+            if (filter === 'kegiatan') return item.id.includes('brida') || item.id.includes('kunker') || item.id.includes('lks') || item.id.includes('oikumene') || item.id.includes('muslimin') || item.category.toLowerCase().includes('sosial') || item.category.toLowerCase().includes('kegiatan') || item.category.toLowerCase().includes('kemitraan');
             return true;
           });
 

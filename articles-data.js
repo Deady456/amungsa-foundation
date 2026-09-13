@@ -14,11 +14,12 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-08-20",
     author: "Tim Redaksi Amungsa Cares & Liputan Lapangan",
     location: "Ruang Komisi C DPRK Mimika, Papua Tengah",
-    coverImage: "images/amungsa-unicef-dprk-malaria.jpg",
-    coverCaption: "Pengurus Amungsa Foundation bersama delegasi UNICEF saat audiensi resmi bersama Ketua Komisi C DPRK Mimika Herman Ghafur di ruang kerja dewan, Kamis (20/8/2026). (Foto: Dok. Amungsa Foundation)",
+    coverImage: "images/instagram/ig_unicef_malaria_20agust.jpg",
+    coverCaption: "Dokumentasi Resmi Publikasi Amungsa Foundation bersama UNICEF saat audiensi bersama Ketua Komisi C DPRK Mimika Herman Ghafur, 20 Agustus 2026. (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "4 menit baca",
     summary: "Yayasan Amungsa Foundation bersama perwakilan UNICEF beraudiensi dengan pimpinan Komisi C DPRK Mimika untuk mempercepat penyusunan Peraturan Daerah (Perda) penanggulangan malaria di Kabupaten Mimika.",
     gallery: [
+      { src: "images/instagram/ig_unicef_malaria_20agust.jpg", caption: "Publikasi resmi advokasi Perda Malaria bersama UNICEF dan DPRK Mimika." },
       { src: "images/amungsa-unicef-dprk-malaria.jpg", caption: "Pertemuan koordinasi Amungsa Foundation, UNICEF, dan Ketua Komisi C DPRK Mimika." },
       { src: "images/foto-dr-enny-kenangalem.jpg", caption: "dr. Enny Kenangalem (Ketua Yayasan Amungsa / Peneliti Kesehatan) memaparkan urgensi intervensi malaria berkelanjutan." }
     ],
@@ -62,11 +63,12 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-09-13",
     author: "Tim Redaksi Amungsa Cares",
     location: "Jalan Lanal, Distrik Mimika Baru, Papua Tengah",
-    coverImage: "images/amungsa-gerakan-masker-mimika.jpg",
-    coverCaption: "Program Manager Amungsa Cares Papua, Febian Kakisina, membagikan 500 masker medis kepada Jemaat GPdP Semua Umat di Jalan Lanal, Mimika, Minggu (13/9/2026). (Foto: Dok. Amungsa Cares)",
+    coverImage: "images/instagram/ig_masker_13sept.jpg",
+    coverCaption: "Program Manager Amungsa Cares Papua, Febian Kakisina, membagikan masker medis kepada jemaat di Jalan Lanal, Mimika, Minggu (13/9/2026). (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Cares Papua menginisiasi gerakan sosial penyaluran 2.000 masker medis guna melindungi saluran pernapasan warga, jemaat gereja, dan pelajar sekolah dari ancaman kabut debu polusi di Mimika.",
     gallery: [
+      { src: "images/instagram/ig_masker_13sept.jpg", caption: "Dokumentasi resmi Instagram penyaluran masker medis Amungsa Cares." },
       { src: "images/amungsa-gerakan-masker-mimika.jpg", caption: "Febian Kakisina membagikan masker kepada tokoh jemaat dan keluarga warga." },
       { src: "images/amungsa-tim-lapangan.jpg", caption: "Relawan pemuda Amungsa Cares bersiap mendistribusikan logistik masker." }
     ],
@@ -96,13 +98,13 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-09-11",
     author: "Humas Resmi Yayasan Amungsa Cares Papua (Instagram @amungsafoundation)",
     location: "Kabupaten Mimika, Papua Tengah",
-    coverImage: "images/amungsa-gerakan-masker-mimika.jpg",
+    coverImage: "images/instagram/ig_waspada_asap_11sept.jpg",
     coverCaption: "Poster Edukasi 'Waspada Asap: Jaga Napas Anak Papua, Lindungi Masa Depan Kita' oleh Amungsa Cares Papua. (Sumber: Instagram Resmi @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Cares Papua menerbitkan seruan publik dan panduan aksi perlindungan keluarga dari ancaman asap kebakaran di Mimika: wajib masker, batasi aktivitas luar ruangan, dan deteksi dini ISPA.",
     gallery: [
-      { src: "images/amungsa-gerakan-masker-mimika.jpg", caption: "Kampanye penggunaan masker bagi pelajar sekolah dasar di Mimika." },
-      { src: "images/amungsa-tim-lapangan.jpg", caption: "Tim relawan kemanusiaan Amungsa Cares siaga respon kesehatan masyarakat." }
+      { src: "images/instagram/ig_waspada_asap_11sept.jpg", caption: "Poster edukasi perlindungan pernapasan anak Papua dari kabut asap." },
+      { src: "images/amungsa-gerakan-masker-mimika.jpg", caption: "Aksi pembagian masker di lapangan." }
     ],
     contentHtml: `
       <p class="lead-paragraph"><strong>MIMIKA, PAPUA TENGAH</strong> — Melalui kanal media sosial resminya <em>@amungsafoundation</em>, Yayasan Amungsa Cares Papua merilis seruan edukasi publik bertajuk <strong>"WASPADA ASAP: Jaga Napas Anak Papua, Lindungi Masa Depan Kita"</strong> menyusul meningkatnya kabut asap di langit Mimika pada awal September 2026.</p>
@@ -136,13 +138,13 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-09-09",
     author: "Tim Media Yayasan Amungsa Foundation (Instagram @amungsafoundation)",
     location: "Lakeca Lounge, Timika, Papua Tengah",
-    coverImage: "images/diskusi-pmi-amungsa-petani.jpg",
+    coverImage: "images/instagram/ig_oikumene_09sept.jpg",
     coverCaption: "Silaturahmi dan konsolidasi program sosial Amungsa Foundation bersama perwakilan Pemuda Oikumene Mimika di Lakeca Lounge, Rabu (9/9/2026). (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Cares Papua memperkuat sinergi inklusif bersama Pemuda Oikumene Kabupaten Mimika untuk menyatukan gagasan dan kerja nyata di sektor pendidikan, kesehatan, dan pemberdayaan masyarakat.",
     gallery: [
-      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Pertemuan hangat pemuda lintas komunitas membicarakan program kepemudaan." },
-      { src: "images/foto-febian-kakisina.jpg", caption: "Febian Kakisina (Sekretaris Yayasan) menegaskan pentingnya kolaborasi inklusif." }
+      { src: "images/instagram/ig_oikumene_09sept.jpg", caption: "Dokumentasi resmi Instagram pertemuan di Lakeca Lounge." },
+      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Pertemuan hangat pemuda lintas komunitas membicarakan program kepemudaan." }
     ],
     contentHtml: `
       <p class="lead-paragraph"><strong>TIMIKA, PAPUA TENGAH</strong> — Yayasan <strong>Amungsa Cares Papua</strong> terus membuka ruang komunikasi dan merajut kemitraan bersama berbagai elemen kepemudaan. Pada Rabu (9/9/2026), jajaran pengurus Amungsa menggelar pertemuan hangat bersama perwakilan <strong>Pemuda Oikumene Kabupaten Mimika</strong> di Lakeca Lounge, Timika.</p>
@@ -174,13 +176,13 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-09-08",
     author: "Tim Humas & Media Amungsa Foundation",
     location: "Kantor BRIDA Mimika, Papua Tengah",
-    coverImage: "images/amungsa-cover-collage.jpg",
-    coverCaption: "Presentasi program kemitraan strategis 'Mimika Mimpi Tanpa Batas' oleh pengurus Amungsa Foundation di hadapan pimpinan BRIDA Mimika. (Foto: Dok. Instagram @amungsafoundation)",
+    coverImage: "images/instagram/ig_brida_08sept.jpg",
+    coverCaption: "Presentasi program kemitraan strategis 'Mimika Mimpi Tanpa Batas' oleh pengurus Amungsa Foundation di hadapan pimpinan BRIDA Mimika, 08 September 2026. (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Foundation memaparkan roadmap program 'Mimika Mimpi Tanpa Batas' di Badan Riset dan Inovasi Daerah (BRIDA) Mimika untuk mengembangkan ekosistem riset terapan dan pemberdayaan pemuda asli Papua.",
     gallery: [
-      { src: "images/amungsa-cover-collage.jpg", caption: "Sinergi perumusan program inkubasi talenta riset pemuda daerah." },
-      { src: "images/foto-febian-kakisina.jpg", caption: "Febian Kakisina memaparkan pendekatan audio-visual dan dokumentasi potensi daerah." }
+      { src: "images/instagram/ig_brida_08sept.jpg", caption: "Dokumentasi poster resmi presentasi program BRIDA Mimika." },
+      { src: "images/amungsa-cover-collage.jpg", caption: "Sinergi perumusan program inkubasi talenta riset pemuda daerah." }
     ],
     contentHtml: `
       <p class="lead-paragraph"><strong>MIMIKA, PAPUA TENGAH</strong> — Melalui akun Instagram resmi <em>@amungsafoundation</em>, Yayasan Amungsa Foundation membagikan kabar gembira mengenai konsolidasi strategis bersama <strong>Badan Riset dan Inovasi Daerah (BRIDA) Kabupaten Mimika</strong> dalam merancang program inkubasi <strong>"Mimika Mimpi Tanpa Batas"</strong>.</p>
@@ -240,13 +242,13 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-08-30",
     author: "Tim Humas Amungsa Foundation (Instagram @amungsafoundation)",
     location: "Hotel Grand Mozza, Timika, Papua Tengah",
-    coverImage: "images/diskusi-pmi-amungsa-petani.jpg",
-    coverCaption: "Pengurus Amungsa Foundation saat menghadiri pelantikan PW Pemuda Muslimin Indonesia Papua Tengah. (Foto: Dok. Instagram @amungsafoundation)",
+    coverImage: "images/instagram/ig_pemuda_muslimin_30agust.jpg",
+    coverCaption: "Dokumentasi resmi kehadiran pengurus Amungsa Foundation dalam pelantikan PW Pemuda Muslimin Indonesia Papua Tengah, 30 Agustus 2026. (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Foundation menghadiri pelantikan resmi Pimpinan Wilayah Pemuda Muslimin Indonesia (PMI) Papua Tengah guna mempererat komitmen bersama dalam kemandirian ekonomi dan kemanusiaan.",
     gallery: [
-      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Konsolidasi pemuda dan pengurus yayasan seusai prosesi pelantikan." },
-      { src: "images/foto-rahadian-putra.jpg", caption: "Rahadian Putra (Ketua PW PMI Papua Tengah) mitra strategis kemanusiaan Amungsa." }
+      { src: "images/instagram/ig_pemuda_muslimin_30agust.jpg", caption: "Dokumentasi Instagram resmi kehadiran Amungsa Foundation." },
+      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Konsolidasi pemuda dan pengurus yayasan seusai prosesi pelantikan." }
     ],
     contentHtml: `
       <p class="lead-paragraph"><strong>TIMIKA, PAPUA TENGAH</strong> — Pengurus Yayasan Amungsa Foundation menghadiri secara langsung prosesi pelantikan Pimpinan Wilayah (PW) <strong>Pemuda Muslimin Indonesia (PMI) Provinsi Papua Tengah</strong> periode 2026–2030 di Timika, Minggu (30/8/2026).</p>
@@ -269,13 +271,13 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-08-28",
     author: "Tim Hubungan Kelembagaan Amungsa Foundation (Instagram @amungsafoundation)",
     location: "Gedung Pertemuan Dinas Sosial Kabupaten Mimika",
-    coverImage: "images/kegiatan/kegiatan-sosial-1.jpg",
+    coverImage: "images/instagram/ig_pelatihan_sdm_28agust.jpg",
     coverCaption: "Febian Kakisina (Sekretaris Yayasan) dan perwakilan Amungsa Foundation dalam pembukaan sosialisasi LK3 Dinas Sosial Mimika, 28 Agustus 2026. (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Foundation mengikuti pelatihan peningkatan kapasitas SDM Lembaga Konsultasi Kesejahteraan Keluarga (LK3) oleh Dinas Sosial Mimika demi standardisasi pendampingan sosial bermartabat.",
     gallery: [
-      { src: "images/kegiatan/kegiatan-sosial-1.jpg", caption: "Febian Kakisina bersama peserta sosialisasi kelembagaan sosial Mimika." },
-      { src: "images/kegiatan/kegiatan-sosial-2.jpg", caption: "Pemaparan materi tata kelola akreditasi lembaga sosial kemanusiaan." }
+      { src: "images/instagram/ig_pelatihan_sdm_28agust.jpg", caption: "Dokumentasi resmi Instagram keikutsertaan penguatan kapasitas kelembagaan sosial." },
+      { src: "images/kegiatan/kegiatan-sosial-1.jpg", caption: "Febian Kakisina bersama peserta sosialisasi kelembagaan sosial Mimika." }
     ],
     contentHtml: `
       <p class="lead-paragraph"><strong>MIMIKA, PAPUA TENGAH</strong> — Yayasan <strong>Amungsa Cares Papua</strong> terus memperkuat kualitas sumber daya manusia dan kapasitas kelembagaan sebagai fondasi penting dalam menghadirkan pelayanan sosial yang profesional, responsif, dan berkelanjutan.</p>
@@ -285,6 +287,35 @@ const AMUNGSA_ARTICLES = [
       <blockquote class="editorial-quote">
         <p>"Kerja sosial bukan hanya tentang hadir ketika persoalan terjadi, tetapi juga tentang memiliki pengetahuan, sistem, dan kemampuan untuk mendampingi masyarakat menemukan jalan keluar. Setiap ruang pembelajaran adalah investasi bagi pelayanan—agar Amungsa tidak sekadar hadir membawa kepedulian, tetapi hadir dengan kapasitas, integritas, dan kerja nyata,"</p>
         <cite>— Rilis Resmi Instagram @amungsafoundation</cite>
+      </blockquote>
+    `
+  },
+  {
+    id: "sinergi-pmi-masyarakat-mimika",
+    title: "Rajut Kebersamaan: Amungsa & Pemuda Muslimin Bangun Sinergi Berkelanjutan untuk Masyarakat",
+    subtitle: "Dokumentasi Instagram Resmi @amungsafoundation: Penandatanganan komitmen kerja sama kemanusiaan, advokasi regulasi serapan perikanan darat, dan ketahanan pangan.",
+    category: "Kemitraan Pemuda & Ormas",
+    categoryBadge: "#RajutKebersamaan · Pemuda Muslimin",
+    date: "21 Agustus 2026",
+    isoDate: "2026-08-21",
+    author: "Tim Media Amungsa Foundation (Instagram @amungsafoundation)",
+    location: "Timika, Papua Tengah",
+    coverImage: "images/instagram/ig_sinergi_pmi_21agust.jpg",
+    coverCaption: "Konsolidasi kerja kemanusiaan Amungsa Foundation bersama Pemuda Muslimin Indonesia Papua Tengah, 21 Agustus 2026. (Foto: Dok. Instagram @amungsafoundation)",
+    readTime: "3 menit baca",
+    summary: "Yayasan Amungsa Foundation bersama PW Pemuda Muslimin Indonesia Papua Tengah memperkokoh sinergi pemberdayaan petani perikanan lokal dan aksi tanggap kemanusiaan.",
+    gallery: [
+      { src: "images/instagram/ig_sinergi_pmi_21agust.jpg", caption: "Dokumentasi resmi Instagram konsolidasi sinergi kemanusiaan bersama PMI." },
+      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Dialog bersama kelompok pembudidaya kolam bioflok." }
+    ],
+    contentHtml: `
+      <p class="lead-paragraph"><strong>MIMIKA, PAPUA TENGAH</strong> — Menyusul rangkaian program ketahanan pangan di sentra budidaya SP3, Yayasan <strong>Amungsa Foundation</strong> dan <strong>Pemuda Muslimin Indonesia (PMI) Papua Tengah</strong> mempertegas kolaborasi strategis dalam pengawalan aspirasi ekonomi kerakyatan, Jumat (21/8/2026).</p>
+
+      <p>Kolaborasi ini difokuskan pada perlindungan hak-hak pembudidaya ikan lokal, percepatan distribusi nutrisi protein untuk balita, dan edukasi kewirausahaan mandiri bagi generasi muda Papua.</p>
+
+      <blockquote class="editorial-quote">
+        <p>"Kebersamaan adalah modal sosial terbesar di Tanah Papua. Ketika kita melangkah beriringan dengan niat tulus untuk rakyat, setiap rintangan regulasi dan pemasaran dapat kita tembus bersama,"</p>
+        <cite>— Rilis Resmi Instagram @amungsafoundation (21 Agustus 2026)</cite>
       </blockquote>
     `
   },
@@ -332,13 +363,13 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-08-10",
     author: "Tim Hubungan Antarlembaga Amungsa Foundation (Instagram @amungsafoundation)",
     location: "Restoran Timika, Kabupaten Mimika, Papua Tengah",
-    coverImage: "images/diskusi-pmi-amungsa-petani.jpg",
+    coverImage: "images/instagram/ig_asisten1_wakapolres_10agust.jpg",
     coverCaption: "Pertemuan koordinasi pimpinan Yayasan Amungsa Cares Papua bersama Asisten I Setda Kabupaten Mimika dan Wakapolres Mimika, 10 Agustus 2026. (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Yayasan Amungsa Cares Papua memperkuat komunikasi strategis bersama Asisten I Setda Mimika dan Wakapolres Mimika guna menyelaraskan program sosial kemanusiaan dengan stabilitas daerah.",
     gallery: [
-      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Suasana dialog terbuka pimpinan yayasan bersama unsur pemerintah dan kepolisian." },
-      { src: "images/foto-dr-enny-kenangalem.jpg", caption: "dr. Enny Kenangalem memaparkan agenda intervensi gizi balita Amungsa Cares." }
+      { src: "images/instagram/ig_asisten1_wakapolres_10agust.jpg", caption: "Dokumentasi poster resmi Instagram koordinasi Asisten 1 Setda & Wakapolres." },
+      { src: "images/diskusi-pmi-amungsa-petani.jpg", caption: "Suasana dialog terbuka pimpinan yayasan bersama unsur pemerintah dan kepolisian." }
     ],
     contentHtml: `
       <p class="lead-paragraph"><strong>MIMIKA, PAPUA TENGAH</strong> — Yayasan <strong>Amungsa Cares Papua</strong> terus memperkuat komunikasi dan kemitraan strategis dengan berbagai pemangku kepentingan melalui pertemuan koordinasi bersama <strong>Asisten I Setda Kabupaten Mimika</strong> dan <strong>Wakapolres Mimika</strong> pada Senin (10/8/2026).</p>
@@ -354,6 +385,35 @@ const AMUNGSA_ARTICLES = [
     `
   },
   {
+    id: "pemberdayaan-kat-dinsos-kemensos",
+    title: "Perkuat Kolaborasi: Amungsa Ikuti Diskusi Pemberdayaan Komunitas Adat Terpencil (KAT) Bersama Kemensos RI",
+    subtitle: "Dokumentasi Instagram Resmi @amungsafoundation: Penguatan strategi pendampingan sosial dan pemenuhan hak-hak dasar warga KAT di pelosok pedalaman Mimika.",
+    category: "Pemberdayaan Sosial & KAT",
+    categoryBadge: "#PemberdayaanKAT · Kemensos RI",
+    date: "09 Agustus 2026",
+    isoDate: "2026-08-09",
+    author: "Tim Advokasi Adat & Sosial Amungsa Foundation (Instagram @amungsafoundation)",
+    location: "Dinas Sosial Kabupaten Mimika",
+    coverImage: "images/instagram/ig_dinsos_kat_09agust.jpg",
+    coverCaption: "Diskusi program pemberdayaan masyarakat dan Komunitas Adat Terpencil (KAT) bersama Dinsos Mimika dan Kementerian Sosial RI, 9 Agustus 2026. (Foto: Dok. Instagram @amungsafoundation)",
+    readTime: "3 menit baca",
+    summary: "Yayasan Amungsa Foundation menghadiri diskusi pemetaan program Komunitas Adat Terpencil (KAT) guna mendorong perlindungan sosial inklusif bagi suku-suku asli di pesisir dan pegunungan Mimika.",
+    gallery: [
+      { src: "images/instagram/ig_dinsos_kat_09agust.jpg", caption: "Dokumentasi poster resmi Instagram kemitraan program KAT Dinsos & Kemensos." },
+      { src: "images/kegiatan/kegiatan-sosial-1.jpg", caption: "Forum diskusi pemetaan wilayah sasaran program KAT di Mimika." }
+    ],
+    contentHtml: `
+      <p class="lead-paragraph"><strong>MIMIKA, PAPUA TENGAH</strong> — Yayasan <strong>Amungsa Foundation</strong> berkomitmen teguh memastikan tidak ada satu pun kelompok masyarakat di Tanah Papua yang tertinggal dari arus pembangunan, terutama warga <strong>Komunitas Adat Terpencil (KAT)</strong>.</p>
+
+      <p>Pada Minggu (9/8/2026), perwakilan Amungsa Foundation berpartisipasi aktif dalam diskusi koordinasi program pemberdayaan masyarakat adat yang diinisiasi oleh <strong>Dinas Sosial Kabupaten Mimika</strong> bersama utusan <strong>Kementerian Sosial Republik Indonesia (Kemensos RI)</strong>.</p>
+
+      <blockquote class="editorial-quote">
+        <p>"Mendampingi masyarakat adat terpencil menuntut kesabaran budaya, pendekatan antropologis yang santun, dan keberpihakan yang nyata. Amungsa hadir menjadi mitra lapangan yang menghubungkan kebijakan pusat dengan realitas kehidupan di kampung-kampung terdalam,"</p>
+        <cite>— Rilis Resmi Instagram @amungsafoundation (9 Agustus 2026)</cite>
+      </blockquote>
+    `
+  },
+  {
     id: "verifikasi-legalitas-dinsos-mimika",
     title: "Verifikasi & Validasi Lapangan: Pemenuhan Legalitas Yayasan Amungsa Cares Papua oleh Dinsos Mimika",
     subtitle: "Dokumentasi Instagram Resmi @amungsafoundation: Legalitas kuat, tata kelola transparan, dan pelayanan kemanusiaan yang semakin bermartabat serta terakreditasi.",
@@ -363,11 +423,12 @@ const AMUNGSA_ARTICLES = [
     isoDate: "2026-05-18",
     author: "Tim Legal & Tata Kelola Amungsa Foundation (Instagram @amungsafoundation)",
     location: "Sekretariat Amungsa Cares Papua, Mimika",
-    coverImage: "images/kegiatan/kegiatan-sosial-2.jpg",
-    coverCaption: "Tim verifikator Dinas Sosial Kabupaten Mimika saat melakukan pemeriksaan berkas dan validasi lapangan legalitas Yayasan Amungsa Cares Papua, 18 Mei 2026. (Foto: Dok. Instagram @amungsafoundation)",
+    coverImage: "images/instagram/ig_validasi_dinsos_18mei.jpg",
+    coverCaption: "Dokumentasi poster resmi Instagram verifikasi dan validasi lapangan legalitas Yayasan Amungsa Cares Papua oleh Dinsos Mimika, 18 Mei 2026. (Foto: Dok. Instagram @amungsafoundation)",
     readTime: "3 menit baca",
     summary: "Dinas Sosial Kabupaten Mimika melakukan verifikasi dan validasi faktual pemenuhan legalitas dan kesiapan kelembagaan Yayasan Amungsa Cares Papua sebagai lembaga sosial terdaftar resmi.",
     gallery: [
+      { src: "images/instagram/ig_validasi_dinsos_18mei.jpg", caption: "Dokumentasi resmi Instagram verifikasi legalitas oleh Dinsos Mimika." },
       { src: "images/kegiatan/kegiatan-sosial-2.jpg", caption: "Proses verifikasi dokumen legalitas dan program kerja yayasan oleh tim Dinsos." },
       { src: "images/kegiatan/kegiatan-sosial-3.jpg", caption: "Peninjauan sarana kerja dan kelengkapan administrasi sekretariat yayasan." }
     ],
