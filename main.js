@@ -641,19 +641,22 @@
   });
 
   // --------------------------------------------------------------------------
-  // View Mode Engine (Default: Desktop Site, Mobile on demand)
+  // View Mode Engine (Natural Responsive Mobile First)
   // --------------------------------------------------------------------------
   function initViewMode() {
     const metaViewport = document.getElementById('viewportMeta') || document.querySelector('meta[name="viewport"]');
     const btnDesktop = document.getElementById('btnViewDesktop');
     const btnMobile = document.getElementById('btnViewMobile');
 
-    // Default to 'desktop' unless visitor explicitly selected 'mobile'
-    let currentMode = 'desktop';
+    // Auto-detect mobile devices or narrow screen viewports
+    const isMobileDevice = window.innerWidth <= 850 || /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+    
+    // Default to 'mobile' on mobile screens, 'desktop' on large screens
+    let currentMode = isMobileDevice ? 'mobile' : 'desktop';
     try {
       const saved = localStorage.getItem('amungsa_view_mode');
-      if (saved === 'mobile') {
-        currentMode = 'mobile';
+      if (saved) {
+        currentMode = saved;
       }
     } catch (e) {}
 
@@ -665,12 +668,11 @@
 
     function setViewMode(mode, save = true) {
       currentMode = mode;
-      if (mode === 'mobile') {
-        if (metaViewport) metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+      if (mode === 'mobile' || isMobileDevice) {
+        if (metaViewport) metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0');
         document.documentElement.setAttribute('data-view-mode', 'mobile');
       } else {
-        // Desktop Default: Fixed 1240 viewport forces mobile browsers to render full desktop site
-        if (metaViewport) metaViewport.setAttribute('content', 'width=1240');
+        if (metaViewport) metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
         document.documentElement.setAttribute('data-view-mode', 'desktop');
       }
       updateButtons(mode);
@@ -842,29 +844,44 @@
   }
 
   // --------------------------------------------------------------------------
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle & Card Touch Ergonomics
   // --------------------------------------------------------------------------
   function initMobileMenu() {
     const toggleBtn = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    if (!toggleBtn || !navMenu) return;
-
-    toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active', isOpen);
       });
-    });
 
-    document.addEventListener('click', (e) => {
-      if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove('open');
-      }
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          toggleBtn.classList.remove('active');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove('open');
+          toggleBtn.classList.remove('active');
+        }
+      });
+    }
+
+    // Make all compact news cards fully clickable for easy thumb tapping on mobile
+    document.querySelectorAll('.news-card-compact').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        const link = card.querySelector('a');
+        if (link && link.href) {
+          window.location.href = link.href;
+        }
+      });
     });
   }
 

@@ -2422,81 +2422,431 @@ button {
 }
 
 @media (max-width: 768px) {
-  .announcement-text {
-    font-size: 0.76rem;
+  /* Native Mobile Body & Container */
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
   }
+
+  .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .section {
+    padding: 2rem 0 !important;
+  }
+
+  /* Compact Mobile Header (56px) */
+  .navbar {
+    height: 56px !important;
+  }
+
+  .nav-container {
+    height: 56px !important;
+  }
+
+  .brand-logo {
+    gap: 8px !important;
+  }
+
+  .logo-symbol {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .brand-name {
+    font-size: 1.05rem !important;
+  }
+
   .brand-sub {
-    display: none;
+    display: none !important;
   }
+
   .mobile-toggle {
-    display: flex;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 36px;
+    height: 36px;
+    background: rgba(28, 171, 226, 0.08);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 6px;
+    z-index: 1001;
   }
+
+  .mobile-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-unicef-navy);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  [data-theme="dark"] .mobile-toggle span {
+    background-color: #FFFFFF;
+  }
+
+  .mobile-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Slide-down Mobile App Drawer */
   .nav-menu {
-    position: fixed;
-    top: 72px;
-    left: 0;
-    right: 0;
-    background-color: var(--color-bg-surface);
-    border-bottom: 1px solid var(--color-border);
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
-    display: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    top: 56px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid var(--color-border) !important;
+    flex-direction: column !important;
+    padding: 1.25rem !important;
+    gap: 0.65rem !important;
+    display: none !important;
+    z-index: 999 !important;
+    overflow-y: auto !important;
   }
+
+  [data-theme="dark"] .nav-menu {
+    background-color: rgba(7, 21, 38, 0.98) !important;
+  }
+
   .nav-menu.open {
-    display: flex;
+    display: flex !important;
   }
+
+  .nav-link {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    padding: 0.8rem 1rem !important;
+    border-radius: var(--radius-md) !important;
+    border: 1px solid var(--color-border) !important;
+    background: var(--color-bg-card) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    color: var(--color-text-main) !important;
+    text-decoration: none !important;
+  }
+
+  .nav-link.active {
+    background: var(--color-unicef-blue-light) !important;
+    color: var(--color-unicef-blue) !important;
+    border-color: var(--color-unicef-blue) !important;
+  }
+
+  [data-theme="dark"] .nav-link.active {
+    background: rgba(28, 171, 226, 0.15) !important;
+    color: #38bdf8 !important;
+  }
+
+  /* Hero Section on Mobile */
+  .unicef-hero-stage {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
   .unicef-hero-media {
-    height: 280px;
+    min-height: 220px !important;
+    max-height: 260px !important;
+    border-radius: var(--radius-md) !important;
   }
-  .unicef-editorial-card {
-    margin: -40px 1rem 1rem 1rem;
-    padding: 1.5rem;
+
+  .unicef-hero-editorial {
+    padding: 0.25rem 0 !important;
   }
-  .unicef-card-title {
-    font-size: 1.65rem;
+
+  .unicef-hero-title {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+    margin: 0.6rem 0 !important;
   }
-  .ribbon-inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+
+  .unicef-hero-lead {
+    font-size: 0.94rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.25rem !important;
   }
-  .team-strip-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .unicef-hero-actions {
+    flex-direction: column !important;
+    gap: 0.65rem !important;
   }
-  .unicef-partner-row {
-    grid-template-columns: repeat(2, 1fr);
+
+  .unicef-hero-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
-  .donation-amount-grid {
-    grid-template-columns: 1fr;
+
+  /* Impact Strip on Mobile: 3-column compact counter bar */
+  .unicef-impact-strip {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem !important;
+    margin-top: 1.25rem !important;
+  }
+
+  .impact-strip-card {
+    padding: 0.35rem !important;
+    text-align: center !important;
+  }
+
+  .strip-num-wrap {
+    font-size: 1.35rem !important;
+  }
+
+  .strip-label {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Spotlight Story Card on Mobile */
+  .spotlight-card {
+    grid-template-columns: 1fr !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .spotlight-media {
+    min-height: 220px !important;
+    max-height: 250px !important;
+  }
+
+  .spotlight-body {
+    padding: 1.25rem !important;
+  }
+
+  .spotlight-title {
+    font-size: 1.25rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .spotlight-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ==========================================================================
+     Galeri Papua Style Horizontal Media-Object News Feed
+     ========================================================================== */
+  .news-sub-grid,
+  .portal-stories-grid,
+  .related-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Horizontal compact card: Thumbnail left, title & meta right */
+  .news-card-compact {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    padding: 0.65rem !important;
+    gap: 0.75rem !important;
+    background-color: var(--color-bg-card) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: 0 1px 4px rgba(0, 43, 73, 0.04) !important;
+    min-height: 92px !important;
+    text-decoration: none !important;
+  }
+
+  .news-card-compact:active {
+    transform: scale(0.985);
+    background-color: var(--color-bg-card-hover) !important;
+    border-color: var(--color-unicef-blue) !important;
+  }
+
+  .news-card-thumb,
+  .news-card-compact.is-instagram .news-card-thumb {
+    width: 88px !important;
+    min-width: 88px !important;
+    max-width: 88px !important;
+    height: 88px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .news-card-thumb img,
+  .news-card-compact.is-instagram .news-card-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+  }
+
+  /* Mini Instagram Badge on Thumbnail */
+  .news-card-compact.is-instagram .news-card-thumb::after {
+    content: 'IG';
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #FFFFFF;
+    font-size: 0.55rem;
+    font-weight: 800;
+    padding: 1px 4px;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    z-index: 2;
+  }
+
+  .news-card-tag,
+  .news-thumb-tag {
+    display: none !important;
+  }
+
+  .news-card-body,
+  .news-card-info {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .news-card-body .unicef-card-kicker,
+  .news-card-info .unicef-card-kicker {
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    color: var(--color-unicef-blue) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+  }
+
+  .news-card-title,
+  .news-card-heading {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: var(--color-unicef-navy) !important;
+    margin-bottom: 4px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  [data-theme="dark"] .news-card-title,
+  [data-theme="dark"] .news-card-heading {
+    color: #FFFFFF !important;
+  }
+
+  .news-card-desc {
+    display: none !important;
+  }
+
+  .news-card-link,
+  .news-card-action {
+    display: inline-block !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    color: var(--color-unicef-blue) !important;
+    text-decoration: none !important;
+    margin-top: auto !important;
+  }
+
+  /* Social Channels Bar on Mobile */
+  .news-social-bar {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.75rem !important;
+    padding: 1.15rem !important;
+  }
+
+  .news-social-links {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+
+  .news-social-links a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* About & Clean Values */
+  .about-clean-box {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 1.25rem !important;
+  }
+
+  .about-clean-media {
+    order: -1;
+  }
+
+  .core-values-compact {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Quick Contact Banner on Mobile */
+  .contact-quick-banner {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+    text-align: center !important;
+  }
+
+  .contact-quick-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.6rem !important;
+  }
+
+  .contact-quick-buttons .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Footer on Mobile */
+  .footer-content-compact {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.25rem !important;
+  }
+
+  .footer-nav-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column !important;
+    gap: 0.85rem !important;
   }
 }
 
-@media (max-width: 580px) {
-  .unicef-impact-strip {
-    grid-template-columns: 1fr;
-  }
-  .unicef-program-grid {
-    grid-template-columns: 1fr;
-  }
-  .impact-numbers-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .team-strip-grid {
-    grid-template-columns: 1fr;
-  }
-  .unicef-partner-row {
-    grid-template-columns: 1fr;
-  }
-  .gallery-compact-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ==========================================================================
    STREAMLINED UNICEF 5-BLOCK HOME LAYOUT
@@ -3347,5 +3697,72 @@ button {
 .btn-social-gp .icon-svg {
   margin-right: 6px;
 }
+
+/* ==========================================================================
+   Mobile Bottom App Dock (Native Mobile Navigation Bar)
+   ========================================================================== */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 56px !important;
+    padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 1px solid var(--color-border) !important;
+    z-index: 9999 !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    box-shadow: 0 -4px 16px rgba(0, 43, 73, 0.08) !important;
+  }
+
+  [data-theme="dark"] .mobile-bottom-nav {
+    background: rgba(12, 30, 52, 0.96) !important;
+    border-top-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .bottom-nav-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    color: var(--color-text-subtle) !important;
+    text-decoration: none !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    flex: 1 !important;
+    height: 100% !important;
+    transition: color 0.2s ease, transform 0.15s ease !important;
+  }
+
+  .bottom-nav-item:active {
+    transform: scale(0.92) !important;
+  }
+
+  .bottom-nav-item svg {
+    width: 20px !important;
+    height: 20px !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--color-unicef-blue) !important;
+  }
+
+  .bottom-nav-item.bottom-nav-wa {
+    color: #25D366 !important;
+  }
+}
+
 
 
