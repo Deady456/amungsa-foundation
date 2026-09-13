@@ -638,6 +638,7 @@
     initGalleryFilter();
     initAnnouncement();
     initDonationModule();
+    initProgramModal();
   });
 
   // --------------------------------------------------------------------------
@@ -886,6 +887,100 @@
   }
 
   // --------------------------------------------------------------------------
+  // Interactive Program Modal & Field Photo Zoom Engine
+  // --------------------------------------------------------------------------
+  function initProgramModal() {
+    const modal = document.getElementById('programDetailModal');
+    const openBtns = document.querySelectorAll('.btn-open-program-modal');
+    const closeBtn = document.getElementById('btnCloseProgramModal');
+    const backdrop = document.getElementById('programModalBackdrop');
+    const tabBtns = document.querySelectorAll('.prog-tab-btn');
+    const tabPanels = {
+      gizi: document.getElementById('modalTabContent-gizi'),
+      bioflok: document.getElementById('modalTabContent-bioflok'),
+      pemuda: document.getElementById('modalTabContent-pemuda')
+    };
+
+    if (!modal) return;
+
+    function switchTab(pillarKey) {
+      tabBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === pillarKey);
+      });
+      Object.keys(tabPanels).forEach(key => {
+        const panel = tabPanels[key];
+        if (panel) {
+          panel.classList.toggle('active', key === pillarKey);
+          panel.style.display = (key === pillarKey) ? 'block' : 'none';
+        }
+      });
+    }
+
+    function openModal(pillarKey = 'gizi') {
+      switchTab(pillarKey);
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const pillar = btn.getAttribute('data-pillar') || 'gizi';
+        openModal(pillar);
+      });
+    });
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        if (tab) switchTab(tab);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Wire clicks on field photo cards and modal gallery thumbnails to the zoom lightbox
+    document.querySelectorAll('.program-photo-card, .modal-gallery-thumb').forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const src = card.getAttribute('data-zoom-src') || card.querySelector('img')?.src;
+        const caption = card.getAttribute('data-zoom-caption') || card.querySelector('img')?.alt || 'Dokumentasi Lapangan Amungsa Foundation';
+        
+        let zoomModal = document.getElementById('imageZoomModal');
+        if (!zoomModal) zoomModal = document.getElementById('amungsaImageModal');
+        
+        if (zoomModal && src) {
+          const zoomImg = zoomModal.querySelector('.zoom-modal-img');
+          const zoomCap = zoomModal.querySelector('.zoom-modal-caption');
+          if (zoomImg) {
+            zoomImg.src = src;
+            zoomImg.alt = caption;
+          }
+          if (zoomCap) {
+            zoomCap.textContent = caption;
+          }
+          zoomModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // Animated Stats Counter
   // --------------------------------------------------------------------------
   function initStatsCounter() {
@@ -1108,7 +1203,10 @@
 
       const closeBtn = modal.querySelector('.zoom-modal-close');
       const backdrop = modal.querySelector('.zoom-modal-backdrop');
-      const closeModal = () => { modal.classList.remove('active'); };
+      const closeModal = () => { 
+        modal.classList.remove('active'); 
+        document.body.style.overflow = '';
+      };
       if (closeBtn) closeBtn.addEventListener('click', closeModal);
       if (backdrop) backdrop.addEventListener('click', closeModal);
       document.addEventListener('keydown', (e) => {
