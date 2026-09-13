@@ -2,20 +2,7 @@
 <html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" id="viewportMeta" content="width=1240">
-  <script>
-    (function() {
-      try {
-        var savedMode = localStorage.getItem('amungsa_view_mode');
-        if (savedMode === 'mobile') {
-          document.getElementById('viewportMeta').setAttribute('content', 'width=device-width, initial-scale=1.0');
-          document.documentElement.setAttribute('data-view-mode', 'mobile');
-        } else {
-          document.documentElement.setAttribute('data-view-mode', 'desktop');
-        }
-      } catch(e) {}
-    })();
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amungsa Foundation — #UntukSetiapAnak Papua: Dari Piring Sehat, Lahir Masa Depan Hebat</title>
   <meta name="description" content="Yayasan Amungsa Foundation (Amungsa Cares Papua) bergerak dalam aksi kemanusiaan pemenuhan gizi anak balita, pencegahan stunting, ketahanan pangan bioflok, dan kemitraan masyarakat di Papua Tengah.">
 
@@ -32,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.3">
+  <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body>
 
@@ -106,16 +93,6 @@
     <section class="unicef-hero-section" id="beranda">
       <div class="container unicef-hero-container">
         <div class="unicef-hero-stage">
-          <!-- Photojournalism Field Photo -->
-          <div class="unicef-hero-media">
-            <img src="images/panen-lele-stunting-dinkes.jpg" alt="Penyaluran 90 kg Ikan Lele Program Anti-Stunting Dinas Kesehatan Mimika" class="unicef-hero-img">
-            <div class="unicef-hero-overlay-shade"></div>
-            <div class="unicef-photo-credit-badge">
-              <span class="credit-camera-icon">📷</span>
-              <span>Foto: &copy; Amungsa Cares / Mimika &middot; Penyaluran Lele Anti-Stunting</span>
-            </div>
-          </div>
-
           <!-- Signature UNICEF Editorial Card -->
           <div class="unicef-editorial-card">
             <div class="unicef-card-kicker">
@@ -145,6 +122,16 @@
               <span class="meta-pill-cyan">Aksi Lapangan Dinkes</span>
               <span class="meta-pill-white"><strong>90+ Kg</strong> Lele Terdistribusi</span>
               <span class="meta-pill-muted">&bull; Mimika, Papua Tengah</span>
+            </div>
+          </div>
+
+          <!-- Photojournalism Field Photo -->
+          <div class="unicef-hero-media">
+            <img src="images/panen-lele-stunting-dinkes.jpg" alt="Penyaluran 90 kg Ikan Lele Program Anti-Stunting Dinas Kesehatan Mimika" class="unicef-hero-img">
+            <div class="unicef-hero-overlay-shade"></div>
+            <div class="unicef-photo-credit-badge">
+              <span class="credit-camera-icon">📷</span>
+              <span>Foto: &copy; Amungsa Cares / Mimika &middot; Penyaluran Lele Anti-Stunting</span>
             </div>
           </div>
         </div>

@@ -518,12 +518,12 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Section (Authentic UNICEF Photojournalism Feature Banner)
+   Hero Section (Clean, Compact UNICEF Split Hero Banner)
    -------------------------------------------------------------------------- */
 .unicef-hero-section {
   position: relative;
   background-color: var(--color-bg-base);
-  padding: 2.5rem 0 3.5rem 0;
+  padding: 1.75rem 0 2rem 0;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -533,26 +533,23 @@ button {
   padding: 0 1.5rem;
 }
 
-/* Widescreen Hero Stage */
+/* 2-Column Split Hero Stage */
 .unicef-hero-stage {
-  position: relative;
-  width: 100%;
-  min-height: 520px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 43, 73, 0.12);
-  border: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 1.75rem;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
 }
 
 .unicef-hero-media {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  min-height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
   background-color: #002B49;
 }
 
@@ -560,7 +557,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center;
   display: block;
 }
 
@@ -570,65 +567,67 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(0, 43, 73, 0.82) 0%, rgba(0, 43, 73, 0.45) 50%, rgba(0, 43, 73, 0.15) 100%);
+  background: linear-gradient(180deg, rgba(0, 43, 73, 0.05) 0%, rgba(0, 43, 73, 0.6) 100%);
 }
 
 .unicef-photo-credit-badge {
   position: absolute;
-  bottom: 14px;
-  right: 16px;
+  bottom: 10px;
+  right: 12px;
   z-index: 5;
-  background: rgba(0, 43, 73, 0.8);
+  background: rgba(0, 43, 73, 0.85);
   backdrop-filter: blur(4px);
   color: #FFFFFF;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   letter-spacing: 0.02em;
 }
 
 .credit-camera-icon {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
-/* Signature UNICEF Editorial Teaser Box */
+/* Compact UNICEF Editorial Card */
 .unicef-editorial-card {
   position: relative;
-  z-index: 10;
-  max-width: 580px;
-  margin-left: 2.5rem;
-  background-color: #FFFFFF;
-  border-radius: 6px;
-  padding: 2.25rem 2.5rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-  border-top: 5px solid var(--color-unicef-blue);
+  z-index: 2;
+  background-color: var(--color-bg-card);
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-unicef-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 [data-theme="dark"] .unicef-editorial-card {
   background-color: #00223A;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-top: 5px solid var(--color-unicef-blue);
+  border-color: rgba(255, 255, 255, 0.12);
+  border-left: 5px solid var(--color-unicef-blue);
 }
 
 .unicef-card-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: var(--color-unicef-blue);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.85rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
 }
 
 .kicker-pulse {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: var(--color-unicef-blue);
   border-radius: 50%;
   display: inline-block;
@@ -637,11 +636,11 @@ button {
 
 .unicef-card-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
   font-weight: 900;
   color: var(--color-unicef-navy);
-  line-height: 1.15;
-  margin-bottom: 1rem;
+  line-height: 1.18;
+  margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
 
@@ -654,10 +653,10 @@ button {
 }
 
 .unicef-card-desc {
-  font-size: 0.94rem;
-  line-height: 1.65;
-  color: #4B5563;
-  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 1.15rem;
 }
 
 [data-theme="dark"] .unicef-card-desc {
@@ -667,8 +666,8 @@ button {
 .unicef-card-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-bottom: 1.25rem;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .btn-unicef-yellow {
@@ -676,16 +675,16 @@ button {
   color: var(--color-unicef-navy);
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
-  padding: 0.85rem 1.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  padding: 0.7rem 1.4rem;
   border-radius: 4px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  box-shadow: 0 3px 8px rgba(255, 194, 14, 0.35);
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(255, 194, 14, 0.35);
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   border: none;
   cursor: pointer;
@@ -693,8 +692,8 @@ button {
 
 .btn-unicef-yellow:hover {
   background-color: var(--color-unicef-yellow-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(255, 194, 14, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 194, 14, 0.45);
 }
 
 .btn-unicef-outline {
@@ -703,8 +702,8 @@ button {
   border: 1.5px solid var(--color-unicef-blue);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.88rem;
-  padding: 0.85rem 1.4rem;
+  font-size: 0.85rem;
+  padding: 0.7rem 1.25rem;
   border-radius: 4px;
   text-decoration: none;
   display: inline-flex;
@@ -717,27 +716,27 @@ button {
 .btn-unicef-outline:hover {
   background-color: var(--color-unicef-tint);
   border-color: var(--color-unicef-blue);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .unicef-card-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  padding-top: 1rem;
+  gap: 6px;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--color-border);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 }
 
 .meta-pill-cyan {
   background-color: var(--color-unicef-tint);
   color: var(--color-unicef-blue);
   font-weight: 800;
-  padding: 3px 8px;
+  padding: 2px 7px;
   border-radius: 3px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
 }
 
 [data-theme="dark"] .meta-pill-cyan {
@@ -757,26 +756,26 @@ button {
   color: var(--color-text-subtle);
 }
 
-/* Quick Evidence Impact Strip */
+/* Compact Evidence Impact Strip */
 .unicef-impact-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  margin-top: 2rem;
+  gap: 0.85rem;
+  margin-top: 0;
 }
 
 .impact-strip-card {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: 1.25rem 1rem;
+  padding: 0.85rem 0.75rem;
   text-align: center;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-xs);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .impact-strip-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   border-color: var(--color-unicef-blue);
 }
 
@@ -785,12 +784,12 @@ button {
   align-items: baseline;
   justify-content: center;
   gap: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .impact-strip-card .stat-number {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 1.85rem;
   font-weight: 900;
   color: var(--color-unicef-blue);
   line-height: 1;
@@ -798,15 +797,29 @@ button {
 
 .impact-strip-card .stat-suffix {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--color-unicef-blue);
 }
 
 .strip-label {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .unicef-hero-stage {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .unicef-hero-media {
+    min-height: 260px;
+    order: -1;
+  }
+  .unicef-impact-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -877,7 +890,7 @@ button {
    Sections General & Typography
    -------------------------------------------------------------------------- */
 .section {
-  padding: 5rem 0;
+  padding: 2.75rem 0;
 }
 
 .text-center {
@@ -886,7 +899,7 @@ button {
 
 .section-header {
   max-width: 760px;
-  margin: 0 auto 3.5rem auto;
+  margin: 0 auto 1.5rem auto;
 }
 
 .section-tag {
@@ -1295,7 +1308,7 @@ button {
    -------------------------------------------------------------------------- */
 .section-take-action {
   background-color: var(--color-bg-base);
-  padding: 5rem 0;
+  padding: 2.75rem 0;
 }
 
 /* UNICEF Interactive Donation Module */
@@ -1303,9 +1316,9 @@ button {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  padding: 2.25rem 2.5rem;
-  margin-bottom: 3.5rem;
-  box-shadow: 0 8px 24px rgba(0, 43, 73, 0.06);
+  padding: 1.75rem 2rem;
+  margin-bottom: 0;
+  box-shadow: 0 4px 16px rgba(0, 43, 73, 0.05);
 }
 
 .donation-header-row {
@@ -1363,13 +1376,13 @@ button {
 .amount-chip {
   border: 2px solid var(--color-border);
   background-color: var(--color-bg-card);
-  padding: 1.1rem 0.75rem;
+  padding: 0.85rem 0.65rem;
   border-radius: 6px;
   cursor: pointer;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   transition: all 0.2s ease;
 }
 
@@ -2503,29 +2516,29 @@ button {
 
 /* Featured Spotlight Story (Editorial Newspaper / UNICEF style) */
 .section-featured-story {
-  padding: 4rem 0;
+  padding: 2.75rem 0;
   background-color: var(--color-bg-base);
 }
 
 .unicef-spotlight-card {
   display: grid;
-  grid-template-columns: 1.1fr 1.3fr;
+  grid-template-columns: 1fr 1.25fr;
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card);
   transition: var(--transition);
 }
 
 .unicef-spotlight-card:hover {
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .spotlight-media {
   position: relative;
-  min-height: 340px;
+  min-height: 280px;
   background-color: #0A192F;
 }
 
@@ -2538,16 +2551,31 @@ button {
 
 .spotlight-badge-date {
   position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
+  top: 1rem;
+  left: 1rem;
   background: rgba(11, 35, 65, 0.88);
   backdrop-filter: blur(8px);
   color: #FFFFFF;
-  padding: 6px 14px;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.spotlight-date {
+  color: #FFD200;
+}
+
+.spotlight-content {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
   font-size: 0.75rem;
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2628,33 +2656,33 @@ button {
 
 /* Clean About, Leadership & Partners Block */
 .section-about-clean {
-  padding: 4.5rem 0 3.5rem 0;
+  padding: 2.75rem 0 2rem 0;
   background-color: var(--color-bg-base);
 }
 
 .about-clean-box {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 2.75rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card);
 }
 
 .about-clean-text .section-title {
   text-align: left;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.35rem 0 0.75rem 0;
 }
 
 .about-clean-text .section-body {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--color-text-body);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .about-clean-media {
@@ -2665,7 +2693,7 @@ button {
 
 .about-clean-img {
   width: 100%;
-  height: 280px;
+  height: 240px;
   object-fit: cover;
   border-radius: var(--radius-md);
   display: block;
@@ -2673,14 +2701,14 @@ button {
 
 .about-clean-quote {
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
   background: rgba(11, 35, 65, 0.85);
   backdrop-filter: blur(6px);
   color: #FFD200;
-  font-size: 1.2rem;
-  padding: 0.75rem 1rem;
+  font-size: 1.05rem;
+  padding: 0.6rem 0.85rem;
   border-radius: var(--radius-sm);
   text-align: center;
 }
@@ -2688,57 +2716,57 @@ button {
 @media (max-width: 850px) {
   .about-clean-box {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 1.75rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 }
 
 /* Leadership Avatars Strip */
 .leadership-clean-strip {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .leadership-strip-title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--color-text-title);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .leadership-avatars-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .leader-avatar-item {
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 1.25rem 0.85rem;
+  padding: 1rem 0.75rem;
   text-align: center;
   transition: var(--transition);
 }
 
 .leader-avatar-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 .leader-img {
-  width: 68px;
-  height: 68px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 0.75rem auto;
-  border: 3px solid var(--color-unicef-blue);
+  margin: 0 auto 0.5rem auto;
+  border: 2.5px solid var(--color-unicef-blue);
   display: block;
 }
 
 .leader-info strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--color-text-title);
   margin-bottom: 2px;
@@ -2746,9 +2774,9 @@ button {
 
 .leader-info span {
   display: block;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   color: var(--color-text-muted);
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 @media (max-width: 990px) {
@@ -2768,17 +2796,17 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  padding: 1.25rem 1.75rem;
+  padding: 0.85rem 1.5rem;
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .partners-label {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -2788,7 +2816,7 @@ button {
 .partners-logos-wrap {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -2796,25 +2824,25 @@ button {
 .partner-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
+  gap: 6px;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--color-text-body);
   background: var(--color-bg-base);
   border: 1px solid var(--color-border);
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
 }
 
 .partner-logo-img {
-  height: 20px;
+  height: 18px;
   width: auto;
-  max-width: 24px;
+  max-width: 22px;
   object-fit: contain;
 }
 
 .partner-icon {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Quick Direct Contact Banner */
@@ -2822,12 +2850,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
   background: linear-gradient(135deg, #0B2341 0%, #004D71 100%);
   color: #FFFFFF;
-  padding: 2.25rem 2.75rem;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 14px 40px rgba(11, 35, 65, 0.2);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(11, 35, 65, 0.15);
 }
 
 .contact-quick-text h4 {
@@ -2866,7 +2894,7 @@ button {
 .footer-compact {
   background-color: #061325;
   color: #CBD5E1;
-  padding: 3rem 0 2rem 0;
+  padding: 2rem 0 1.25rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
