@@ -2681,20 +2681,34 @@ button {
 
 .news-card-thumb {
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
   background-color: #0A192F;
   overflow: hidden;
+}
+
+/* Khusus postingan & poster Instagram: Rasio 4:5 portrait pas sempurna dengan poster asli 1080x1350 */
+.news-card-compact.is-instagram .news-card-thumb,
+.news-card-thumb.is-instagram {
+  aspect-ratio: 4 / 5;
+  background-color: #06101E;
 }
 
 .news-card-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.3s ease;
 }
 
+.news-card-compact.is-instagram .news-card-thumb img,
+.news-card-thumb.is-instagram img {
+  object-fit: contain;
+  background-color: #06101E;
+}
+
 .news-card-compact:hover .news-card-thumb img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .news-card-tag {
@@ -2705,10 +2719,12 @@ button {
   color: #FFFFFF;
   font-size: 0.65rem;
   font-weight: 800;
-  padding: 2px 7px;
-  border-radius: 3px;
+  padding: 3px 8px;
+  border-radius: 4px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .news-card-body {
@@ -3190,3 +3206,99 @@ button {
     font-size: 0.8rem;
   }
 }
+
+/* Image Zoom Lightbox Modal */
+.image-zoom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.image-zoom-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.zoom-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.zoom-modal-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: zoomModalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes zoomModalIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.zoom-modal-img {
+  max-width: 88vw;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #06101E;
+}
+
+.zoom-modal-caption {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.zoom-modal-close {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border: none;
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.zoom-modal-close:hover {
+  background: var(--color-unicef-yellow);
+  color: var(--color-unicef-navy);
+  transform: scale(1.1);
+}
+

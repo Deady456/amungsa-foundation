@@ -159,9 +159,19 @@
     .article-featured-img {
       width: 100%;
       height: auto;
-      max-height: 480px;
-      object-fit: cover;
+      max-height: 680px;
+      object-fit: contain;
+      background-color: #06101E;
       display: block;
+      margin: 0 auto;
+    }
+    .news-card-compact.is-instagram .news-card-thumb {
+      aspect-ratio: 4 / 5;
+      background-color: #06101E;
+    }
+    .news-card-compact.is-instagram .news-card-thumb img {
+      object-fit: contain;
+      background-color: #06101E;
     }
     .article-media-caption {
       padding: 0.75rem 1.25rem;
@@ -676,6 +686,8 @@
           `;
           relatedGrid.appendChild(card);
         });
+
+        setupZoomableImages();
       }
 
       function renderPortalView() {
@@ -701,7 +713,8 @@
 
           filtered.forEach(item => {
             const card = document.createElement('article');
-            card.className = 'news-card-compact';
+            const isIg = item.coverImage && item.coverImage.includes('instagram');
+            card.className = 'news-card-compact' + (isIg ? ' is-instagram' : '');
             card.innerHTML = `
               <div class="news-card-thumb">
                 <img src="${item.coverImage}" alt="${item.title}">
@@ -716,6 +729,8 @@
             `;
             grid.appendChild(card);
           });
+
+          setupZoomableImages();
         }
 
         filterBtns.forEach(btn => {
@@ -728,6 +743,50 @@
         });
 
         displayItems('all');
+      }
+
+      function setupZoomableImages() {
+        let modal = document.getElementById('amungsaImageModal');
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.id = 'amungsaImageModal';
+          modal.className = 'image-zoom-modal';
+          modal.innerHTML = `
+            <div class="zoom-modal-backdrop"></div>
+            <div class="zoom-modal-content">
+              <button type="button" class="zoom-modal-close" aria-label="Tutup Preview">✕</button>
+              <img src="" alt="" class="zoom-modal-img" id="zoomModalImg">
+              <div class="zoom-modal-caption" id="zoomModalCaption"></div>
+            </div>
+          `;
+          document.body.appendChild(modal);
+
+          const closeBtn = modal.querySelector('.zoom-modal-close');
+          const backdrop = modal.querySelector('.zoom-modal-backdrop');
+          const closeModal = () => { modal.classList.remove('active'); };
+          if (closeBtn) closeBtn.addEventListener('click', closeModal);
+          if (backdrop) backdrop.addEventListener('click', closeModal);
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+          });
+        }
+
+        document.querySelectorAll('.news-card-thumb img, .article-featured-img, .gallery-card img').forEach(img => {
+          img.style.cursor = 'zoom-in';
+          img.onclick = (e) => {
+            e.stopPropagation();
+            const zoomImg = document.getElementById('zoomModalImg');
+            const zoomCaption = document.getElementById('zoomModalCaption');
+            if (zoomImg) {
+              zoomImg.src = img.src;
+              zoomImg.alt = img.alt || 'Dokumentasi Amungsa Foundation';
+            }
+            if (zoomCaption) {
+              zoomCaption.textContent = img.alt || 'Dokumentasi Resmi Yayasan Amungsa Foundation';
+            }
+            modal.classList.add('active');
+          };
+        });
       }
     })();
   </script>

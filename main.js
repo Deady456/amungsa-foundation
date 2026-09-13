@@ -1071,5 +1071,53 @@
     updateDonationLink();
   }
 
+  // Universal Lightbox for Post / News Images
+  document.addEventListener('DOMContentLoaded', () => {
+    // Create Lightbox DOM if not present
+    let modal = document.getElementById('amungsaImageModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'amungsaImageModal';
+      modal.className = 'image-zoom-modal';
+      modal.innerHTML = `
+        <div class="zoom-modal-backdrop"></div>
+        <div class="zoom-modal-content">
+          <button type="button" class="zoom-modal-close" aria-label="Tutup Preview">✕</button>
+          <img src="" alt="" class="zoom-modal-img" id="zoomModalImg">
+          <div class="zoom-modal-caption" id="zoomModalCaption"></div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const closeBtn = modal.querySelector('.zoom-modal-close');
+      const backdrop = modal.querySelector('.zoom-modal-backdrop');
+      const closeModal = () => { modal.classList.remove('active'); };
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (backdrop) backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+      });
+    }
+
+    // Attach click to all news/post thumbnails
+    document.querySelectorAll('.news-card-thumb img, .article-featured-img, .gallery-card img').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const zoomImg = document.getElementById('zoomModalImg');
+        const zoomCaption = document.getElementById('zoomModalCaption');
+        if (zoomImg) {
+          zoomImg.src = img.src;
+          zoomImg.alt = img.alt || 'Dokumentasi Amungsa Foundation';
+        }
+        if (zoomCaption) {
+          zoomCaption.textContent = img.alt || 'Dokumentasi Resmi Yayasan Amungsa Foundation';
+        }
+        modal.classList.add('active');
+      });
+    });
+  });
+
 })();
+
 
